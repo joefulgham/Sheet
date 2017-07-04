@@ -16,16 +16,44 @@
 		-webkit-columns: 3 300px;
 		-moz-columns: 3 300px;
 		columns: 3 300px;
+		-webkit-column-rule: 1px solid black;
+        -moz-column-rule: 1px solid black;
+        column-rule: 1px solid black;
+        margin-bottom: 20px;
 	}
 	.threeColumnsSmall {
-		-webkit-columns: 3 100px;
-		-moz-columns: 3 100px;
-		columns: 3 100px;
+		-webkit-columns: 3 50px;
+		-moz-columns: 3 50px;
+		columns: 3 50px;
+		-webkit-column-rule: 1px solid black;
+        -moz-column-rule: 1px solid black;
+        column-rule: 1px solid black;
 	}
-	.threeColumnsSmall {
+	.twoColumnsSmall {
 		-webkit-columns: 2 150px;
 		-moz-columns: 2 150px;
 		columns: 2 150px;
+		-webkit-column-rule: 1px solid black;
+        -moz-column-rule: 1px solid black;
+        column-rule: 1px solid black;
+	}
+	#defenses div, #healing div {
+		border: 1px solid black;
+		text-align: center;
+	}
+
+	#feats, #abilitiesSpells, #featuresTalents, #equipmentMagicItems { 
+		border: 1px solid black; 
+		margin: 20px 0;
+	}
+
+	.nobreak { 
+		break-inside: avoid; 
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left:0;
 	}
   </style>
 
@@ -41,17 +69,17 @@
 		<div id="characterName">Lestin Dumal</div>
 		<div id="topArea">
 			<div id="levelRaceClass">Level 4 Human Rogue</div>
-			<div id="oneUniqueThing">Last Member of family cursed by the Lich King</div>
-			<div id="iconRelationships">
+			<div id="oneUniqueThing" class="nobreak">Last Member of family cursed by the Lich King</div>
+			<div id="iconRelationships" class="nobreak">
 				<ul><li>Emperor +1</li><li>Elf Queen +1</li><li>Lich King -1</li></ul>
 			</div>
-			<div id="backgrounds">
+			<div id="backgrounds" class="nobreak">
 				<ul><li>Imperial Diplomatic Problem-Solver: +5</li><li>Last Duke of the Caustic Marsh: +3</li>
 			</div>
 		</div>
 	</div>
 	<div class="threeColumns">
-		<div id="statistics">
+		<div id="statistics" class="nobreak">
 			Strength 8<br/>Constitution 13<br/>Dexterity 19<br/>Intelligence 10<br/>Wisdom 15<br/>Charisma 16
 		</div>
 		<div id="initiative">+12</div>
@@ -66,15 +94,17 @@
 			<div id="recoveries">8</div>
 			<div id="recoveryRoll">4d8+1</div>
 		</div>
-		<div id="Feats">
+		<div id="feats" class="nobreak">
 			<b>Improved Initiative</b> (+4)<br>
 			<b>Sneak Attack</b> (Apply first round vs. lower initiative)<br>
 			<b>Murderous</b> (+2 attack vs staggered enemies)<br>
 			<b>Roll With It</b> (Bonus also applies to PD)<br>
 			<b>Bleeding Strike</b> (4d6 vs Large+ targets)
 		</div>
-		<div id="abilitiesSpells">Spell and ability list goes here</div>
-		<div id="featuresTalents">
+		<div id="abilitiesSpells" class="nobreak">
+			
+		</div>
+		<div id="featuresTalents" class="nobreak">
 			<b>Quick To Fight</b> <i>(Human Racial)</i><br>
 			Roll 2d20 for Initiative, choosing one to use. +1 Feat<br><br>
 			<b>Momentum</b> <i>(Rogue Feature)</i><br>
@@ -88,7 +118,7 @@
 			<b>Swashbuckle</b> <i>(Rogue Talent)</i><br>
 			Once/battle as a quick action spend Momentum to be awesome.
 		</div>
-		<div id="equipmentMagicItems">
+		<div id="equipmentMagicItems" class="nobreak">
 			<b>Spy-Master’s Cape</b> (recharge 16+): Teleport to any nearby or far away location you can see, but only when you are hidden from the view of all other observers. <i>Quirk:</i> Ends conversations by leaving abruptly when the other person looks away.<br><br>
 			<b>Gloves of Abundant Daggers</b> Creates two +1 Daggers as a free action, disappearing 2 rounds after leaving the glove’s grip. <i>Quirk:</i> Tries to solve all problems with blades.<br><br>
 			<b>Noblemorphic Leathers +1</b> Quick Action: May appear as any clothing/leather armor. Quirk: Obsessively follows fashion trends
