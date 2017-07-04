@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Adventure For Hire - Responsive Columns Character Sheet - 0.1 Alpha Layout Version</title>
+  <meta name="description" content="Responsive Columns Character Sheet">
+  <meta name="author" content="Joe Fulgham">
+
+  <style>
+  	#characterSheet {
+  		width: 100%;
+  	}
+  	.threeColumns {
+		-webkit-columns: 3 300px;
+		-moz-columns: 3 300px;
+		columns: 3 300px;
+	}
+	.threeColumnsSmall {
+		-webkit-columns: 3 100px;
+		-moz-columns: 3 100px;
+		columns: 3 100px;
+	}
+	.threeColumnsSmall {
+		-webkit-columns: 2 150px;
+		-moz-columns: 2 150px;
+		columns: 2 150px;
+	}
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div id="characterSheet">
+	<div class="threeColumns">
+		<div id="a4hLogo"></div>
+		<div id="characterName">Lestin Dumal</div>
+		<div id="topArea">
+			<div id="levelRaceClass">Level 4 Human Rogue</div>
+			<div id="oneUniqueThing">Last Member of family cursed by the Lich King</div>
+			<div id="iconRelationships">
+				<ul><li>Emperor +1</li><li>Elf Queen +1</li><li>Lich King -1</li></ul>
+			</div>
+			<div id="backgrounds">
+				<ul><li>Imperial Diplomatic Problem-Solver: +5</li><li>Last Duke of the Caustic Marsh: +3</li>
+			</div>
+		</div>
+	</div>
+	<div class="threeColumns">
+		<div id="statistics">
+			Strength 8<br/>Constitution 13<br/>Dexterity 19<br/>Intelligence 10<br/>Wisdom 15<br/>Charisma 16
+		</div>
+		<div id="initiative">+12</div>
+		<div id="defenses" class="threeColumnsSmall">
+			<div id="ac">19</div>
+			<div id="pd">17</div>
+			<div id="md">16</div>
+		</div>
+		<div id="saveBonus"></div>
+		<div id="hitPoints">42</div>
+		<div id="healing" class="twoColumnsSmall">
+			<div id="recoveries">8</div>
+			<div id="recoveryRoll">4d8+1</div>
+		</div>
+		<div id="Feats">
+			<b>Improved Initiative</b> (+4)<br>
+			<b>Sneak Attack</b> (Apply first round vs. lower initiative)<br>
+			<b>Murderous</b> (+2 attack vs staggered enemies)<br>
+			<b>Roll With It</b> (Bonus also applies to PD)<br>
+			<b>Bleeding Strike</b> (4d6 vs Large+ targets)
+		</div>
+		<div id="abilitiesSpells">Spell and ability list goes here</div>
+		<div id="featuresTalents">
+			<b>Quick To Fight</b> <i>(Human Racial)</i><br>
+			Roll 2d20 for Initiative, choosing one to use. +1 Feat<br><br>
+			<b>Momentum</b> <i>(Rogue Feature)</i><br>
+			Gain momentum when you hit, and lose it when hit or spent.<br><br>
+			<b>Trap Sense</b> <i>(Rogue Feature)</i><br>
+			Reroll natural even disarm failures, and natural odd trap attacks<br><br>
+			<b>Sneak Attack</b> <i>(Rogue Feature improved by Rogue Talent)</i><br>
+			Once per turn you may deal +2d8 when a melee attack hits an enemy engaged with one of your allies.<br><br>
+			<b>Murderous</b> <i>(Rogue Talent)</i><br>
+			Threat Range +2 vs. Staggered enemies (Critical on natural 18+)<br><br>
+			<b>Swashbuckle</b> <i>(Rogue Talent)</i><br>
+			Once/battle as a quick action spend Momentum to be awesome.
+		</div>
+		<div id="equipmentMagicItems">
+			<b>Spy-Master’s Cape</b> (recharge 16+): Teleport to any nearby or far away location you can see, but only when you are hidden from the view of all other observers. <i>Quirk:</i> Ends conversations by leaving abruptly when the other person looks away.<br><br>
+			<b>Gloves of Abundant Daggers</b> Creates two +1 Daggers as a free action, disappearing 2 rounds after leaving the glove’s grip. <i>Quirk:</i> Tries to solve all problems with blades.<br><br>
+			<b>Noblemorphic Leathers +1</b> Quick Action: May appear as any clothing/leather armor. Quirk: Obsessively follows fashion trends
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
