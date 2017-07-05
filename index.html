@@ -42,13 +42,42 @@
 		text-align: center;
 	}
 
-	#feats, #abilitiesSpells, #featuresTalents, #equipmentMagicItems { 
+	#feats, #featuresTalents, #equipmentMagicItems { 
 		border: 1px solid black; 
+		margin: 20px 0;
+	}
+
+	#abilitiesSpells {
 		margin: 20px 0;
 	}
 
 	.nobreak { 
 		break-inside: avoid; 
+	}
+
+	.roundBox {
+		margin: 20px 0;
+		break-inside: avoid; 
+	}
+
+	.roundBox h2 {
+		background:#000;color:white;padding:10px;
+		text-align: center;
+		-moz-border-radius-topright:5px;
+		-moz-border-radius-topleft:5px;
+		-webkit-border-top-right-radius:5px;
+		-webkit-border-top-left-radius:5px;
+		border-top-left-radius:5px;
+		border-top-right-radius:5px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.roundBox p {
+		color: #000;
+		padding: 10px;
+		margin: 0;
+		border: 1px solid black; 
 	}
 
 	ul {
@@ -102,7 +131,14 @@
 			<b>Bleeding Strike</b> (4d6 vs Large+ targets)
 		</div>
 		<div id="abilitiesSpells" class="nobreak">
-			
+			<div class="roundBox">
+				<h2>Tumbling Strike</h2>
+				<p>Melee Attack | At Will<br>
+				+11 vs AC -- 4d8+5<br>
+				Miss: 5 damage<br>
+				Always: You gain a +5 bonus to all disengage checks this turn. You can also move to engage an enemy, make this attack against it, and then use a Quick Action to attempt to disengage from it (move again if you succeed).
+				</p>
+			</div>
 		</div>
 		<div id="featuresTalents" class="nobreak">
 			<b>Quick To Fight</b> <i>(Human Racial)</i><br>
