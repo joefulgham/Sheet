@@ -7,7 +7,7 @@
   <title>Adventure For Hire - Responsive Columns Character Sheet - 0.1 Alpha Layout Version</title>
   <meta name="description" content="Responsive Columns Character Sheet">
   <meta name="author" content="Joe Fulgham">
-  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Open+Sans|Im+Fell+English" rel="stylesheet">
   <style>
   body {
   	font-family: 'Open Sans', sans-serif;
@@ -31,26 +31,11 @@
 		-webkit-columns: 3 50px;
 		-moz-columns: 3 50px;
 		columns: 3 50px;
-		-webkit-column-rule: 1px solid black;
-        -moz-column-rule: 1px solid black;
-        column-rule: 1px solid black;
 	}
 	.twoColumnsSmall {
 		-webkit-columns: 2 150px;
 		-moz-columns: 2 150px;
 		columns: 2 150px;
-		-webkit-column-rule: 1px solid black;
-        -moz-column-rule: 1px solid black;
-        column-rule: 1px solid black;
-	}
-	#defenses div, #healing div {
-		border: 1px solid black;
-		text-align: center;
-	}
-
-	#feats, #featuresTalents, #equipmentMagicItems { 
-		border: 1px solid black; 
-		margin: 20px 0;
 	}
 
 	#abilitiesSpells {
@@ -62,21 +47,25 @@
 	}
 
 	.roundBox {
-		margin: 20px 0;
-		break-inside: avoid; 
+		margin: 0;
+		break-inside: avoid;
+		margin-bottom: 20px;
 	}
 
 	.roundBox h2 {
 		background:#000;color:white;padding:10px;
 		text-align: center;
-		-moz-border-radius-topright:5px;
-		-moz-border-radius-topleft:5px;
-		-webkit-border-top-right-radius:5px;
-		-webkit-border-top-left-radius:5px;
-		border-top-left-radius:5px;
-		border-top-right-radius:5px;
-		margin-bottom: 0;
-		padding-bottom: 0;
+		-moz-border-radius-topright:8px;
+		-moz-border-radius-topleft:8px;
+		-webkit-border-top-right-radius:8px;
+		-webkit-border-top-left-radius:8px;
+		border-top-left-radius:8px;
+		border-top-right-radius:8px;
+		margin: 0;
+		padding-bottom: 8px;
+		font-size: 1.2em;
+		font-family: 'Im Fell English', serif;
+		font-weight: normal;
 	}
 
 	.roundBox p {
@@ -91,13 +80,30 @@
 		padding-left:0;
 	}
 
-	#characterName,#levelRaceClass,#oneUniqueThing,#iconRelationships,#backgrounds,#ac,#pd,#md,#initiative,#hitPoints,#recoveries,#recoveryRoll { 
+	#characterName,#levelRaceClass,#oneUniqueThing,#iconRelationships,#backgrounds,#ac p,#pd p,#md p,#initiative,#recoveries p,#recoveryRoll p { 
 		font-family: 'Shadows Into Light', cursive;
-		color: #001392;
+		color: #0022DD;
 		text-align: center;
 		font-size: 1.4em;
 	}
 
+	#characterName, #levelRaceClass, #oneUniqueThing, #iconRelationships li, #backgrounds li {
+		border-bottom: 1px solid #000;
+		width: 100%;
+		display: block;
+	}
+
+	#hitPoints p {
+		font-family: 'Shadows Into Light', cursive;
+		color: #0022DD;
+		text-align: right;
+		font-size: 1.4em;
+
+	}
+
+	#hitPoints p::before {
+		content: "/";
+	}
   </style>
 
   <!--[if lt IE 9]>
@@ -125,37 +131,70 @@
 		<div id="statistics" class="nobreak">
 			Strength 8<br/>Constitution 13<br/>Dexterity 19<br/>Intelligence 10<br/>Wisdom 15<br/>Charisma 16
 		</div>
-		<div id="initiative">+12</div>
+		<div>Initiative: <span id="initiative">+12</span></div>
 		<div id="defenses" class="threeColumnsSmall">
-			<div id="ac">19</div>
-			<div id="pd">17</div>
-			<div id="md">16</div>
+			<div id="ac" class="roundBox"><h2>AC</h2><p>19</p></div>
+			<div id="pd" class="roundBox"><h2>PD</h2><p>17</div>
+			<div id="md" class="roundBox"><h2>MD</h2><p>16</div>
 		</div>
 		<div id="saveBonus"></div>
-		<div id="hitPoints">42</div>
+		<div id="hitPoints" class="roundBox"><h2>Hit Points</h2><p>42</p></div>
 		<div id="healing" class="twoColumnsSmall">
-			<div id="recoveries">8</div>
-			<div id="recoveryRoll">4d8+1</div>
+			<div id="recoveries" class="roundBox"><h2>Recoveries</h2><p>8</p></div>
+			<div id="recoveryRoll" class="roundBox"><h2>Recovery Roll</h2><p>4d8+1</p></div>
 		</div>
-		<div id="feats" class="nobreak">
-			<b>Improved Initiative</b> (+4)<br>
+		<div id="feats" class="roundBox">
+			<h2>Feats</h2>
+			<p><b>Improved Initiative</b> (+4)<br>
 			<b>Sneak Attack</b> (Apply first round vs. lower initiative)<br>
 			<b>Murderous</b> (+2 attack vs staggered enemies)<br>
 			<b>Roll With It</b> (Bonus also applies to PD)<br>
-			<b>Bleeding Strike</b> (4d6 vs Large+ targets)
+			<b>Bleeding Strike</b> (4d6 vs Large+ targets)</p>
 		</div>
 		<div id="abilitiesSpells" class="nobreak">
 			<div class="roundBox">
 				<h2>Tumbling Strike</h2>
 				<p>Melee Attack | At Will<br>
-				+11 vs AC -- 4d8+5<br>
+				+9 vs AC -- 4d8+5<br>
 				Miss: 5 damage<br>
 				Always: You gain a +5 bonus to all disengage checks this turn. You can also move to engage an enemy, make this attack against it, and then use a Quick Action to attempt to disengage from it (move again if you succeed).
 				</p>
 			</div>
+			<div class="roundBox">
+				<h2>Flying Blade</h2>
+				<p>Ranged Attack | At Will | Requires small blade<br>
+				+9 vs AC -- 4d8+5<br>
+				Miss: 5 damage<br>
+				<b>Natural Even Hit:</b> If an ally is engaged with the target, add Sneak Attack damage (2d8)
+				</p>
+			</div>
+			<div class="roundBox">
+				<h2>Roll With It</h2>
+				<p>Momentum | At Will | Once/Round<br>
+				Interrupt action; requires momentum.<br>
+				<b>Trigger:</b> An AC melee or PD attack hits you.<br>
+				<b>Effect:</b> You take half damage.
+				</p>
+			</div>
+			<div class="roundBox">
+				<h2>Sure Cut</h2>
+				<p>Melee Attack | At Will<br>
+				+9 vs AC -- 4d8+5<br>
+				Miss: 2d8+5 damage<br>
+				</p>
+			</div>
+			<div class="roundBox">
+				<h2>Bleeding Strike</h2>
+				<p>Melee Attack | At Will<br>
+				+9 vs AC -- 4d8+5<br>
+				Miss: 2d8+5 damage<br>
+				<b>Hit:</b> 4d4 ongoing damage (Feat: 4d6 vs Large targets)
+				</p>
+			</div>
 		</div>
-		<div id="featuresTalents" class="nobreak">
-			<b>Quick To Fight</b> <i>(Human Racial)</i><br>
+		<div id="featuresTalents" class="roundBox">
+			<h2>Features & Talents</h2>
+			<p><b>Quick To Fight</b> <i>(Human Racial)</i><br>
 			Roll 2d20 for Initiative, choosing one to use. +1 Feat<br><br>
 			<b>Momentum</b> <i>(Rogue Feature)</i><br>
 			Gain momentum when you hit, and lose it when hit or spent.<br><br>
@@ -166,12 +205,13 @@
 			<b>Murderous</b> <i>(Rogue Talent)</i><br>
 			Threat Range +2 vs. Staggered enemies (Critical on natural 18+)<br><br>
 			<b>Swashbuckle</b> <i>(Rogue Talent)</i><br>
-			Once/battle as a quick action spend Momentum to be awesome.
+			Once/battle as a quick action spend Momentum to be awesome.</p>
 		</div>
-		<div id="equipmentMagicItems" class="nobreak">
-			<b>Spy-Master’s Cape</b> (recharge 16+): Teleport to any nearby or far away location you can see, but only when you are hidden from the view of all other observers. <i>Quirk:</i> Ends conversations by leaving abruptly when the other person looks away.<br><br>
+		<div id="equipmentMagicItems" class="roundBox">
+			<h2>Equipment</h2>
+			<p><b>Spy-Master’s Cape</b> (recharge 16+): Teleport to any nearby or far away location you can see, but only when you are hidden from the view of all other observers. <i>Quirk:</i> Ends conversations by leaving abruptly when the other person looks away.<br><br>
 			<b>Gloves of Abundant Daggers</b> Creates two +1 Daggers as a free action, disappearing 2 rounds after leaving the glove’s grip. <i>Quirk:</i> Tries to solve all problems with blades.<br><br>
-			<b>Noblemorphic Leathers +1</b> Quick Action: May appear as any clothing/leather armor. Quirk: Obsessively follows fashion trends
+			<b>Noblemorphic Leathers +1</b> Quick Action: May appear as any clothing/leather armor. Quirk: Obsessively follows fashion trends</p>
 		</div>
 	</div>
 </div>
