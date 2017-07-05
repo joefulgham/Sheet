@@ -22,9 +22,6 @@
 		-webkit-columns: 3 300px;
 		-moz-columns: 3 300px;
 		columns: 3 300px;
-		-webkit-column-rule: 1px solid black;
-        -moz-column-rule: 1px solid black;
-        column-rule: 1px solid black;
         margin-bottom: 20px;
 	}
 	.threeColumnsSmall {
@@ -68,19 +65,69 @@
 		font-weight: normal;
 	}
 
+	#statistics {
+		display: table;
+  		border-collapse: separate;
+  		border-spacing: 10px;
+	}
+
+	.statName {
+		font-family: 'Im Fell English',serif;
+		font-weight: normal;
+		font-size: 1.4em;
+
+	}
+
+	#statistics .statValue, #statistics .statModifier, #statistics .statModPlusLevel {
+		border: 1px solid black;
+		padding: 4px 8px;
+		margin: 0 4px;
+	}
+
+	.statSingle {
+		display: table-row;
+	}
+
+	.statSingle span {
+		display: table-cell;
+		text-align: center;
+		font-family: 'Shadows Into Light', cursive;
+		font-size: 1.2em;
+		color: #0022DD;
+		font-weight: bold;
+	}
+
+	.statSingle span.statValue {
+		font-size: 1.5em;
+	}
+
+	.statSingle span.statModifier {
+		font-size: 1em;
+	}
+
 	.roundBox p {
 		color: #000;
 		padding: 10px;
 		margin: 0;
-		border: 1px solid black; 
+		border: 1px solid black;
 	}
 
 	ul {
 		list-style-type: none;
 		padding-left:0;
 	}
+	#a4hLogo {
+		text-align: center;
+	}
 
-	#characterName,#levelRaceClass,#oneUniqueThing,#iconRelationships,#backgrounds,#ac p,#pd p,#md p,#initiative,#recoveries p,#recoveryRoll p { 
+	#characterName {
+		font-family: 'Shadows Into Light', cursive;
+		color: #0022DD;
+		text-align: center;
+		font-size: 1.8em;
+	}
+
+	#levelRaceClass,#oneUniqueThing,#iconRelationships,#backgrounds,#ac p,#pd p,#md p,#initiative,#recoveries p,#recoveryRoll p { 
 		font-family: 'Shadows Into Light', cursive;
 		color: #0022DD;
 		text-align: center;
@@ -91,6 +138,13 @@
 		border-bottom: 1px solid #000;
 		width: 100%;
 		display: block;
+		break-inside: avoid;
+	}
+
+	.statSingle span.description {
+		font-family: Open Sans, sans-serif;
+		font-size: .7em;
+		color: #222;
 	}
 
 	#hitPoints p {
@@ -98,7 +152,6 @@
 		color: #0022DD;
 		text-align: right;
 		font-size: 1.4em;
-
 	}
 
 	#hitPoints p::before {
@@ -114,7 +167,7 @@
 <body>
 <div id="characterSheet">
 	<div class="threeColumns">
-		<div id="a4hLogo"></div>
+		<div id="a4hLogo"><img src="https://i1.wp.com/adventureforhire.com/wp-content/uploads/2016/11/a4h-logo.png" style="width: 80%; height:auto; margin: 0 auto; text-align: center;" /></div>
 		<div id="characterName">Lestin Dumal</div>
 		<div id="topArea">
 			<div id="levelRaceClass">Level 4 Human Rogue</div>
@@ -129,7 +182,13 @@
 	</div>
 	<div class="threeColumns">
 		<div id="statistics" class="nobreak">
-			Strength 8<br/>Constitution 13<br/>Dexterity 19<br/>Intelligence 10<br/>Wisdom 15<br/>Charisma 16
+			<div class="statSingle"><div></div><span class="description">value</span><span class="description">modifier</span><span class="description">mod + lvl</span></div>
+			<div class="statSingle"><div class="statName">Strength</div> <span class="statValue">8</span><span class="statModifier">-1</span><span class="statModPlusLevel">3</span></div>
+			<div class="statSingle"><div class="statName">Constitution</div> <span class="statValue">13</span><span class="statModifier">1</span><span class="statModPlusLevel">5</span></div>
+			<div class="statSingle"><div class="statName">Dexterity</div> <span class="statValue">19</span><span class="statModifier">4</span><span class="statModPlusLevel">8</span></div>
+			<div class="statSingle"><div class="statName">Intelligence</div> <span class="statValue">10</span><span class="statModifier">0</span><span class="statModPlusLevel">4</span></div>
+			<div class="statSingle"><div class="statName">Wisdom</div> <span class="statValue">15</span><span class="statModifier">2</span><span class="statModPlusLevel">6</span></div>
+			<div class="statSingle"><div class="statName">Charisma</div> <span class="statValue">16</span><span class="statModifier">3</span><span class="statModPlusLevel">7</span></div>
 		</div>
 		<div>Initiative: <span id="initiative">+12</span></div>
 		<div id="defenses" class="threeColumnsSmall">
@@ -155,16 +214,32 @@
 			<div class="roundBox">
 				<h2>Tumbling Strike</h2>
 				<p>Melee Attack | At Will<br>
-				+9 vs AC -- 4d8+5<br>
-				Miss: 5 damage<br>
-				Always: You gain a +5 bonus to all disengage checks this turn. You can also move to engage an enemy, make this attack against it, and then use a Quick Action to attempt to disengage from it (move again if you succeed).
+				<b>+9 vs AC --</b> 4d8+5 damage<br>
+				<b>Miss:</b> 5 damage<br>
+				<b>Always:</b> You gain a +5 bonus to all disengage checks this turn. You can also move to engage an enemy, make this attack against it, and then use a Quick Action to attempt to disengage from it (move again if you succeed).
+				</p>
+			</div>
+			<div class="roundBox">
+				<h2>Bleeding Strike</h2>
+				<p>Melee Attack | At Will<br>
+				<b>+9 vs AC --</b> 4d8+5 damage<br>
+				<b>Miss:</b> 2d8+5 damage<br>
+				<b>Hit:</b> 4d4 ongoing damage (Feat: 4d6 vs Large targets)
+				</p>
+			</div>
+			<div class="roundBox">
+				<h2>Sure Cut</h2>
+				<p>Melee Attack | At Will<br>
+				<b>Special:</b> You must have momentum and be able to deal your Sneak Attack damage to the target if you hit.
+				<b>+9 vs AC --</b> 4d8+5 damage<br>
+				<b>Miss:</b> 2d8+5 damage<br>
 				</p>
 			</div>
 			<div class="roundBox">
 				<h2>Flying Blade</h2>
 				<p>Ranged Attack | At Will | Requires small blade<br>
-				+9 vs AC -- 4d8+5<br>
-				Miss: 5 damage<br>
+				<b>+9 vs AC --</b> 4d8+5 damage<br>
+				<b>Miss:</b> 5 damage<br>
 				<b>Natural Even Hit:</b> If an ally is engaged with the target, add Sneak Attack damage (2d8)
 				</p>
 			</div>
@@ -177,18 +252,11 @@
 				</p>
 			</div>
 			<div class="roundBox">
-				<h2>Sure Cut</h2>
-				<p>Melee Attack | At Will<br>
-				+9 vs AC -- 4d8+5<br>
-				Miss: 2d8+5 damage<br>
-				</p>
-			</div>
-			<div class="roundBox">
-				<h2>Bleeding Strike</h2>
-				<p>Melee Attack | At Will<br>
-				+9 vs AC -- 4d8+5<br>
-				Miss: 2d8+5 damage<br>
-				<b>Hit:</b> 4d4 ongoing damage (Feat: 4d6 vs Large targets)
+				<h2>Deflection</h2>
+				<p>Momentum | At Will | Once/Round<br>
+				Interrupt action; you must spend your momentum.<br>
+				<b>Trigger:</b> A melee attack hits you.<br>
+				<b>Effect:</b> The attack hits a different enemy you are engaged with instead, but deals only half damage
 				</p>
 			</div>
 		</div>
