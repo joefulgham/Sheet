@@ -25,6 +25,14 @@
 		columns: 3 300px;
         margin-bottom: 20px;
 	}
+
+  	.twoColumns {
+		-webkit-columns: 2 450px;
+		-moz-columns: 2 450px;
+		columns: 2 450px;
+        margin-bottom: 20px;
+	}
+
 	.threeColumnsSmall {
 		-webkit-columns: 3 50px;
 		-moz-columns: 3 50px;
@@ -118,9 +126,7 @@
 		padding-left:0;
 	}
 	#a4hLogo {
-		text-align: left;
-		column-span: all;
-		max-width: 300px;
+		text-align: center;
 	}
 
 	#characterName {
@@ -169,9 +175,11 @@
 
 <body>
 <div id="characterSheet">
-	<div class="threeColumns">
+	<div class="twoColumns">
 		<div id="a4hLogo"><img src="https://i1.wp.com/adventureforhire.com/wp-content/uploads/2016/11/a4h-logo.png" style="width: 80%; height:auto; margin: 0 auto; text-align: center;" /></div>
 		<div id="characterName">Lestin Dumal</div>
+	</div>
+	<div class="threeColumns">
 		<div id="topArea">
 			<div id="levelRaceClass">Level 4 Human Rogue</div>
 			<div id="oneUniqueThing" class="nobreak">Last Member of family cursed by the Lich King</div>
