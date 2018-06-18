@@ -179,10 +179,10 @@
 		<div id="a4hLogo"><img src="https://i1.wp.com/adventureforhire.com/wp-content/uploads/2016/11/a4h-logo.png" style="width: 80%; height:auto; margin: 0 auto; text-align: center;" /></div>
 		<div id="characterName">Lestin Dumal</div>
 		<div id="topArea">
-			<div id="levelRaceClass">Level 4 Human Rogue</div>
+			<div id="levelRaceClass">Level 5 Human Rogue</div>
 			<div id="oneUniqueThing" class="nobreak">Last Member of family cursed by the Lich King</div>
 			<div id="iconRelationships" class="nobreak">
-				<ul><li>Emperor +2</li><li>Lich King -1</li></ul>
+				<ul><li>Emperor +3</li><li>Lich King -1</li></ul>
 			</div>
 			<div id="backgrounds" class="nobreak">
 				<ul><li>Imperial Diplomatic Problem-Solver: +5</li><li>Last Duke of the Caustic Marsh: +3</li>
@@ -199,23 +199,24 @@
 			<div class="statSingle"><div class="statName">Wisdom</div> <span class="statValue">15</span><span class="statModifier">2</span><span class="statModPlusLevel">6</span></div>
 			<div class="statSingle"><div class="statName">Charisma</div> <span class="statValue">16</span><span class="statModifier">3</span><span class="statModPlusLevel">7</span></div>
 		</div>
-		<div>Initiative: <span id="initiative">+12</span></div>
+		<div>Initiative: <span id="initiative">+13</span></div>
 		<div id="defenses" class="threeColumnsSmall">
-			<div id="ac" class="roundBox"><h2>AC</h2><p>19</p></div>
-			<div id="pd" class="roundBox"><h2>PD</h2><p>17</div>
-			<div id="md" class="roundBox"><h2>MD</h2><p>16</div>
+			<div id="ac" class="roundBox"><h2>AC</h2><p>20</p></div>
+			<div id="pd" class="roundBox"><h2>PD</h2><p>18</div>
+			<div id="md" class="roundBox"><h2>MD</h2><p>17</div>
 		</div>
 		<div id="saveBonus"></div>
-		<div id="hitPoints" class="roundBox"><h2>Hit Points</h2><p>42</p></div>
+		<div id="hitPoints" class="roundBox"><h2>Hit Points</h2><p>56</p></div>
 		<div id="healing" class="twoColumnsSmall">
 			<div id="recoveries" class="roundBox"><h2>Recoveries</h2><p>8</p></div>
-			<div id="recoveryRoll" class="roundBox"><h2>Recovery Roll</h2><p>4d8+1</p></div>
+			<div id="recoveryRoll" class="roundBox"><h2>Recovery Roll</h2><p>5d8+1</p></div>
 		</div>
 		<div id="feats" class="roundBox">
 			<h2>Feats</h2>
 			<p><b>Improved Initiative</b> (+4)<br>
 			<b>Sneak Attack</b> (Apply first round vs. lower initiative)<br>
 			<b>Murderous</b> (+2 attack vs staggered enemies)<br>
+			<b>Murderous</b> <i>(Champion)</i> +2 (+4 total) to crit range vs staggered enemies<br>
 			<b>Roll With It</b> (Bonus also applies to PD)<br>
 			<b>Bleeding Strike</b> (4d6 vs Large+ targets)</p>
 		</div>
@@ -223,33 +224,33 @@
 			<div class="roundBox">
 				<h2>Tumbling Strike</h2>
 				<p>Melee Attack | At Will<br>
-				<b>+9 vs AC --</b> 4d8+5 damage<br>
-				<b>Miss:</b> 5 damage<br>
+				<b>+10 vs AC --</b> 4d8+9 damage<br>
+				<b>Miss:</b> 6 damage<br>
 				<b>Always:</b> You gain a +5 bonus to all disengage checks this turn. You can also move to engage an enemy, make this attack against it, and then use a Quick Action to attempt to disengage from it (move again if you succeed).
 				</p>
 			</div>
 			<div class="roundBox">
 				<h2>Bleeding Strike</h2>
 				<p>Melee Attack | At Will<br>
-				<b>+9 vs AC --</b> 4d8+5 damage<br>
-				<b>Miss:</b> 5 damage<br>
-				<b>Hit:</b> 4d4 ongoing damage (Feat: 4d6 vs Large targets)
-				</p>
-			</div>
-			<div class="roundBox">
-				<h2>Sure Cut</h2>
-				<p>Melee Attack | At Will<br>
-				<b>Special:</b> You must have momentum and be able to deal your Sneak Attack damage to the target if you hit.
-				<b>+9 vs AC --</b> 4d8+5 damage<br>
-				<b>Miss:</b> 2d8+5 damage<br>
+				<b>+10 vs AC --</b> 5d8+9 damage<br>
+				<b>Miss:</b> 6 damage<br>
+				<b>Hit:</b> 5d4 ongoing damage (Feat: 5d6 vs Large targets)
 				</p>
 			</div>
 			<div class="roundBox">
 				<h2>Flying Blade</h2>
 				<p>Ranged Attack | At Will | Requires small blade<br>
-				<b>+9 vs AC --</b> 4d8+5 damage<br>
-				<b>Miss:</b> 5 damage<br>
+				<b>+10 vs AC --</b> 5d8+9 damage<br>
+				<b>Miss:</b> 6 damage<br>
 				<b>Natural Even Hit:</b> If an ally is engaged with the target, add Sneak Attack damage (2d8)
+				</p>
+			</div>
+			<div class="roundBox">
+				<h2>Swift Dodge</h2>
+				<p>Momentum Power | At Will (Once/round)<br>
+				Interrupt action; requires <i>momentum</i><br>
+				<b>Trigger:</b> You are hit by an attack against AC<br>
+				<b>Effect:</b> The attacker must reroll the attack.
 				</p>
 			</div>
 			<div class="roundBox">
@@ -264,7 +265,7 @@
 				<h2>Deflection</h2>
 				<p>Momentum | At Will | Once/Round<br>
 				Interrupt action; you must spend your momentum.<br>
-				<b>Trigger:</b> A melee attack hits you.<br>
+				<b>Trigger:</b> A melee attack misses you.<br>
 				<b>Effect:</b> The attack hits a different enemy you are engaged with instead, but deals only half damage
 				</p>
 			</div>
