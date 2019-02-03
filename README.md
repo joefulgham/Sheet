@@ -18,6 +18,8 @@ Working Sheet links:
 Made by Joe Fulgham - https://joefulgham.com/
 for Adventure For Hire - https://adventureforhire.com/
 
+GitHub: https://github.com/joefulgham/Sheet/
+
 ### Includes 
 populate.js https://github.com/dannyvankooten/populate.js
 lz-string https://github.com/pieroxy/lz-string
