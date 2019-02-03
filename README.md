@@ -15,11 +15,10 @@ Working Sheet links:
 * [Starcrossed](https://sheet.adventureforhire.com/starcrossed) (still needs tweaks)
 
 ## Credits
-Made by Joe Fulgham - https://joefulgham.com/
-for Adventure For Hire - https://adventureforhire.com/
+Made by [Joe Fulgham](https://joefulgham.com/) for [Adventure For Hire](https://adventureforhire.com/)
 
 GitHub: https://github.com/joefulgham/Sheet/
 
 ### Includes 
-populate.js https://github.com/dannyvankooten/populate.js
-lz-string https://github.com/pieroxy/lz-string
+populate.js - https://github.com/dannyvankooten/populate.js
+lz-string - https://github.com/pieroxy/lz-string
