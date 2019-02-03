@@ -9,4 +9,8 @@ For the pre-made sheets: Simply fill out your character and press "Save". The ch
 
 Character sheets for new games can be made by creating an appropirate HTML form with the id "charSheet" and loading jQuery and charsheet.js
 
-Created for Adventure For Hire - https://adventureforhire.com/ 
+Created for Adventure For Hire - https://adventureforhire.com/
+Working Sheet links:  
+
+* [Tales from the Loop](https://sheet.adventureforhire.com/loop/)
+* [Starcrossed](https://sheet.adventureforhire.com/starcrossed) (still needs tweaks)
