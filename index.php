@@ -12,9 +12,9 @@
   <header>
   </header>
 
-  <div>
+  <div style="max-width: 46em; margin: 0 auto;">
 <?php
-include('parsedown.php');
+include('lib/parsedown.php');
 $html = file_get_contents('README.md');
 $Parsedown = new Parsedown();
 echo $Parsedown->text($html);
