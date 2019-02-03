@@ -7,7 +7,7 @@ I play alot of pen and paper roleplaying games that use printed character sheets
 ### How does this work?
 For the pre-made sheets: Simply fill out your character and press "Save". The character data will be converted to a JSON string and then URI-safe compressed and placed in the hashtag. Load up that page with the hashtag and the script will decompress the JSON string from the hashtag and populate the form!
 
-Character sheets for new games can be made by creating an appropirate HTML form with the id "charSheet" and loading jQuery and charsheet.js
+Character sheets for new games can be made by creating an HTML form with the id "charSheet". Note: Each form element requires a unique Name attribute. Then simply include jQuery and charsheet.js and the script will take care of the rest!
 
 Created for Adventure For Hire - https://adventureforhire.com/
 Working Sheet links:  

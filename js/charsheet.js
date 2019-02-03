@@ -168,6 +168,7 @@ window.addEventListener('resize', function(event) {
     resizeBoxes();
 });
 
+// Resize textareas to fit contents
 function resizeBoxes() {
     var inputs = document.getElementsByTagName('textarea');
     for (var i = 0; i < inputs.length; i += 1) {
@@ -175,9 +176,19 @@ function resizeBoxes() {
     }
 }
 
+function displayButtons() {
+	$( "#charSheet" ).after( "<div class='charSheetButtons' style='text-align: center;''><button type='button' value='Save'  onclick='putCharstuff();' style='margin: 0 auto;'>Save</button> <button type='button' value='Load' onclick='loadCharstuff();' style='margin: 0 auto;'>Load</button> <button type='button' value='Clear' onclick='clearForm()'>Clear</button></div>" );
+}
+
 function initialStuff() {
     // Load Character from hashtag
     loadCharstuff();
     // Expand textareas as needed for loading
     resizeBoxes();
+    // Show load/save buttons at the end of the form
+    displayButtons();
 }
+
+$( document ).ready(function() {
+    initialStuff();
+});
