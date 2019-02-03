@@ -1,0 +1,411 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Tales from the Loop Responsive Columns Character Sheet - v 1.1 | Adventure For Hire</title>
+	<meta name="description" content="Tales from the Loop Responsive Columns Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Tales from the Loop Responsive Columns Character Sheet" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/loop/images/loop-sheet-preview.jpg" />
+	 <meta name="twitter:image-alt" content="[Logo displayed over Tales from the Loop artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/loop/images/loop-sheet-preview.jpg">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script language="javascript" src="../js/lz-string.min.js"></script>
+	<script language="javascript" src="../js/populate.js"></script>
+	<script language="javascript" src="../js/charsheet.js"></script>
+	<style>
+	body {
+  		font-family: 'Open Sans', sans-serif;
+  		font-size: 16px;
+	}
+
+	header {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.orange {
+		color: #ee8800;
+		font-weight: bold;
+		width: 100%;
+	}
+
+	.logo {
+		width: 80%; 
+		height:auto; 
+		margin: 0 auto 1em 0; 
+		text-align: center;
+	}
+
+	#charStatistics {
+		width: 17em;
+		margin: 0 2em;
+		float: left;
+	}
+
+	#charInfo {
+		margin: 0 2em 0 21em;
+		width: auto;
+	}
+
+	 @media (max-width: 640px) {
+	 	#charStatistics, #charInfo { width: 100%; float: none; margin: 0; padding: 0; }
+	 }
+
+	.statBox {
+		outline: 2px solid black;
+		display: block;
+		padding-bottom: 2px;
+		margin-bottom: 1em;
+		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+	}
+
+	.infoBox {
+		border: 2px solid black;
+		white-space: nowrap;
+		margin-bottom: 1em;
+		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.infoHalf {
+		min-width: 50%;
+		max-width: 50%; 
+    }
+
+	.infoFull { 
+		min-width: 100%; 
+		max-width: 100%; 
+    }
+
+    .infoHalf input[type=text], .infoFull input[type=text], .infoFull textarea, .outlined {
+		-webkit-box-shadow:inset 0px 0px 0px 1px #000;
+    	-moz-box-shadow:inset 0px 0px 0px 1px #000;
+    	box-shadow:inset 0px 0px 0px 1px #000;
+    	box-sizing: border-box;
+    	width: 100%;
+	max-height: 50vh;
+    }
+
+    textarea {
+    	display: block;
+    	padding: 0;
+    	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+    }
+
+	.statBox p {
+		padding: 0 8px;
+	}
+
+	.statBox h2, .infoBox h2 {
+		background:#000;
+		color:white;
+		padding:10px;
+		text-align: left;
+		padding: 8px;
+		font-size: 1.2em;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	input[type=checkbox] {
+  		transform: scale(1.4);
+	}
+
+	input[type=number] {
+		width: 2em;
+		text-align: center;
+		padding-left: 1em;
+	}
+
+	textarea:focus::-webkit-input-placeholder, input:focus::-webkit-input-placeholder { color:transparent; }
+	textarea:focus:-moz-placeholder, input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+	textarea:focus::-moz-placeholder, input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+	textarea:focus:-ms-input-placeholder, input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+	.alignRight {
+		float: right;
+	}
+	.alignLeft {
+		float: left;
+	}
+	.headLabel {
+	position: relative;
+    left: 3px;
+    top: 0;
+    cursor: text;
+    font-size: 66%;
+    font-weight: bold;
+	}
+
+	.spreadOut {
+		text-align: center;
+	}
+
+	.releasenotes {
+	max-width: 40em;
+	margin: 40px auto;
+}
+
+	</style>
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body onload="initialStuff()">
+	<header><div class="orange">CHARACTER SHEET<div><img src="images/tftl-logo.png" class="logo" /></header>
+	<form id="charSheet">
+		<section id="charStatistics">
+			<div class="statBox">
+				<h2>Attributes</h2>
+				<p>Body <input type="number" name="charBody" min="1" max="5" class="alignRight" /></p>
+				<p>Tech <input type="number" name="charTech" min="1" max="5" class="alignRight" /></p>
+				<p>Heart <input type="number" name="charHeart" min="1" max="5" class="alignRight" /></p>
+				<p>Mind <input type="number" name="charMind" min="1" max="5" class="alignRight" /></p>
+			</div>
+			<div class="statBox">
+				<h2>Conditions</h2>
+				<p>Upset <input type="checkbox" name="charUpset" value="Upset" class="tristate alignRight"/></p>
+				<p>Scared <input type="checkbox" name="charScared" value="Scared" class="tristate alignRight"/></p>
+				<p>Exhausted <input type="checkbox" name="charExhausted" value="Exhausted" class="tristate alignRight"/></p>
+				<p>Injured <input type="checkbox" name="charInjured" value="Injured" class="tristate alignRight"/></p>
+				<p>Broken <input type="checkbox" name="charBroken" value="Broken" class="tristate alignRight"/></p>
+			</div>
+			<div class="statBox">
+				<h2>Skills</h2>
+				<p>Sneak (Body) <input type="number" name="charSneak" min="0" max="3" class="alignRight" /></p>
+				<p>Force (Body) <input type="number" name="charForce" min="0" max="3" class="alignRight" /></p>
+				<p>Move (Body) <input type="number" name="charMove" min="0" max="3" class="alignRight" /></p>
+				<p>Tinker (Tech) <input type="number" name="charTinker" min="0" max="3" class="alignRight" /></p>
+				<p>Program (Tech) <input type="number" name="charProgram" min="0" max="3" class="alignRight" /></p>
+				<p>Calculate (Tech) <input type="number" name="charCalculate" min="0" max="3" class="alignRight" /></p>
+				<p>Contact (Heart) <input type="number" name="charContact" min="0" max="3" class="alignRight" /></p>
+				<p>Charm (Heart) <input type="number" name="charCharm" min="0" max="3" class="alignRight" /></p>
+				<p>Lead (Heart) <input type="number" name="charLead" min="0" max="3" class="alignRight" /></p>
+				<p>Investigate (Mind) <input type="number" name="charInvestigate" min="0" max="3" class="alignRight" /></p>
+				<p>Comprehend (Mind) <input type="number" name="charComprehend" min="0" max="3" class="alignRight" /></p>
+				<p>Empathize (Mind) <input type="number" name="charEmpathize" min="0" max="3" class="alignRight" /></p>
+			</div>
+			<div class="statBox">
+				<h2>Experience</h2>
+				<p class="spreadOut"><input type="checkbox" name="charXPOne" class="experience"> <input type="checkbox" name="charXPTwo" class="experience"> <input type="checkbox" name="charXPThree" class="experience"> <input type="checkbox" name="charXPFour" class="experience"> <input type="checkbox" name="charXPFive" class="experience"> <input type="checkbox" name="charXPSix" class="experience"> <input type="checkbox" name="charXPSeven" class="experience"> <input type="checkbox" name="charXPEight" class="experience"> <input type="checkbox" name="charXPNine" class="experience"> <input type="checkbox" name="charXPTen" class="experience"></p>
+			</div>
+		</section>
+		<section id="charInfo">
+			<div class="infoBox">
+				<div class="infoHalf">
+					<label class="has-float-label">
+					<input type="text" name="name" placeholder="Name" />
+					<span>Name</span>
+					</label>
+				</div><div class="infoHalf">
+					<label class="has-float-label">
+					<input type="text" name="type" list="types" placeholder="Type"/>
+					<span>Type</span>
+					<datalist id="types">
+						<option value="Bookworm" />
+						<option value="Computer Geek" />
+						<option value="Hick" />
+						<option value="Jock" />
+						<option value="Popular Kid" />
+						<option value="Rocker" />
+						<option value="Troublemaker" />
+						<option value="Weirdo" />
+					</datalist>
+					</label>
+				</div>
+				<div class="infoHalf">
+					<label class="has-float-label">
+					<input type="text" name="age" placeholder="Age"/>
+					<span>Age</span>
+					</label>
+				</div>
+				<div class="infoHalf outlined">
+					<div class="headLabel">Luck Points</div>
+					<div class="spreadOut"><input type="checkbox" name="luckOne"> <input type="checkbox" name="luckTwo"> <input type="checkbox" name="luckThree"> <input type="checkbox" name="luckFour"> <input type="checkbox" name="luckFive"></div>
+				</div>
+				<div class="infoHalf">
+					<label class="has-float-label">
+					<input type="text" name="drive" placeholder="Drive"/>
+					<span>Drive</span>
+					</label>
+				</div>
+				<div class="infoHalf">
+					<label class="has-float-label">
+					<input type="text" name="anchor" placeholder="Anchor"/>
+					<span>Anchor</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows="1" name="problem" placeholder="Problem"/></textarea>
+					<span>Problem</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows="1" name="pride" placeholder="Pride"/></textarea>
+					<span>Pride</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows="1" name="description" placeholder="Description"/></textarea>
+					<span>Description</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows="1" name="favesong" placeholder="Favorite Song"/></textarea>
+					<span>Favorite Song</span>
+					</label>
+				</div>
+			</div>
+			<div class="infoBox">
+				<h2>Relationships</h2>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows="1" name="kid1" placeholder="Kid 1"/></textarea>
+					<span>Kid 1</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows="1" name="kid2" placeholder="Kid 2"/></textarea>
+					<span>Kid 2</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="kid3" placeholder="Kid 3"/></textarea>
+					<span>Kid 3</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="kid4" placeholder="Kid 4"/></textarea>
+					<span>Kid 4</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="npc1" placeholder="NPC 1"/></textarea>
+					<span>NPC 1</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="npc2" placeholder="NPC 2"/></textarea>
+					<span>NPC 2</span>
+					</label>
+				</div>
+			</div>
+			<div class="infoBox">
+				<h2>Items</h2>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="iconicitem" placeholder="Iconic Item"/></textarea>
+					<span>Iconic Item</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="item1" placeholder=""/></textarea>
+					<span>Item 1</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="item2" placeholder=""/></textarea>
+					<span>Item 2</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="item3" placeholder=""/></textarea>
+					<span>Item 3</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="item4" placeholder=""/></textarea>
+					<span>Item 4</span>
+					</label>
+				</div>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="item5" placeholder=""/></textarea>
+					<span>Item 5</span>
+					</label>
+				</div>
+			</div>
+			<div class="infoBox">
+				<h2>Hideout</h2>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=1" name="hideout" placeholder="Hideout"/></textarea>
+					<span>Hideout</span>
+					</label>
+				</div>
+			</div>
+			<div class="infoBox">
+				<h2>Notes</h2>
+				<div class="infoFull">
+					<label class="has-float-label">
+					<textarea rows=8 name="notes" placeholder="Notes"/></textarea>
+					<span>Notes</span>
+					</label>
+				</div>
+			</div>
+		</section>
+	</form>
+	<div class="spreadOut">
+		<button type="button" value="Save"  onclick="putCharstuff();" style="margin: 0 auto;">Save</button> <button type="button" value="Load" onclick="loadCharstuff();" style="margin: 0 auto;">Load</button> <button type="button" value="Clear" onclick="clearForm()">Clear</button> <br /><br />
+Tales from the Loop Character Sheet by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a> | Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a>
+</div>
+<div class="releasenotes">
+<b>Release Notes</b>
+<ul>
+	<li>1.1
+		<ul>
+			<li>Changed long inputs to textareas, added javascript to resize them so they always fit (on load, type, and window resize)</li>
+			<li>Added button to clear form</li>
+		</ul>
+	<li>1.0
+		<ul>
+			<li>Intial public release.</li>
+			<li>Added code to save/load character data using page hashtag!</li>
+			<li>Added credits to bottom of page</li>
+		</ul>
+	<li>0.3
+		<ul>
+			<li>Initial private release</li>
+			<li>Character data saved as string in textarea (boo!) </li>
+		</ul>
+</ul>
+</div>
+</body>
+</html>
