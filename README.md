@@ -11,8 +11,8 @@ Character sheets for new games can be made by creating an HTML form with the id 
 
 Working Sheet links:  
 
-* [Tales from the Loop](https://sheet.adventureforhire.com/loop/) (fully functional!)
-* [Starcrossed](https://sheet.adventureforhire.com/starcrossed) (still needs tweaks)
+* [Tales from the Loop](https://sheet.adventureforhire.com/loop/) 
+* [Starcrossed](https://sheet.adventureforhire.com/starcrossed) 
 
 ## Credits
 Made by [Joe Fulgham](https://joefulgham.com/) for [Adventure For Hire](https://adventureforhire.com/)
