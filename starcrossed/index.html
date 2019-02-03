@@ -1,376 +1,201 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-
-	<title>Starcrossed Responsive Columns Character Sheet - v 0.1 | Adventure For Hire</title>
-	<meta name="description" content="Starcrossed Responsive Columns Character Sheet">
-	<meta name="author" content="Joe Fulgham">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
-	<link rel="stylesheet" href="css/has-float-label.css"/>
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="Starcrossed Responsive Columns Character Sheet" />
-	<meta name="twitter:site" content="@joefulgham" />
-	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
-	<meta name="twitter:image" content="" />
-	 <meta name="twitter:image-alt" content="" >
-	<meta property="og:image" content="">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script language="javascript" src="js/lz-string.min.js"></script>
-	<script src="js/populate.js"></script>
-	<script>
-		function clearForm() {
-			document.getElementById("charSheet").reset();
-		}
-
-		// Save form state to hashtag
-		function putCharstuff() {
-			//Grab all the form data and put it into an array.
-			var result = { };
-			$.each($('form').serializeArray(), function() {
-    			result[this.name] = this.value;
-			});
-			// Convert array to JSON string which is then compressed to a text string that can be stored in the URI
-			var charData = LZString.compressToEncodedURIComponent(JSON.stringify(result));
-			// Put that string up into the hashtag 
-			window.location.hash = charData;
-		}
-
-		// Read the hashtag data and use to populate form
-		function loadCharstuff() {
-			// Load the hashtag into variable
-			var charHashtag = window.location.hash.substr(1);
-			// Decompress hashtag to json string
-			var charData = LZString.decompressFromEncodedURIComponent(charHashtag);
-			// Parse JSON data
-			var data = JSON.parse(charData);
-			// Set your containing element
-			var formElement = document.getElementById('charSheet');
-			// populate the form with our JSON object
-			populate(formElement, data);
-		}
-
-		var autoExpand = function (field) {
-
-			// Reset field height
-			field.style.height = 'inherit';
-
-			// Get the computed styles for the element
-			var computed = window.getComputedStyle(field);
-
-			// Calculate the height
-			var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
-				     + parseInt(computed.getPropertyValue('padding-top'), 10)
-				     + field.scrollHeight
-				     + parseInt(computed.getPropertyValue('padding-bottom'), 10)
-				     + parseInt(computed.getPropertyValue('border-bottom-width'), 10)
-					- 20;
-
-			field.style.height = height + 'px';
-
-		};
-
-		document.addEventListener('input', function (event) {
-			if (event.target.tagName.toLowerCase() !== 'textarea') return;
-			autoExpand(event.target);
-		}, false);
-
-		// Check textareas if the window gets resized
-		window.addEventListener('resize', function(event){
-			  resizeBoxes();
-		});
-
-		function resizeBoxes() {
-                        var inputs = document.getElementsByTagName('textarea');
-                        for (var i = 0; i < inputs.length; i += 1) {
-				autoExpand(inputs[i]);
+	<head>
+		<meta charset="utf-8">
+		<title>Starcrossed Responsive Columns Character Sheet - v 1.0 | Adventure For Hire</title>
+		<meta name="description" content="Starcrossed Responsive Columns Character Sheet">
+		<meta name="author" content="Joe Fulgham">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rokkitt" rel="stylesheet">
+		<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+		<link rel="stylesheet" href="css/has-float-label.css"/>
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Starcrossed Responsive Columns Character Sheet" />
+		<meta name="twitter:site" content="@joefulgham" />
+		<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:image-alt" content="" >
+		<meta property="og:image" content="">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script language="javascript" src="../js/charsheet.js"></script>
+		<style>
+			body {
+			font-family: 'Rokkitt', sans-serif;
+			font-size: 24px;
+			color: #a176a1;
 			}
-		}
-
-		function initialStuff() { 
-			// Load Character from hashtag
-			loadCharstuff();
-			// Expand textareas as needed for loading
-			resizeBoxes();
-		}
-	</script>
-	<style>
-	body {
-  		font-family: 'Open Sans', sans-serif;
-  		font-size: 16px;
-	}
-
-	header {
-		width: 100%;
-		margin: 0 auto;
-		text-align: center;
-	}
-
-	.orange {
-		color: #ee8800;
-		font-weight: bold;
-		width: 100%;
-	}
-
-	.logo {
-		width: 80%; 
-		height:auto; 
-		margin: 0 auto 1em 0; 
-		text-align: center;
-	}
-
-	#charStatistics {
-		width: 17em;
-		margin: 0 2em;
-		float: left;
-	}
-
-	#charInfo {
-		margin: 0 2em 0 21em;
-		width: auto;
-	}
-
-	 @media (max-width: 640px) {
-	 	#charStatistics, #charInfo { width: 100%; float: none; margin: 0; padding: 0; }
-	 }
-
-	.statBox {
-		outline: 2px solid black;
-		display: block;
-		padding-bottom: 2px;
-		margin-bottom: 1em;
-		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-	}
-
-	.infoBox {
-		border: 2px solid black;
-		white-space: nowrap;
-		margin-bottom: 1em;
-		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.infoHalf {
-		min-width: 50%;
-		max-width: 50%; 
-    }
-
-	.infoFull { 
-		min-width: 100%; 
-		max-width: 100%; 
-    }
-
-    .infoHalf input[type=text], .infoFull input[type=text], .infoFull textarea, .outlined {
-		-webkit-box-shadow:inset 0px 0px 0px 1px #000;
-    	-moz-box-shadow:inset 0px 0px 0px 1px #000;
-    	box-shadow:inset 0px 0px 0px 1px #000;
-    	box-sizing: border-box;
-    	width: 100%;
-	max-height: 50vh;
-    }
-
-    textarea {
-    	display: block;
-    	padding: 0;
-    	margin: 0;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-    }
-
-	.statBox p {
-		padding: 0 8px;
-	}
-
-	.statBox h2, .infoBox h2 {
-		background:#000;
-		color:white;
-		padding:10px;
-		text-align: left;
-		padding: 8px;
-		font-size: 1.2em;
-		font-weight: bold;
-		text-transform: uppercase;
-		margin: 0;
-		width: 100%;
-		box-sizing: border-box;
-	}
-
-	input[type=checkbox] {
-  		transform: scale(1.4);
-	}
-
-	input[type=number] {
-		width: 2em;
-		text-align: center;
-		padding-left: 1em;
-	}
-
-	textarea:focus::-webkit-input-placeholder, input:focus::-webkit-input-placeholder { color:transparent; }
-	textarea:focus:-moz-placeholder, input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-	textarea:focus::-moz-placeholder, input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-	textarea:focus:-ms-input-placeholder, input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
-
-	.alignRight {
-		float: right;
-	}
-	.alignLeft {
-		float: left;
-	}
-	.headLabel {
-	position: relative;
-    left: 3px;
-    top: 0;
-    cursor: text;
-    font-size: 66%;
-    font-weight: bold;
-	}
-
-	.spreadOut {
-		text-align: center;
-	}
-
-	.releasenotes {
-	max-width: 40em;
-	margin: 40px auto;
-}
-
-	</style>
-
-	<!--[if lt IE 9]>
+			h1 {
+				font-size: 82px;
+				font-weight: 900;
+				text-align: center;
+			}
+			h2 {
+				font-size: 64px;
+				font-weight: 800;
+				margin-bottom: 0;
+				text-align: center;
+			}
+			h3 {
+				font-size: 36px;
+				font-weight: 800;
+				margin-bottom: 0;
+			}
+			header {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			}
+			input[type=text], textarea, .outlined {
+			box-sizing: border-box;
+			width: 100%;
+			max-height: 50vh;
+			}
+			textarea {
+			display: block;
+			padding: 0;
+			margin: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 16px;
+			}
+			input[type=checkbox] {
+			transform: scale(1.4);
+			}
+			input[type=number] {
+			width: 2em;
+			text-align: center;
+			padding-left: 1em;
+			}
+			form#charSheet {
+				max-width: 46em;
+				margin: 0 auto;
+			}
+			textarea:focus::-webkit-input-placeholder, input:focus::-webkit-input-placeholder { color:transparent; }
+			textarea:focus:-moz-placeholder, input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+			textarea:focus::-moz-placeholder, input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+			textarea:focus:-ms-input-placeholder, input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+			.alignRight {
+			float: right;
+			}
+			.alignLeft {
+			float: left;
+			}
+			.spreadOut {
+			text-align: center;
+			}
+		</style>
+		<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-	<![endif]-->
-
-</head>
-
-<body onload="initialStuff()">
-	<header><h1>The Lead</h1></header>
-	<form id="charSheet">
-			<div class="infoBox">
-				<div class="infoFull">
-					<label class="has-float-label">
-					<textarea rows="1" name="whoami" placeholder="Who am I?"/></textarea>
-					<span>Who am I?</span>
-					</label>
-				</div>
-				<div class="infoFull">
-					<label class="has-float-label">
-					<textarea rows="1" name="feature" placeholder="What is my most attractive feature?"/></textarea>
-					<span>What is my most attractive feature?</span>
-					</label>
-				</div>
-				<div class="infoFull">
-					<label class="has-float-label">
-					<textarea rows="1" name="attractive" placeholder="What are two things about me that I don't realize are attractive?"/></textarea>
-					<span>What are two things about me that I don't realize are attractive?</span>
-					</label>
-				</div>
-				<div class="infoFull">
-					<label class="has-float-label">
-					<textarea rows="1" name="impediment" placeholder="Why can't I act on my feelings?"/></textarea>
-					<span>Why can't I act on my feelings?</span>
-					</label>
-				</div>
-				<div class="infoFull">
-					<label class="has-float-label">
-					<textarea rows="1" name="whyimportant" placeholder="Why is that important to me?"/></textarea>
-					<span>Why is that important to me?</span>
-					</label>
-				</div>
-			</div>
-			<div class="infoBox">
+		<![endif]-->
+	</head>
+	<body>
+		<form id="charSheet">
+			<div id="leadCharacter">
+				<h1>The Lead</h1>
+				<label class="has-float-label">
+				<textarea rows="1" name="leadWhoami" placeholder="Who am I?"/></textarea>
+				<span>Who am I?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="leadFeature" placeholder="What is my most attractive feature?"/></textarea>
+				<span>What is my most attractive feature?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="leadAttractive" placeholder="What are two things about me that I don't realize are attractive?"/></textarea>
+				<span>What are two things about me that I don't realize are attractive?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="leadImpediment" placeholder="Why can't I act on my feelings?"/></textarea>
+				<span>Why can't I act on my feelings?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="leadImportant" placeholder="Why is that important to me?"/></textarea>
+				<span>Why is that important to me?</span>
+				</label>
 				<h2>Moves</h2>
-				<div class="infoHalf">
-					Describe your character's movements
+				<h3>Describe your character's movements</h3>
+				<div>Unlimited uses per game. No pull required</div>
+				<h3>Describe a detail in the characters' environment</h3>
+				<div>Unlimited uses per game. No pull required</div>
+				<h3>Describe your character intentionally touching the Follow</h3>
+				<div>
+					<input type="checkbox" name="leadtouchOne"> <input type="checkbox" name="leadtouchTwo"> <input type="checkbox" name="leadtouchThree"> <input type="checkbox" name="touchFour"> <input type="checkbox" name="leadtouchFive" > <input type="checkbox" name="leadtouchSix" > <input type="checkbox" name="leadtouchSeven" > <input type="checkbox" name="leadtouchEight" > <input type="checkbox" name="leadtouchNine" > <input type="checkbox" name="leadtouchTen" ><br/>
+					Maximum once each per scene. Pull required.
 				</div>
-				<div class="infoHalf">
-					Unlimited uses per game<br />
-					No pull required
+				<h3>Describe your character intentionally revealing something personal</h3>
+				<div>
+					<input type="checkbox" name="leadrevealOne"> <input type="checkbox" name="leadrevealTwo"> <input type="checkbox" name="leadrevealThree"> <input type="checkbox" name="leadrevealFour"> <input type="checkbox" name="leadrevealFive" > <input type="checkbox" name="leadrevealSix" > <input type="checkbox" name="leadrevealSeven" > <input type="checkbox" name="leadrevealEight" > <input type="checkbox" name="leadrevealNine" > <input type="checkbox" name="leadrevealTen" ><br/>
+					Maximum once each per scene. Pull required.
 				</div>
-				<div class="infoHalf">
-                                        Describe a detail in the characters' environment
-                                </div>
-                                <div class="infoHalf">
-                                        Unlimited uses per game<br />
-                                        No pull required
-                                </div>
-				<div class="infoHalf">
-                                        Describe your character intentionally touching the Follow<br />
-					<input type="checkbox" name="touchOne"> <input type="checkbox" name="touchTwo"> <input type="checkbox" name="touchThree"> <input type="checkbox" name="touchFour"> <input type="checkbox" name="touchFive" > <input type="checkbox" name="touchSix" > <input type="checkbox" name="touchSeven" > <input type="checkbox" name="touchEight" > <input type="checkbox" name="touchNine" > <input type="checkbox" name="touchTen" >
-                                </div>
-                                <div class="infoHalf">
-                                        Maximum once each per scene<br />
-                                        Pull required
-                                </div>
-				<div class="infoHalf">
-                                        Describe your character intentionally revealing something personal<br />
-                                        <input type="checkbox" name="revealOne"> <input type="checkbox" name="revealTwo"> <input type="checkbox" name="revealThree"> <input type="checkbox" name="revealFour"> <input type="checkbox" name="revealFive" > <input type="checkbox" name="revealSix" > <input type="checkbox" name="revealSeven" > <input type="checkbox" name="revealEight" > <input type="checkbox" name="revealNine" > <input type="checkbox" name="revealTen" >
-                                </div>
-                                <div class="infoHalf">
-                                        Maximum once each per scene<br />
-                                        Pull required
-                                </div>
-				 <div class="infoHalf">
-                                        Describe your character unintentionally touching the Follow<br />
-                                        <input type="checkbox" name="touchUnintentional">
-                                </div>
-                                <div class="infoHalf">
-                                        Maximum once each per game<br />
-                                        Pull required
-                                </div>
-				 <div class="infoHalf">
-                                        Describe your character unintentionally revealing something personal<br />
-                                        <input type="checkbox" name="touchUnintentional">
-                                </div>
-                                <div class="infoHalf">
-                                        Maximum once each per game<br />
-                                        Pull required
-                                </div>
-
-
+				<h3>Describe your character unintentionally touching the Follow</h3>
+				<div>
+					<input type="checkbox" name="leadTouchUnintentional"><br />
+					Maximum once each per game. Pull required.
+				</div>
+				<h3>Describe your character unintentionally revealing something personal</h3>
+				<div>
+					<input type="checkbox" name="leadRevealUnintentional"><br />
+					Maximum once each per game. Pull required.
+				</div>
+				<label class="has-float-label">
+				<textarea rows=8 name="notes" placeholder="leadNotes"/></textarea>
+				<span>Notes</span>
+				</label>
 			</div>
-			<div class="infoBox">
-				<h2>Notes</h2>
-				<div class="infoFull">
-					<label class="has-float-label">
-					<textarea rows=8 name="notes" placeholder="Notes"/></textarea>
-					<span>Notes</span>
-					</label>
+			<div id="followCharacter">
+				<h1>The Follow</h1>
+				<label class="has-float-label">
+				<textarea rows="1" name="followWhoami" placeholder="Who am I?"/></textarea>
+				<span>Who am I?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="followFeature" placeholder="What is my most attractive feature?"/></textarea>
+				<span>What is my most attractive feature?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="followAttractive" placeholder="What are two things about me that I don't realize are attractive?"/></textarea>
+				<span>What are two things about me that I don't realize are attractive?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="followImpediment" placeholder="Why can't I act on my feelings?"/></textarea>
+				<span>Why can't I act on my feelings?</span>
+				</label>
+				<label class="has-float-label">
+				<textarea rows="1" name="followImportant" placeholder="Why is that important to me?"/></textarea>
+				<span>Why is that important to me?</span>
+				</label>
+				<h2>Moves</h2>
+				<h3>Describe your character's movements</h3>
+				<div>Unlimited uses per game. No pull required</div>
+				<h3>Describe a detail in the characters' environment</h3>
+				<div>Unlimited uses per game. No pull required</div>
+				<h3>Describe your character <i>unintentionally</i> touching the Follow</h3>
+				<div>
+					<input type="checkbox" name="followtouchOne"> <input type="checkbox" name="followtouchTwo"> <input type="checkbox" name="followtouchThree"> <input type="checkbox" name="touchFour"> <input type="checkbox" name="followtouchFive" > <input type="checkbox" name="followtouchSix" > <input type="checkbox" name="followtouchSeven" > <input type="checkbox" name="followtouchEight" > <input type="checkbox" name="followtouchNine" > <input type="checkbox" name="followtouchTen" ><br/>
+					Maximum once each per scene. Pull required.
 				</div>
+				<h3>Describe your character <i>unintentionally</i> revealing something personal</h3>
+				<div>
+					<input type="checkbox" name="followrevealOne"> <input type="checkbox" name="followrevealTwo"> <input type="checkbox" name="followrevealThree"> <input type="checkbox" name="followrevealFour"> <input type="checkbox" name="followrevealFive" > <input type="checkbox" name="followrevealSix" > <input type="checkbox" name="followrevealSeven" > <input type="checkbox" name="followrevealEight" > <input type="checkbox" name="followrevealNine" > <input type="checkbox" name="followrevealTen" ><br/>
+					Maximum once each per scene. Pull required.
+				</div>
+				<h3>Describe your character <i>intentionally</i> touching the Follow</h3>
+				<div>
+					<input type="checkbox" name="followTouchIntentional"><br />
+					Maximum once each per game. Pull required.
+				</div>
+				<h3>Describe your character <i>intentionally</i> revealing something personal</h3>
+				<div>
+					<input type="checkbox" name="followRevealIntentional"><br />
+					Maximum once each per game. Pull required.
+				</div>
+				<label class="has-float-label">
+				<textarea rows=8 name="notes" placeholder="followNotes"/></textarea>
+				<span>Notes</span>
+				</label>
 			</div>
-		</section>
-	</form>
-	<div class="spreadOut">
-		<button type="button" value="Save"  onclick="putCharstuff();" style="margin: 0 auto;">Save</button> <button type="button" value="Load" onclick="loadCharstuff();" style="margin: 0 auto;">Load</button> <button type="button" value="Clear" onclick="clearForm()">Clear</button> <br /><br />
-Tales from the Loop Character Sheet by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a> | Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a>
-</div>
-<div class="releasenotes">
-<b>Release Notes</b>
-<ul>
-	<li>1.1
-		<ul>
-			<li>Changed long inputs to textareas, added javascript to resize them so they always fit (on load, type, and window resize)</li>
-			<li>Added button to clear form</li>
-		</ul>
-	<li>1.0
-		<ul>
-			<li>Intial public release.</li>
-			<li>Added code to save/load character data using page hashtag!</li>
-			<li>Added credits to bottom of page</li>
-		</ul>
-	<li>0.3
-		<ul>
-			<li>Initial private release</li>
-			<li>Character data saved as string in textarea (boo!) </li>
-		</ul>
-</ul>
-</div>
-</body>
+		</form>
+		<div class="spreadOut">
+			Starcrossed Character Sheet by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a> | Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a>
+		</div>
+	</body>
 </html>
