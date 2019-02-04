@@ -89,12 +89,39 @@
 				margin: 0 auto;
 			}
 		</style>
+		<script language="javascript">
+			$(function () {
+		        $("#toggleCharacter").click(function () {
+		            if ($(this).is(":checked")) {
+		                $("#leadCharacter").hide();
+		                $("#followCharacter").show();
+		            } else {
+		          		$("#leadCharacter").show();
+		                $("#followCharacter").hide();
+		            }
+		        });
+		    });
+		</script>
+		<script language="javascript">
+			function charLoaded() {
+		    	if ($("#toggleCharacter").is(":checked")) {
+		                $("#leadCharacter").hide();
+		                $("#followCharacter").show();		                
+		            } else {
+		            	$("#leadCharacter").show();
+		                $("#followCharacter").hide();
+		            }
+		    }
+		</script>
 		<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 	<body>
 		<form id="charSheet">
+			<div>
+				<input type="checkbox" name="toggleCharacter" id="toggleCharacter" /> Toggle Lead / Follow
+			</div>
 			<div id="leadCharacter">
 				<h1>The Lead</h1>
 				<label class="has-float-label">

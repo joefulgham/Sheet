@@ -187,6 +187,10 @@ function initialStuff() {
     resizeBoxes();
     // Show load/save buttons at the end of the form
     displayButtons();
+    // Run sheet-specific post-load scripts
+    if (typeof charLoaded == 'function') {
+            charLoaded(); 
+	}   
 }
 
 $( document ).ready(function() {
