@@ -1,4 +1,4 @@
-/*! charsheet.js v1.0 by @joefulgham | MIT license */
+/*! charsheet.js v1.1 by @joefulgham | MIT license */
 
 /* Include external libraries for faster loading */
 /* LZ-String - from http://pieroxy.net/blog/pages/lz-string/index.html */
@@ -193,7 +193,7 @@ function initialStuff() {
 	}
 	var newPortrait = $("#charPortraitURI").val();
 	$("#charImage").attr("src", newPortrait );
-	
+
 	$( "#charPortraitURI" ).blur(function() {
 		var newPortrait = $("#charPortraitURI").val();
 		$("#charImage").attr("src", newPortrait );
