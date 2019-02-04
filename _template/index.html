@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>[Game] Responsive Character Sheet - v 0.1 | Adventure For Hire</title>
+	<meta name="description" content="[Game] Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="[Game] Responsive Character Sheet" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="[featuredimage]" />
+	 <meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="[featuredimage]">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script language="javascript" src="../js/charsheet.js"></script>
+	<style>
+	body {
+  		font-family: 'Open Sans', sans-serif;
+  		font-size: 16px;
+	}
+
+	header {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.logo {
+		width: 80%; 
+		height:auto; 
+		margin: 0 auto 1em 0; 
+		text-align: center;
+	}
+
+	#charStatistics {
+		width: 17em;
+		margin: 0 2em;
+		float: left;
+	}
+
+	#charInfo {
+		margin: 0 2em 0 21em;
+		width: auto;
+	}
+
+	 @media (max-width: 640px) {
+	 	#charStatistics, #charInfo { width: 100%; float: none; margin: 0; padding: 0; }
+	 }
+
+	.statBox {
+		outline: 2px solid black;
+		display: block;
+		padding-bottom: 2px;
+		margin-bottom: 1em;
+		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+	}
+
+	.infoBox {
+		border: 2px solid black;
+		white-space: nowrap;
+		margin-bottom: 1em;
+		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.infoHalf {
+		min-width: 50%;
+		max-width: 50%; 
+    }
+
+	.infoFull { 
+		min-width: 100%; 
+		max-width: 100%; 
+    }
+
+    .infoHalf input[type=text], .infoFull input[type=text], .infoFull textarea, .outlined {
+		-webkit-box-shadow:inset 0px 0px 0px 1px #000;
+    	-moz-box-shadow:inset 0px 0px 0px 1px #000;
+    	box-shadow:inset 0px 0px 0px 1px #000;
+    	box-sizing: border-box;
+    	width: 100%;
+		max-height: 50vh;
+    }
+
+    textarea {
+    	display: block;
+    	padding: 0;
+    	margin: 0;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+    }
+
+	.statBox p {
+		padding: 0 8px;
+	}
+
+	.statBox h2, .infoBox h2 {
+		background:#000;
+		color:white;
+		padding:10px;
+		text-align: left;
+		padding: 8px;
+		font-size: 1.2em;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	input[type=checkbox] {
+  		transform: scale(1.4);
+	}
+
+	input[type=number] {
+		width: 2em;
+		text-align: center;
+		padding-left: 1em;
+	}
+
+	textarea:focus::-webkit-input-placeholder, input:focus::-webkit-input-placeholder { color:transparent; }
+	textarea:focus:-moz-placeholder, input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+	textarea:focus::-moz-placeholder, input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+	textarea:focus:-ms-input-placeholder, input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+	.alignRight {
+		float: right;
+	}
+	.alignLeft {
+		float: left;
+	}
+	.headLabel {
+	position: relative;
+    left: 3px;
+    top: 0;
+    cursor: text;
+    font-size: 66%;
+    font-weight: bold;
+	}
+
+	.spreadOut {
+		text-align: center;
+	}
+
+	.releasenotes {
+	max-width: 40em;
+	margin: 40px auto;
+	}
+	.credits {
+		text-align: center;
+		max-width: 47em;
+		margin: 0 auto;
+	}
+	</style>
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>Put header here</header>
+	<form id="charSheet">
+		<label class="has-float-label">
+		<input type="text" name="type" list="types" placeholder="Type"/>
+		<span>Type</span>
+		<datalist id="types">
+			<option value="Bookworm" />
+			<option value="Computer Geek" />
+			<option value="Hick" />
+			<option value="Jock" />
+			<option value="Popular Kid" />
+			<option value="Rocker" />
+			<option value="Troublemaker" />
+			<option value="Weirdo" />
+		</datalist>
+		</label>
+	</form>
+	<div class="credits">
+		[Game] <a href="https://sheet.adventureforhire.com/">Character Sheet</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="">[Game] here</a>!
+	</div>
+</body>
+</html>
