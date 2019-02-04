@@ -53,52 +53,6 @@
 		text-align: center;
 	}
 
-	#charStatistics {
-		width: 17em;
-		margin: 0 2em;
-		float: left;
-	}
-
-	#charInfo {
-		margin: 0 2em 0 21em;
-		width: auto;
-	}
-
-	 @media (max-width: 640px) {
-	 	#charStatistics, #charInfo { width: 100%; float: none; margin: 0; padding: 0; }
-	 }
-
-	.statBox {
-		outline: 2px solid black;
-		display: block;
-		padding-bottom: 2px;
-		margin-bottom: 1em;
-		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-	}
-
-	.infoBox {
-		/* border: 2px solid black; */
-		white-space: nowrap;
-		margin-bottom: 1em;
-		-webkit-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		-moz-box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		box-shadow: 2px 2px 0px 0px rgba(150,150,150,1);
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.infoHalf {
-		min-width: 50%;
-		max-width: 50%; 
-    }
-
-	.infoFull { 
-		min-width: 100%; 
-		max-width: 100%; 
-    }
-
     input[type=text], .infoFull input[type=text], .infoFull textarea, .outlined {
     	box-sizing: border-box;
 		max-height: 50vh;
@@ -171,18 +125,9 @@
 	.alignLeft {
 		float: left;
 	}
-	.headLabel {
-	position: relative;
-    left: 3px;
-    top: 0;
-    cursor: text;
-    font-size: 66%;
-    font-weight: bold;
-	}
 
 	.spreadOut {
 		text-align: center;
-		width: 100%;
 	}
 
 	.credits {
@@ -203,6 +148,13 @@
 	.nowrap {
 		white-space:nowrap;
 	}
+	img#charImage {
+		float: right;
+		z-index: -5;
+		max-width: 45%;
+		max-height: 100vh;
+
+	}
 	</style>
 
 	<!--[if lt IE 9]>
@@ -213,6 +165,7 @@
 <body>
 	<header><h1>Masks RPG Playbook - The Beacon</h1></header>
 	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" id="charImage" />
 		<label class="has-float-label">
 		<input type="text" name="heroName" placeholder="Hero Name" />
 		<span>Hero Name</span>
@@ -220,6 +173,10 @@
 		<label class="has-float-label">
 		<input type="text" name="realName" placeholder="Real Name" />
 		<span>Real Name</span>
+		</label>
+		<label class="has-float-label">
+		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" />
+		<span>Portrait URI</span>
 		</label>
 		<h2>Look</h2>
 		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="face" list="faces" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/>

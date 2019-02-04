@@ -190,7 +190,11 @@ function initialStuff() {
     // Run sheet-specific post-load scripts
     if (typeof charLoaded == 'function') {
             charLoaded(); 
-	}   
+	}
+	$( "#charPortraitURI" ).blur(function() {
+		var newPortrait = $("#charPortraitURI").val();
+		$("#charImage").attr("src", newPortrait );
+	});
 }
 
 $( document ).ready(function() {
