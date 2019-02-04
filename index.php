@@ -11,9 +11,9 @@
   <meta name="twitter:title" content="JQuery RPG character sheets saved as bookmarks" />
   <meta name="twitter:site" content="@joefulgham" />
   <meta name="twitter:description" content="Web based character sheets for role-playing games that store and load their data using the hashtag. Bookmark to save for later loading!" />
-  <meta name="twitter:image" content="images/sheet-featured.jpg" />
+  <meta name="twitter:image" content="https://sheet.adventureforhire.com/images/sheet-featured.jpg" />
   <meta name="twitter:image-alt" content="" >
-  <meta property="og:image" content="images/sheet-featured.jpg">
+  <meta property="og:image" content="https://sheet.adventureforhire.com/images/sheet-featured.jpg">
   <link rel="stylesheet" href=""/>
   <style>
   body { font-family: apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; }
