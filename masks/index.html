@@ -155,6 +155,7 @@
 		max-height: 100vh;
 
 	}
+
 	</style>
 
 	<!--[if lt IE 9]>
@@ -166,18 +167,20 @@
 	<header><h1>Masks RPG Playbook - The Beacon</h1></header>
 	<form id="charSheet">
 		<img src="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" id="charImage" />
-		<label class="has-float-label">
-		<input type="text" name="heroName" placeholder="Hero Name" />
-		<span>Hero Name</span>
-		</label>
-		<label class="has-float-label">
-		<input type="text" name="realName" placeholder="Real Name" />
-		<span>Real Name</span>
-		</label>
-		<label class="has-float-label">
-		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" />
-		<span>Portrait URI</span>
-		</label>
+		<div>
+			<label class="has-float-label">
+			<input type="text" name="heroName" placeholder="Hero Name" />
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" placeholder="Real Name" />
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" />
+			<span>Portrait URI</span>
+			</label>
+		</div>
 		<h2>Look</h2>
 		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="face" list="faces" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/>
 		<datalist id="genders">
