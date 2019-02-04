@@ -26,5 +26,5 @@ GitHub: https://github.com/joefulgham/Sheet/
 * populate.js - https://github.com/dannyvankooten/populate.js
 * lz-string - https://github.com/pieroxy/lz-string
 
-##Like this?
+## Like this?
 [Buy me a coffee](https://ko-fi.com/joefulgham) or [send with PayPal](https://paypal.me/joefulgham)
