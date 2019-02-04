@@ -21,7 +21,7 @@
 		<style>
 			body {
 			font-family: 'Rokkitt', sans-serif;
-			font-size: 24px;
+			font-size: 16px;
 			color: #a176a1;
 			}
 			h1 {
@@ -74,6 +74,10 @@
 			textarea:focus:-moz-placeholder, input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 			textarea:focus::-moz-placeholder, input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 			textarea:focus:-ms-input-placeholder, input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+			textarea {
+				overflow: hidden;
+			}
 			.alignRight {
 			float: right;
 			}
@@ -133,8 +137,8 @@
 				<span>What is my most attractive feature?</span>
 				</label>
 				<label class="has-float-label">
-				<textarea rows="1" name="leadAttractive" placeholder="What are two things about me that I don't realize are attractive?"/></textarea>
-				<span>What are two things about me that I don't realize are attractive?</span>
+				<textarea rows="2" name="leadAttractive" placeholder="What are two things about me that I don't realize are attractive?"/></textarea>
+				<span>What are two things about me I don't realize are attractive?</span>
 				</label>
 				<label class="has-float-label">
 				<textarea rows="1" name="leadImpediment" placeholder="Why can't I act on my feelings?"/></textarea>
