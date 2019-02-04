@@ -21,8 +21,8 @@
 </head>
 
 <body>
-  <header>
-    <img src="https://sheet.adventureforhire.com/images/sheet-featured.jpg" style="max-width: 46em; margin: 0 auto 20px auto;" />
+  <header style="max-width: 46em; margin: 0 auto;">
+    <img src="https://sheet.adventureforhire.com/images/sheet-featured.jpg" style="max-width: 100%" />
   </header>
 
   <div style="max-width: 46em; margin: 0 auto;">
