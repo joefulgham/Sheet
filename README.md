@@ -15,7 +15,11 @@ Character sheets for new games can be made by creating an HTML form with the id 
 * [Tales from the Loop](https://sheet.adventureforhire.com/loop/) 
 * [Star-Crossed](https://sheet.adventureforhire.com/starcrossed) 
 
-These should be future-proof, but if I ever have to break the save/load formatting I'll make sure the old code is still available to load your characters. 
+These should be future-proof, but if I ever have to break the save/load formatting I'll make sure the old code is still available to load your characters.
+
+### Sheets under construction
+Note that I cannot guarantee saved characters on these will continue to work, so use at your own risk! These are here simply because I've planned to do them and have started in some fashion.
+* [Masks RPG](https://sheet.adventureforhire.com/masks/) - Doing "Beacon" first and once that's working will make it a sub-page and do the rest based on its template.
 
 ## Credits
 Made by [Joe Fulgham](https://joefulgham.com/) for [Adventure For Hire](https://adventureforhire.com/)
