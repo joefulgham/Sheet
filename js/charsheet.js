@@ -191,6 +191,9 @@ function initialStuff() {
     if (typeof charLoaded == 'function') {
             charLoaded(); 
 	}
+	var newPortrait = $("#charPortraitURI").val();
+	$("#charImage").attr("src", newPortrait );
+	
 	$( "#charPortraitURI" ).blur(function() {
 		var newPortrait = $("#charPortraitURI").val();
 		$("#charImage").attr("src", newPortrait );
