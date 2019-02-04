@@ -22,6 +22,7 @@
 
 <body>
   <header>
+    <img src="https://sheet.adventureforhire.com/images/sheet-featured.jpg" style="max-width: 46em; margin: 0 auto 20px auto;" />
   </header>
 
   <div style="max-width: 46em; margin: 0 auto;">
