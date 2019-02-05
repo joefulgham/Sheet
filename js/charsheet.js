@@ -1,4 +1,4 @@
-/*! charsheet.js v1.1 by @joefulgham | MIT license */
+/*! charsheet.js v1.11 by @joefulgham | MIT license */
 
 /* Include external libraries for faster loading */
 /* LZ-String - from http://pieroxy.net/blog/pages/lz-string/index.html */
@@ -157,6 +157,20 @@ var autoExpand = function(field) {
 
 };
 
+// URL confirmation to avoid image changes being used for nefarious purposes
+function is_url(str)
+{
+  regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+        if (regexp.test(str))
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+}
+
 // Listen for input events to check for textarea resizing
 document.addEventListener('input', function(event) {
     if (event.target.tagName.toLowerCase() !== 'textarea') return;
@@ -180,6 +194,16 @@ function displayButtons() {
 	$( "#charSheet" ).after( "<div class='charSheetButtons' style='text-align: center;''><button type='button' value='Save'  onclick='putCharstuff();' style='margin: 0 auto;'>Save</button> <button type='button' value='Load' onclick='loadCharstuff();' style='margin: 0 auto;'>Load</button> <button type='button' value='Clear' onclick='clearForm()'>Clear</button></div>" );
 }
 
+function changePortrait() {
+	var newPortrait = $("#charPortraitURI").val();
+	if (is_url(newPortrait)) {
+		$("#charImage").attr("src", newPortrait );
+	}
+	else {
+		alert("Portrait is not a valid URL!")
+	}
+}
+
 function initialStuff() {
     // Load Character from hashtag
     loadCharstuff();
@@ -187,16 +211,13 @@ function initialStuff() {
     resizeBoxes();
     // Show load/save buttons at the end of the form
     displayButtons();
-    // Run sheet-specific post-load scripts
+    //	Run sheet-specific post-load scripts 
     if (typeof charLoaded == 'function') {
             charLoaded(); 
 	}
-	var newPortrait = $("#charPortraitURI").val();
-	$("#charImage").attr("src", newPortrait );
-
+	// New Portrait checker
 	$( "#charPortraitURI" ).blur(function() {
-		var newPortrait = $("#charPortraitURI").val();
-		$("#charImage").attr("src", newPortrait );
+		changePortrait();
 	});
 }
 
