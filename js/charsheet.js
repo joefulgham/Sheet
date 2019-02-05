@@ -1,4 +1,4 @@
-/*! charsheet.js v1.14 by @joefulgham | MIT license 
+/*! charsheet.js v1.2 by @joefulgham | MIT license 
 	https://sheet.adventureforhire.com
 	https://joefulgham.com
 */
@@ -15,6 +15,20 @@ function clearForm() {
     document.getElementById("charSheet").reset();
 }
 
+// Put Character name at the start of the page title.
+function setTitle() {
+    var current_title = $(document).attr('title');
+    if(current_title.indexOf(" -- ") >=0) {
+    	var n = current_title.indexOf(" -- ");
+    	var orig_title = current_title.substring(n + 4);
+    }
+    else {
+    	var orig_title = current_title;
+    }
+    var new_title = $( "#charName" ).val() + " -- " + orig_title;
+    $(document).attr("title", new_title);
+}
+
 // Save form state to hashtag
 function putCharstuff() {
     //Grab all the form data and put it into an array.
@@ -26,6 +40,7 @@ function putCharstuff() {
     var charData = LZString.compressToEncodedURIComponent(JSON.stringify(result));
     // Put that string up into the hashtag 
     window.location.hash = charData;
+    setTitle();
 }
 
 // Read the hashtag data and use to populate form
@@ -63,7 +78,7 @@ var autoExpand = function(field) {
 
 };
 
-// URL confirmation to avoid image changes being used for nefarious purposes
+// URL confirmation - security and sometimes people don't know what an image link is.
 function is_url(str)
 {
   regexp =  /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/;
@@ -126,6 +141,9 @@ function initialStuff() {
 	}
 	// Change image in case it's different from default after propagation
 	changePortrait();
+
+	// Set title to character name
+	setTitle();
 
 	// Queue new Portrait checker
 	$( "#charPortraitURI" ).blur(function() {
