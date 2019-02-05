@@ -1,4 +1,4 @@
-/*! charsheet.js v1.12 by @joefulgham | MIT license */
+/*! charsheet.js v1.13 by @joefulgham | MIT license */
 
 /* Include external libraries for faster loading */
 /* LZ-String - from http://pieroxy.net/blog/pages/lz-string/index.html */
@@ -203,6 +203,7 @@ function changePortrait() {
 	else {
 		alert("Portrait is not a valid image URL! Resetting to default.");
 		charPortraitinput.val(charPortraitinput.data("original-value"));
+		$("#charImage").attr("src", charPortraitinput.data("original-value") );
 	}
 }
 
