@@ -1,4 +1,4 @@
-/*! charsheet.js v1.11 by @joefulgham | MIT license */
+/*! charsheet.js v1.12 by @joefulgham | MIT license */
 
 /* Include external libraries for faster loading */
 /* LZ-String - from http://pieroxy.net/blog/pages/lz-string/index.html */
@@ -160,7 +160,7 @@ var autoExpand = function(field) {
 // URL confirmation to avoid image changes being used for nefarious purposes
 function is_url(str)
 {
-  regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+  regexp =  /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/;
         if (regexp.test(str))
         {
           return true;
@@ -196,11 +196,13 @@ function displayButtons() {
 
 function changePortrait() {
 	var newPortrait = $("#charPortraitURI").val();
-	if (is_url(newPortrait)) {
+	var charPortraitinput = $("input#charPortraitURI");
+	if (is_url(newPortrait)) { 
 		$("#charImage").attr("src", newPortrait );
 	}
 	else {
-		alert("Portrait is not a valid URL!")
+		alert("Portrait is not a valid image URL! Resetting to default.");
+		charPortraitinput.val(charPortraitinput.data("original-value"));
 	}
 }
 
