@@ -122,7 +122,6 @@ function changePortrait() {
 		$("#charImage").attr("src", newPortrait );
 	}
 	else {
-		alert("Portrait is not a valid image URL! Resetting to default.");
 		charPortraitinput.val(charPortraitinput.data("original-value"));
 		$("#charImage").attr("src", charPortraitinput.data("original-value") );
 	}
