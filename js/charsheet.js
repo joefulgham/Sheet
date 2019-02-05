@@ -1,4 +1,7 @@
-/*! charsheet.js v1.13 by @joefulgham | MIT license */
+/*! charsheet.js v1.14 by @joefulgham | MIT license 
+	https://sheet.adventureforhire.com
+	https://joefulgham.com
+*/
 
 /* Include external libraries for faster loading */
 /* LZ-String - from http://pieroxy.net/blog/pages/lz-string/index.html */
@@ -218,7 +221,10 @@ function initialStuff() {
     if (typeof charLoaded == 'function') {
             charLoaded(); 
 	}
-	// New Portrait checker
+	// Change image in case it's different from default after propagation
+	changePortrait();
+
+	// Queue new Portrait checker
 	$( "#charPortraitURI" ).blur(function() {
 		changePortrait();
 	});
