@@ -122,6 +122,9 @@
 		                $("#followCharacter").hide();
 		            }
 		    }
+		    $("#leadWhoami, #followWhoami").on("keyup", function(){
+				$("#charName").val($("#leadWhoami").val() + "||" + $("#followWhoami").val());
+			});
 		</script>
 		<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -131,6 +134,7 @@
 		<form id="charSheet">
 			<div>
 				<input type="checkbox" name="toggleCharacter" id="toggleCharacter" /> Toggle Lead / Follow
+				<input type="hidden" name="charName" id="charName" />
 			</div>
 			<div id="leadCharacter">
 				<h1>The Lead</h1>
