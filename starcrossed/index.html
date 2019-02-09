@@ -111,6 +111,10 @@
 		            }
 		        });
 		    });
+		    function setCharacterName() {
+				var characterName = $( "#leadWhoami" ).val() + " | " + $("#followWhoami").val();
+				$("#charName").val(characterName);
+		    }
 		</script>
 		<script language="javascript">
 			function charLoaded() {
@@ -121,8 +125,9 @@
 		            	$("#leadCharacter").show();
 		                $("#followCharacter").hide();
 		            }
-				$("#leadWhoami, #followWhoami").on("keyup", function(){
-					$("#charName").val($("#leadWhoami").val() + "||" + $("#followWhoami").val());
+		            setCharacterName();
+				$("#leadWhoami, #followWhoami").on("keyup", function() {
+					setCharacterName();
 				});
 		    }
 		</script>
@@ -134,12 +139,12 @@
 		<form id="charSheet">
 			<div>
 				<input type="checkbox" name="toggleCharacter" id="toggleCharacter" /> Toggle Lead / Follow
-				<input type="hidden" name="charName" id="charName" value="" />
+				<input type="hidden" name="charName" id="charName" value="Character Name" />
 			</div>
 			<div id="leadCharacter">
 				<h1>The Lead</h1>
 				<label class="has-float-label">
-				<textarea rows="1" name="leadWhoami" placeholder="Who am I?"/></textarea>
+				<textarea rows="1" name="leadWhoami" id="leadWhoami" placeholder="Who am I?"/></textarea>
 				<span>Who am I?</span>
 				</label>
 				<label class="has-float-label">
@@ -191,7 +196,7 @@
 			<div id="followCharacter">
 				<h1>The Follow</h1>
 				<label class="has-float-label">
-				<textarea rows="1" name="followWhoami" placeholder="Who am I?"/></textarea>
+				<textarea rows="1" name="followWhoami" id="followWhoami" placeholder="Who am I?"/></textarea>
 				<span>Who am I?</span>
 				</label>
 				<label class="has-float-label">
