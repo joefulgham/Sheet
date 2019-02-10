@@ -1,0 +1,143 @@
+	body {
+  		font-family: 'Open Sans', sans-serif;
+  		font-size: 16px;
+	}
+	/* Tell iOS to leave my small fonts alone! */
+	body{
+	    -webkit-text-size-adjust: none;
+	  }
+
+	.content { 
+		max-width: 46em;
+		margin: 0 auto; }
+
+	header {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	h1, h2, h3 {
+		color: #4a7284;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	h2 {
+		margin-bottom: 4px;
+		margin-left: -12px;
+		padding-left: 12px;
+		padding-top: 6px;
+		font-style: italic;
+		border-left: 6px solid  #4a7284;
+		border-top: 2px solid  #4a7284;
+	}
+
+	.logo {
+		width: 80%; 
+		height:auto; 
+		margin: 0 auto 1em 0; 
+		text-align: center;
+	}
+
+    input[type=text], .infoFull input[type=text], .infoFull textarea, .outlined {
+    	box-sizing: border-box;
+		max-height: 50vh;
+		border: 0;
+		border-bottom: 1px solid black;
+    }
+
+    textarea {
+    	display: block;
+    	padding: 0;
+    	margin: 0;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+    }
+
+	.statBox p {
+		padding: 0 8px;
+	}
+
+	.statBox h2, .infoBox h2 {
+		background:#000;
+		color:white;
+		padding:10px;
+		text-align: left;
+		padding: 8px;
+		font-size: 1.2em;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	input[type=checkbox] {
+  		transform: scale(1.4);
+	}
+
+	input[type=number] {
+		width: 2em;
+		text-align: center;
+		padding-left: 1em;
+	}
+
+	textarea:focus::-webkit-input-placeholder, input:focus::-webkit-input-placeholder { color:transparent; }
+	textarea:focus:-moz-placeholder, input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+	textarea:focus::-moz-placeholder, input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+	textarea:focus:-ms-input-placeholder, input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+	textarea.inline {
+		border: 0;
+		border-bottom: 1px solid black;
+		max-width: 12em;
+		display: inline-block;
+		height: 1.2em !important;
+	}
+
+	textarea.fillblank {
+		border: 0;
+		border-bottom: 1px solid black;
+		height: 1.2em !important;
+		min-width: 20em;
+	}
+
+	.charMove {
+		margin-bottom: 2em;
+	}
+	.alignRight {
+		float: right;
+	}
+	.alignLeft {
+		float: left;
+	}
+
+	.spreadOut {
+		text-align: center;
+	}
+
+	.credits {
+		text-align: center;
+		max-width: 66em;
+		margin: 0 auto;
+	}
+	#charSheet {
+		max-width: 66em;
+		margin: 0 auto;
+		padding: 8px;
+	}
+	.moves label {
+		font-weight: 600;
+	}
+	.abilities label {
+		margin-right: 2em;
+	}
+	.nowrap {
+		white-space:nowrap;
+	}
+	img#charImage {
+		float: right;
+		z-index: -5;
+		max-width: 45%;
+		max-height: 100vh;
+
+	}

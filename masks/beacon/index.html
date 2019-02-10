@@ -1,0 +1,247 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Masks RPG Character Sheet - v 0.6 | Adventure For Hire</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Masks RPG Responsive Character Sheet" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="[featuredimage]" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="[featuredimage]">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css"
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Masks RPG Playbook - The Beacon</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" id="charImage" />
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name" />
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name" />
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" data-original-value="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" />
+			<span>Portrait URI</span>
+			</label>
+		</div>
+		<h2>Look</h2>
+		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="face" list="faces" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/>
+		<datalist id="genders">
+			<option value="ambiguous">
+			<option value="man">
+			<option value="shifting">
+			<option value="transgressing">
+			<option value="woman">
+		</datalist>
+		<datalist id="races">
+			<option value="Asian or South Asian">
+			<option value="Black">
+			<option value="Hispanic/Latino">
+			<option value="Indigenous">
+			<option value="Middle Eastern">
+			<option value="White">
+		</datalist>
+		<datalist id="faces">
+			<option value="smiling face">
+			<option value="naive face">
+			<option value="average face">
+			<option value="pretty face">
+		</datalist>
+		<datalist id="clothing">
+			<option value="stylish clothing">
+			<option value="comfortable clothing">
+			<option value="simple clothing">
+			<option value="casual clothing">
+		</datalist>
+		<datalist id="costumes">
+			<option value="flashy costume">
+			<option value="stylish costume">
+			<option value="gaudy costume">
+			<option value="iconic costume">
+		</datalist>
+		<h2>Abilities</h2>
+		<p>If you have superpowers, they’re pretty minor or not noticeable. If you have skills, you carry the
+		necessary equipment. Choose two.</p>
+		<div class="abilities">
+			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="bow and trick arrows"><label for="abilityOne"> bow and trick arrows</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="swords"><label for="abilityTwo"> swords</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="camouflage and stealth"><label for="abilityThree"> camouflage and stealth</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value=" martial arts"><label for="abilityFour"> martial arts</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="phasing"><label for="abilityOne"> phasing</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="acrobatics"><label for="abilitySix"> acrobatics</label></span>
+		</div>
+		<h2>Labels</h2>
+		<p>(at character creation, add +1 wherever you choose)</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Danger <input type="number" name="charDanger" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Freak <input type="number" name="charFreak" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Savior <input type="number" name="charSavior" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Superior <input type="number" name="charSuperior" min="-2" max="3" value="0" class="alignRight" /></p>
+			<p>Mundane <input type="number" name="charMundane" min="-2" max="3" value="2" class="alignRight" /></p>
+		</div>
+		<div class="conditions">
+			<h2>Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br />
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br />
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br /> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br /> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br /> 
+		</div>
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="How did you gain your skills?"></textarea>
+			<span>How did you gain your skills?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="When did you first put on your costume?"></textarea>
+			<span>When did you first put on your costume?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Who, outside of the team, thinks you shouldn't be a superhero?"></textarea>
+			<span>Who, outside of the team, thinks you shouldn't be a superhero?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Why do you try to be a hero?"></textarea>
+			<span>Why do you try to be a hero?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		<h2>When our team first came together...</h2>
+		<p>We found signs that this incident was just the start of something bigger. </p>
+		<label class="has-float-label">
+			<textarea rows="1" name="firstTogether" placeholder="What were the signs?"></textarea>
+			<span>What were the signs?</span>
+		</label>
+		<h2>Relationships</h2>
+			<textarea rows="1" name="relationshipOne" class="inline"></textarea> is awesome, and you take every chance you get to hang out with them.<br />
+			You've got to prove yourself to <textarea rows="1" name="relationshipTwo" class="inline"></textarea> before you feel like a real hero.<br />
+		<h2>Influence</h2>
+		<p>You are so excited to be here. Give Influence over you to three of your teammates.</p>
+		<div class="moves">
+			<h2>Beacon Moves</h2>
+			<p>(Choose two)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Straight. Up. Creepin'"><label for="moveOne"> Straight. Up. Creepin':</label> 
+				When you scope out a person or place, roll + Mundane. On a 10+, ask two. On a 7-9, ask one.
+				<ul><li>what’s my best way in/out?</li>
+					<li>what happened here recently?</li>
+					<li>what here is worth grabbing?</li>
+					<li>who or what here is not what they seem?</li>
+					<li>whose place is this?</li>
+				</ul>
+				On a miss, you find yourself in over your head.
+				The GM will tell you why this is a bad spot.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="No powers and not nearly enough training"><label for="moveTwo"> No powers and not nearly enough training:</label> 
+				You’re always picking up new gear to keep yourself in the game. Whenever you pick up a new piece of gear, you can write it in as a new ability if this line is empty.<br />
+				<textarea rows="1" name="newGear" class="fillblank"></textarea><br />
+				The first time you use each piece of gear to directly engage a threat, unleash your powers, or defend someone, you can roll + Mundane instead of the normal Label.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Won't let you down"><label for="moveThree"> Won't let you down:</label> 
+				When you help a teammate, you can spend 2 out of the Team pool to add +2 to their roll.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Pretty much a superhero"><label for="moveFour"> Pretty much a superhero:</label> 
+				When you bring up your superhero name to someone important (your call) for the first time, roll + Savior. On a hit, they’ve heard of you; say which of your exploits they’ve heard about and which Label they think applies. On a 7-9, the GM will tell you something else they’ve heard, and pick a second Label they assign to you. On a miss, they don’t take you seriously or mistrust you moving forward.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="C'mon lucky"><label for="moveFive"> C'mon lucky:</label> 
+				You have a pet of some kind, a smaller companion that helps you out. Detail it. Choose three basic moves and tell the GM how it helps you with those moves. Whenever your pet could help you, take +1 to that move. If your pet ever gets hurt, treat it as taking a powerful blow.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Suck it, Domitian"><label for="moveSix"> Suck it, Domitian:</label> 
+				When you stand strong while dramatically under fire, roll +Savior instead of +Danger to <b>directly engage a threat</b>.
+			</div>
+		</div>
+		<h2>Drives</h2>
+		<p>Choose four drives to mark at the start of play. When you fulfill a marked drive, strike it out, and choose one: mark potential, clear a condition, take Influence over someone involved.</p>
+		<p>When your four marked drives are all struck out, choose and mark four new drives. When all drives are struck out, change playbooks, retire from the life, or become a paragon of the city.</p>
+		<input type="checkbox" name="driveOne" id="driveOne"> lead the team successfully in battle<br />
+		<input type="checkbox" name="driveTwo" id="driveTwo"> kiss someone dangerous<br />
+		<input type="checkbox" name="driveThree" id="driveThree"> punch someone you probably shouldn't<br />
+		<input type="checkbox" name="driveFour" id="driveFour"> help a teammate when they most need you<br />
+		<input type="checkbox" name="driveFive" id="driveFive"> take down a threat all on your own<br />
+		<input type="checkbox" name="driveSix" id="driveSix"> outperform an adult hero<br />
+		<input type="checkbox" name="driveSeven" id="driveSeven"> pull off a ridiculous stunt<br />
+		<input type="checkbox" name="driveEight" id="driveEight"> save a teammate’s life<br />
+		<input type="checkbox" name="driveNine" id="driveNine"> get drunk or high with a teammate<br />
+		<input type="checkbox" name="driveTen" id="driveTen"> drive a fantastical vehicle<br />
+		<input type="checkbox" name="driveEleven" id="driveEleven"> get a new costume<br />
+		<input type="checkbox" name="driveTwelve" id="driveTwelve"> get a new hero name<br />
+		<input type="checkbox" name="driveThirteen" id="driveThirteen"> earn the respect of a hero you admire<br />
+		<input type="checkbox" name="driveFourteen" id="driveFourteen"> make out with a teammate<br />
+		<input type="checkbox" name="driveFifteen" id="driveFifteen"> punch out a teammate<br />
+		<input type="checkbox" name="driveSixteen" id="driveSixteen"> break up with someone<br />
+		<input type="checkbox" name="driveSeventeen" id="driveSeventeen"> stop a fight with calm words<br />
+		<input type="checkbox" name="driveEighteen" id="driveEighteen"> tell someone your true feelings for them<br />
+		<input type="checkbox" name="driveNineteen" id="driveNineteen"> travel to an incredible place (or time)<br />
+		<input type="checkbox" name="driveTwenty" id="driveTwenty"> reject someone who tells you "you shouldn’t be here"<br />
+		<div>
+		<h2>Moment of Truth</h2>
+		<p>This is the moment when you show them exactly why you belong here. You do any one thing, take out any one enemy, no matter how insane, no matter how ridiculous, because that’s you. Their jaws are gonna drop when you’re done. Of course, pulling off a stunt like this tends to bring unwanted attention and a dangerous reputation...</p>
+		<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+		<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+	</div>
+	<div>
+		<h2>Team Moves</h2>
+		<p>When you share a triumphant celebration with someone, tell them how they’re awesome and add a Team to the pool. If they tell you how you’re awesome in return, add another Team to the pool.</p>
+		<p>When you share a vulnerability or weakness with someone, ask them to confirm or deny that you should be here. If they confirm it, mark potential and give them Influence over you. If they deny it, mark Angry and shift one Label up and one Label down, your choice.</p>
+	</div>
+	<div><h2>Potential</h2>
+		<div><input type="checkbox" name="potentialOne" id="potentialOne"><input type="checkbox" name="potentialTwo" id="potentialTwo"><input type="checkbox" name="potentialThree" id="potentialThree"><input type="checkbox" name="potentialFour" id="potentialFour"><input type="checkbox" name="potentialFive" id="potentialFive"> </div>
+	</div>
+	<div><h2>Advancement</h2>
+		<p>When you fill your potential track, you advance. Choose from the list below.</p>
+		<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br />
+		<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from another playbook<br />
+		<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from another playbook<br />
+		<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br />
+		<input type="checkbox" name="advanceSeven" id="advanceSeven"> Rearrange your Labels as you choose, and add +1 to a Label<br />
+		<input type="checkbox" name="advanceEight" id="advanceEight"> Unlock your Moment of Truth<br />
+		<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+		<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br />
+		<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br />
+		<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br />
+		<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br />
+		<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br />
+		<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br />
+	</div>
+	<h2>Other Moves</h2>
+				<textarea rows=8 name="otherMoves" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Masks RPG <a href="https://sheet.adventureforhire.com/">Character Sheet</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://www.magpiegames.com/masks/">Masks RPG here</a>!
+	</div>
+
+</body>
+</html>
