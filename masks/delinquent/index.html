@@ -30,7 +30,7 @@
 	<header><h1>Masks RPG Playbook - Delinquent</h1></header>
 	<form id="charSheet">
 		<img src="https://sheet.adventureforhire.com/masks/images/portrait-delinquent.jpg" id="charImage" /><br />
-		You're big, strong, and tough. You know what fighting really is, and you're good at it. Sure... you've got a soft side, too. But you only show that to the people you care about most. Everybody else? They can eat your fist.
+		You've got these cool powers. But everyone keeps telling you how to use 'em. You know what they need? Someone to give them trouble, to make sure they don't always get their way. And hey! You're the perfect hero to do it.
 		<div style="white-space: nowrap;">
 			<label class="has-float-label">
 			<input type="text" name="charName" id="charName" placeholder="Hero Name" />
@@ -46,7 +46,7 @@
 			</label>
 		</div>
 		<h2>Look</h2>
-		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="charHands" list="charHands" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/>
+		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="charEye" list="charEyes" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/>
 		<datalist id="genders">
 			<option value="ambiguous">
 			<option value="man">
@@ -62,38 +62,45 @@
 			<option value="Middle Eastern">
 			<option value="White">
 		</datalist>
-		<datalist id="charHands">
-			<option value="calloused hands">
-			<option value="dirty hands">
-			<option value="inhuman hands">
-			<option value="battered hands">
+		<datalist id="charEyes">
+			<option value="laughing eyes">
+			<option value="jaded eyes">
+			<option value="untrusting eyes">
+			<option value="hateful eyes">
 		</datalist>
 		<datalist id="clothing">
-			<option value="baggy clothing">
-			<option value="ragged clothing">
-			<option value="dirty clothing">
 			<option value="casual clothing">
+			<option value="ragged clothing">
+			<option value="rebellious clothing">
+			<option value="garish clothing">
 		</datalist>
 		<datalist id="costumes">
-			<option value="simple costume">
-			<option value="memorable costume">
-			<option value="other the top costume">
+			<option value="skimpy costume">
+			<option value="showy costume">
+			<option value="ridiculous costume">
+			<option value="cheap costume">
 			<option value="no costume">
 		</datalist>
 		<h2>Abilities</h2>
-		<p>Someone or something chaged you, made you into a perfect weapon: superhumanly tough, incredibly strong, and uniquely skilled at fighting. Decide how each of those abilities manifests.</p>
+		<p>Your powers are messy, deceiving, or frustrating. Choose two.</p>
 		<div class="abilities">
-			<label class="has-float-label">
-			<textarea rows="2" name="charAbilities" placeholder="How do your abilities manifest?" style="width: auto; min-width: 50%; max-width: 100%;"></textarea><span>How do your abilities manifest?</span></label>
+			<div class="abilities">
+			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="teleportation"><label for="abilityOne"> teleportation</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="illusions"><label for="abilityTwo"> illusions</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="gadgetry and hacking"><label for="abilityThree"> gadgetry and hacking</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value="psychic weapons"><label for="abilityFour"> psychic weapons</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="emotion control"><label for="abilityOne"> emotion control</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="power negation"><label for="abilitySix"> power negation</label></span>
+		</div>
 		</div>
 		<h2>Labels</h2>
 		<p>(at character creation, add +1 wherever you choose)</p>
 		<div class="labels" style="max-width: 10em;">
-			<p>Danger <input type="number" name="charDanger" min="-2" max="3" value="2"	" class="alignRight" /></p>
-			<p>Freak <input type="number" name="charFreak" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Danger <input type="number" name="charDanger" min="-2" max="3" value="0"	" class="alignRight" /></p>
+			<p>Freak <input type="number" name="charFreak" min="-2" max="3" value="0" class="alignRight" /></p>
 			<p>Savior <input type="number" name="charSavior" min="-2" max="3" value="-1" class="alignRight" /></p>
-			<p>Superior <input type="number" name="charSuperior" min="-2" max="3" value="1" class="alignRight" /></p>
-			<p>Mundane <input type="number" name="charMundane" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Superior <input type="number" name="charSuperior" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Mundane <input type="number" name="charMundane" min="-2" max="3" value="1" class="alignRight" /></p>
 		</div>
 		<div class="conditions">
 			<h2>Conditions</h2>
@@ -106,16 +113,16 @@
 		<div class="backstory">
 			<h2>Backstory</h2>
 			<label class="has-float-label">
-			<textarea rows="1" name="backstoryOne" placeholder="Who changed you?"></textarea>
-			<span>Who changed you?</span>
+			<textarea rows="1" name="backstoryOne" placeholder="How did you get your powers?"></textarea>
+			<span>How did you get your powers?</span>
 			</label>
 			<label class="has-float-label">
-			<textarea rows="1" name="backstoryTwo" placeholder="How did you escape from them?"></textarea>
-			<span>How did you escape from them?</span>
+			<textarea rows="1" name="backstoryTwo" placeholder="What do you do for fun?"></textarea>
+			<span>What do you do for fun?</span>
 			</label>
 			<label class="has-float-label">
-			<textarea rows="1" name="backstoryThree" placeholder="Who, outside the team, tries to take care of you now?"></textarea>
-			<span>Who, outside the team, tries to take care of you now?</span>
+			<textarea rows="1" name="backstoryThree" placeholder="Who, outside the team, thinks better of you than you do?"></textarea>
+			<span>Who, outside the team, thinks better of you than you do?</span>
 			</label>
 			<label class="has-float-label">
 			<textarea rows="1" name="backstoryFour" placeholder="Why do you try to be a hero?"></textarea>
@@ -128,86 +135,68 @@
 			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
 		</div>
 		<h2>When our team first came together...</h2>
-		<p>We defeated a dangerous enemy.</p>
+		<p>We totally broke some major rules to win the fight.</p>
 		<label class="has-float-label">
-			<textarea rows="1" name="firstTogether" placeholder="Who or what was it?"></textarea>
-			<span>Who or what was it?</span>
+			<textarea rows="2" name="firstTogether" placeholder="What rules did we break? Whose rules were they?"></textarea>
+			<span>What rules did we break? Whose rules were they?</span>
 		</label>
 		<h2>Relationships</h2>
-			<textarea rows="1" name="relationshipOne" class="inline"></textarea> is your love. You've opened up to them about the worst parts of your past.<br />
-			<textarea rows="1" name="relationshipTwo" class="inline"></textarea> is your rival. They tried to control you at a cruical moment.<br />
+			You keep trying to impress <textarea rows="1" name="relationshipOne" class="inline"></textarea> with your antics.<br />
+			You and <textarea rows="1" name="relationshipTwo" class="inline"></textarea> pulled an awesome (if illegal) stunt together.
 		<h2>Influence</h2>
-		<p>You're selective about who you let in. Give your love and rival Influence over you, but that's it.</p>
+		<p>You care way more than you let on. Give three teammates Influence over you.</p>
 		<label class="has-float-label">
 			<textarea rows="1" name="influenceNotes" placeholder="Influence notes"></textarea>
 			<span>Influence notes</span>
 		</label>
 		<div class="moves">
-			<h2>Bull Moves</h2>
-			<p>(Choose two)</p>
+			<h2>Delinquent Moves</h2>
+			<p>(Choose three)</p>
 			<div class="charMove">
-				<input type="checkbox" name="moveOne" id="moveOne" value="Thick and thin skinned"><label for="moveOne"> Thick and thin skinned:</label> 
-				Whenever you have Angry marked, take +1 ongoing to <b>unleash your powers</b>.
+				<input type="checkbox" name="moveOne" id="moveOne" value="Mary Contrary"><label for="moveOne"> Mary Contrary: </label> 
+				When someone tries to <b>pierce your mask</b>, <b>comfort or support you</b>, or <b>provoke you</b>, you can interfere. Roll + Superior. On a hit, they take a -2 on their roll. On a 10+, you also take Influence over them or clear a condition. On a miss, they get a 10+ no matter what they rolled and you mark a condition of their choice.
 			</div>
 			<div class="charMove">
-				<input type="checkbox" name="moveTwo" id="moveTwo" value="You’ve got a head you don’t need"><label for="moveTwo"> You’ve got a head you don’t need:</label> 
-				When you <b>provoke someone</b> with obvious threats and shows of force, roll +Danger instead of +Superior.
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="I don't care what you think!"><label for="moveTwo"> I don't care what you think!:</label> 
+				Whenever you <b>reject others’ Influence</b>, add +2 to your roll.
 			</div>
 			<div class="charMove">
-				<input type="checkbox" name="moveThree" id="moveThree" value="Punch everyone"><label for="moveThree"> Punch everyone:</label> 
-				Whenever you charge into a fight without hedging your bets, you can shift your Danger up and any other Label down.
+				<input type="checkbox" name="moveThree" id="moveThree" value="Team? What team?"><label for="moveThree"> Team? What team?:</label> 
+				When you use Team selfishly, clear a condition or mark potential. The first time in a session that you use Team to help a teammate, take +1 forward.
 			</div>
 			<div class="charMove">
-				<input type="checkbox" name="moveFour" id="moveFour" value="There when it matters"><label for="moveFour"> There when it matters:</label> 
-				When you <b>defend someone</b>, on a hit you can hold 1 instead of choosing one from the list. Spend your hold when they are in danger later to arrive on the scene ready to help.
+				<input type="checkbox" name="moveFour" id="moveFour" value="Criminal mind"><label for="moveFour"> Criminal mind:</label> 
+				When you <b>assess the situation</b>, you can always ask one of the following questions, even on a miss:
+				<ul><li>what here is useful or valuable to me?</li>
+					<li>how could I best infuriate or provoke ____________?</li>
+					<li>what’s the best way in/way past?</li>
+				</ul>
 			</div>
 			<div class="charMove">
-				<input type="checkbox" name="moveFive" id="moveFive" value="In a china shop"><label for="moveFive">In a china shop:</label> 
-				When you <b>directly engage a threat</b>, you can cause significant collateral damage to your environment to choose an additional option, even on a miss.
+				<input type="checkbox" name="moveFive" id="moveFive" value="Troublemaker"><label for="moveFive">Troublemaker:</label> 
+				When you help a teammate through destructive, criminal, or rule-breaking actions, you can give them a +2 instead of a +1 when you spend a Team from the pool.
 			</div>
 			<div class="charMove">
-				<input type="checkbox" name="moveSix" id="moveSix" value="Physics? What physics?"><label for="moveSix"> Physics? What physics?:</label> 
-				When you <b>unleash your powers</b> to barrel through an insurmountable barrier, roll +Danger instead of +Freak.
+				<input type="checkbox" name="moveSix" id="moveSix" value="Are you watching closely?"><label for="moveSix"> Are you watching closely?:</label> 
+				When you mislead, distract, or trick someone, roll +Superior. On a hit, they are fooled, at least for a moment. On a 10+, choose three. On a 7-9, choose two.
+				<ul><li>you get an opportunity</li>
+					<li>you expose a weakness or flaw</li>
+					<li>you confuse them for some time</li>
+					<li>you avoid further entanglement</li>
+				</ul>
+				On a miss, you’re hopelessly embroiled in it and under pressure; mark a condition.
 			</div>
 		</div>
-		<h2>The Bull's Heart</h2>
-		<p>You always have exactly one love and one rival. You can change your love or rival at any time; give the new subject of your affections or disdain Influence over you. Take +1 ongoing to any action that impresses your love or frustrates your rival.</p>
-		<label class="has-float-label">
-			<textarea rows="1" name="charLove" id="charLove" placeholder="Love"></textarea>
-			<span>Love</span>
-		</label>
-		<label class="has-float-label">
-			<textarea rows="1" name="charRival" id="charRival" placeholder="Rival"></textarea>
-			<span>Rival</span>
-		</label>
-		<p>Choose a role you commonly fulfill for your love or rival:</p>
-		<div class="charMove moves">
-			<input type="checkbox" name="heartOne" id="heartOne" value="Defender"><label for="heartOne"> Defender:</label> 
-			When you leap to defend your love or rival in battle, roll + Danger instead of + Savior to defend them.
-		</div>
-		<div class="charMove moves">
-			<input type="checkbox" name="heartTwo" id="heartTwo" value="Friend"><label for="heartTwo"> Friend:</label> 
-			When you comfort or support your love or rival, mark potential on a hit. When your love or rival comforts or supports you, mark potential when they roll a hit.
-		</div>
-		<div class="charMove moves">
-			<input type="checkbox" name="heartThree" id="heartThree" value="Listener"><label for="heartThree"> Listener:</label> 
-			When you <b>pierce the mask</b> of your love or rival, you can always let them ask you a question to ask them an additional question in turn, even on a miss. These additional questions do not have to be on the list.
-		</div>
-		<div class="charMove moves">
-			<input type="checkbox" name="heartFour" id="heartFour" value="Enabler"><label for="heartFour"> Enabler:</label> 
-			When you <b>provoke</b> your love or rival, roll +Danger if you are trying to provoke them to rash or poorly thought out action.
-		</div>
-
 		<div>
 		<h2>Moment of Truth</h2>
-		<p>This is what you do best. You let loose, all the pent up strength and rage and glee, and you break whatever stands in your way. You are a walking demolition crew. What can stand up to you? Nothing. Not buildings. Not structures. Not enemies. Nothing. Of course, now the people who changed you know exactly where to find you...</p>
+		<p>This is when you show them what you really are. Whether you’re the hero underneath the rebel facade...or the one who can make the hard choices heroes can’t make. You do whatever it takes to show that truth, whether it’s saving the day from a terrible villain or stopping a bad guy once and for all. Of course, once you’ve shown what you really are, there’s no going back to playing the clown...</p>
 		<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
 		<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
 	</div>
 	<div>
 		<h2>Team Moves</h2>
-		<p>When you share a triumphant celebration with someone, make them your love or rival immediately to mark potential. If they are already your love or rival, take Influence over them and mark potential.</p>
-		<p>When you share a vulnerability or weakness with someone, give them Influence and hold 2. Spend that hold to help them as if it were Team in the pool.</p>
+		<p>When you share a triumphant celebration with someone, ask them if they think you’re cool. If they say yes, give them Influence and take Influence over them. If they say no, mark a condition or spurn them immediately. If they’re a teammate, then either way, add a Team to the pool.</p>
+		<p>When you share a vulnerability or weakness with someone, give them Influence over you, and ask them who they’d like you to be. Mark potential if you show them that person. If they’re a teammate, add a Team to the pool no matter what.</p>
 	</div>
 	<div><h2>Potential</h2>
 		<div><input type="checkbox" name="potentialOne" id="potentialOne"><input type="checkbox" name="potentialTwo" id="potentialTwo"><input type="checkbox" name="potentialThree" id="potentialThree"><input type="checkbox" name="potentialFour" id="potentialFour"><input type="checkbox" name="potentialFive" id="potentialFive"> </div>
@@ -221,9 +210,9 @@
 		<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br />
 		<input type="checkbox" name="advanceSeven" id="advanceSeven"> Rearrange your Labels as you choose, and add +1 to a Label<br />
 		<input type="checkbox" name="advanceEight" id="advanceEight"> Unlock your Moment of Truth<br />
+		<input type="checkbox" name="advanceFive" id="advanceFive"> Add +1 to any two Labels<br />
 		<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
 		<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br />
-		<input type="checkbox" name="advanceFive" id="advanceFive"> Choose another two roles for The Bull's Heart<br />
 		<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br />
 		<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br />
 		<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br />
