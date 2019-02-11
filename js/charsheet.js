@@ -1,4 +1,4 @@
-/*! charsheet.js v1.2 by @joefulgham | MIT license 
+/*! charsheet.js v1.3 by @joefulgham | MIT license 
 	https://sheet.adventureforhire.com
 	https://joefulgham.com
 */
@@ -142,8 +142,9 @@ function initialStuff() {
 	changePortrait();
 
 	// Set title to character name
-	setTitle();
-
+	if ($("#charName").val()) { 
+        setTitle();
+    }
 	// Queue new Portrait checker
 	$( "#charPortraitURI" ).blur(function() {
 		changePortrait();
