@@ -19,7 +19,13 @@ These should be future-proof, but if I ever have to break the save/load formatti
 
 ### Sheets under construction
 Note that I cannot guarantee saved characters on these will continue to work, so use at your own risk! These are here simply because I've planned to do them and have started in some fashion.
-* [Masks RPG](https://sheet.adventureforhire.com/masks/) - Doing "Beacon" first and once that's working will make it a sub-page and do the rest based on its template.
+* [Masks RPG](https://sheet.adventureforhire.com/masks/) - I started with "Beacon" and am now making my way through the individual playbooks as I have time. Already very happy with how they're working.
+
+## To-Do and Requests
+* Remainder of Masks playbooks
+* I bought [Downfall](http://lessthanthreegames.com/downfall/) and want to try making a "shareable" set of sheets for it. Possible it'll work better with simply a shared Google Doc though.
+* **Create check for overly-long hashcode**  
+Test sheets are hitting a length of around 1000 characters which is about half the data-space so it's not vital, but there should be an "oops too much data" error display soon. Max URI length is 2038 -- I should be able to make a very specific "how long is the current URI" check so it can use as much space is possible no matter where the code goes.
 
 ## Credits
 Made by [Joe Fulgham](https://joefulgham.com/) for [Adventure For Hire](https://adventureforhire.com/)
