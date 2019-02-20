@@ -30,7 +30,7 @@
 	<header><h1>Masks RPG Playbook - Janus</h1></header>
 	<form id="charSheet">
 		<img src="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" id="charImage" /><br />
-		You don't have to do this. 	You could probably have a safe, decent, simple life. It'd be nice but... come on. Superpowers! Aliens! Wizards! Time travel! You're out of your depth but who cares? This is awesome. Everybody should try it.
+		Wake up> Breakfast. School. Work. Homework. Sleep. Repeat. It burns you up, being stuck in this life, unable to make a real difference. That is... until you put on the mask. And then, you can be someone else: a hero.
 		<div style="white-space: nowrap;">
 			<label class="has-float-label">
 			<input type="text" name="charName" id="charName" placeholder="Hero Name" />
@@ -41,12 +41,12 @@
 			<span>Real Name</span>
 			</label>
 			<label class="has-float-label">
-			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" data-original-value="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" />
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-janus.jpg" data-original-value="https://sheet.adventureforhire.com/masks/images/portrait-janus.jpg" />
 			<span>Portrait URI</span>
 			</label>
 		</div>
 		<h2>Look</h2>
-		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="face" list="faces" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/>
+		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/> <input type="text" name="mask" list="masks" placeholder=""/>
 		<datalist id="genders">
 			<option value="ambiguous">
 			<option value="man">
@@ -62,27 +62,28 @@
 			<option value="Middle Eastern">
 			<option value="White">
 		</datalist>
-		<datalist id="faces">
-			<option value="smiling face">
-			<option value="naive face">
-			<option value="average face">
-			<option value="pretty face">
-		</datalist>
 		<datalist id="clothing">
-			<option value="stylish clothing">
-			<option value="comfortable clothing">
-			<option value="simple clothing">
-			<option value="casual clothing">
+			<option value="boring clothing">
+			<option value="elegant clothing">
+			<option value="formal clothing">
+			<option value="upscale clothing">
 		</datalist>
 		<datalist id="costumes">
-			<option value="flashy costume">
-			<option value="stylish costume">
-			<option value="gaudy costume">
 			<option value="iconic costume">
+			<option value="concealing costume">
+			<option value="distracting costume">
+			<option value="flashy costume">
+		</datalist>
+		<datalist id="masks">
+			<option value="featureless mask">
+			<option value="helmet">
+			<option value="character mask">
+			<option value="small mask">
+			<option value="hood">
+			<option value="full disguise">
 		</datalist>
 		<h2>Abilities</h2>
-		<p>If you have superpowers, they’re pretty minor or not noticeable. If you have skills, you carry the
-		necessary equipment. Choose two.</p>
+		<p>Your appearance is unchanged by your abilities, and you can keep your powers hidden. You have heightened physical abilities (strength, agility, toughness), and choose two unique abilities:</p>
 		<div class="abilities">
 			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="bow and trick arrows"><label for="abilityOne"> bow and trick arrows</label></span>
 			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="swords"><label for="abilityTwo"> swords</label></span>
