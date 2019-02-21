@@ -1,0 +1,225 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Masks RPG Playbook - v 0.3 | Adventure For Hire</title>
+	<meta name="description" content="Masks RPG Responsive Playbook">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Masks RPG Responsive Playbook" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based playbook that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css"/>
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Masks RPG Playbook - Transformed</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/masks/images/portrait-transformed.jpg" id="charImage" /><br />
+		You can recall a time not too long ago when you looked... normal. When you didn't feel their stares. When you didn't hear their gasps. When no one thought of you as a monster. Those were the days, huh.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name" />
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name" />
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-transformed.jpg" data-original-value="https://sheet.adventureforhire.com/masks/images/portrait-transformed.jpg" />
+			<span>Portrait URI</span>
+			</label>
+		</div>
+		<h2>Look</h2>
+		<input type="text" name="genders" list="genders" placeholder=""/> 
+		<input type="text" name="race" list="races" placeholder=""/> 
+		<input type="text" name="eye" list="eyes" placeholder=""/> 
+		<input type="text" name="flesh" list="fleshtypes" placeholder=""/> 
+		<input type="text" name="costume" list="costumes" placeholder=""/>
+		<datalist id="genders">
+			<option value="ambiguous">
+			<option value="man">
+			<option value="shifting">
+			<option value="transgressing">
+			<option value="woman">
+		</datalist>
+		<datalist id="races">
+			<option value="Asian or South Asian">
+			<option value="Black">
+			<option value="Hispanic/Latino">
+			<option value="Indigenous">
+			<option value="Middle Eastern">
+			<option value="White">
+		</datalist>
+		<datalist id="eyes">
+			<option value="strange eyes">
+			<option value="upsetting eyes">
+			<option value="piercing eyes">
+			<option value="human eyes">
+		</datalist>
+		<datalist id="fleshtypes">
+			<option value="metallic flesh">
+			<option value="scaled flesh">
+			<option value="alien flesh">
+			<option value="plated flesh">
+			<option value="untouchable flesh">
+			<option value="mottle flesh">
+		</datalist>
+		<datalist id="costumes">
+			<option value="terrifying costume">
+			<option value="strange costume">
+			<option value="unnerving costume">
+			<option value="no costume">
+		</datalist>
+		<h2>Abilities</h2>
+		<p>You appear obviously and clearly monstrous, and your powers are tied to your appearance. Choose two, and describe how they make you grotesque.</p>
+		<div class="abilities">
+			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="impenetrable armor"><label for="abilityOne"> impenetrable armor</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="inhuman might"><label for="abilityTwo"> inhuman might</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="plant affinity"><label for="abilityThree"> plant affinity</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value="superhuman senses"><label for="abilityFour"> superhuman senses</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="technopathy"><label for="abilityFive"> technopathy</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="transmuting flesh"><label for="abilitySix"> transmuting flesh</label></span>
+		</div>
+		<h2>Labels</h2>
+		<p>(at character creation, add +1 wherever you choose)</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Danger <input type="number" name="charDanger" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Freak <input type="number" name="charFreak" min="-2" max="3" value="3" class="alignRight" /></p>
+			<p>Savior <input type="number" name="charSavior" min="-2" max="3" value="0" class="alignRight" /></p>
+			<p>Superior <input type="number" name="charSuperior" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Mundane <input type="number" name="charMundane" min="-2" max="3" value="-1" class="alignRight" /></p>
+		</div>
+		<div class="conditions">
+			<h2>Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br />
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br />
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br /> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br /> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br /> 
+		</div>
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="Who were you before?"></textarea>
+			<span>Who were you before?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="When did you change? What caused it?"></textarea>
+			<span>When did you change? What caused it?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Who, outside of the team, is helping you understand your new body?"></textarea>
+			<span>Who, outside of the team, is helping you understand your new body?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Why don’t you just try to hide yourself away?"></textarea>
+			<span>Why don’t you just try to hide yourself away?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		<h2>When our team first came together...</h2>
+		<p>We drew attention and ire from plenty during the fight. One important person in particular now hates and fears us.</p>
+		<label class="has-float-label">
+			<textarea rows="1" name="firstTogether" placeholder="Who is it?"></textarea>
+			<span>Who is it?</span>
+		</label>
+		<h2>Relationships</h2>
+			<textarea rows="1" name="relationshipOne" class="inline"></textarea> comforted you when you were at your lowest<br />
+			<textarea rows="1" name="relationshipTwo" class="inline"></textarea> knew you before you changed.<br />
+		<h2>Influence</h2>
+		<p>You try not to care what other people think, even if you can’t shut everyone out. Give Influence to one teammate.</p>
+		<label class="has-float-label">
+			<textarea rows="1" name="influenceNotes" placeholder="Influence notes" style="height: 50px;"></textarea>
+			<span>Influence notes</span>
+		</label>
+		<div class="moves">
+			<h2>Transformed Moves</h2>
+			<p>(Choose three)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="I am not my body"><label for="moveOne"> I am not my body:</label> When you <b>take a powerful physical blow</b>, you may roll as if you had two fewer conditions marked. If you do, on a 10+ you must choose to lose control of yourself in a terrible way.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Not human enough"><label for="moveTwo"> Not human enough:</label> 
+				When you <b>directly engage a threat</b> in a terrifying fashion, mark a condition to choose an additional option, even on a miss.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Unstoppable"><label for="moveThree"> Unstoppable:</label> 
+				When you smash your way through scenery to get to or away from something, roll + Danger. On a hit, the world breaks before you, and you get what you want. On a 7-9, choose one: mark a condition, leave something behind, or take something with you. On a miss, you smash through, but leave devastation in your wake or wind up somewhere worse, GM’s choice.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Coming for you"><label for="moveFour"> Coming for you:</label> 
+				When you mark a condition, take +1 forward against the person you most blame for causing it.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Wish I could be"><label for="moveFive"> Wish I could be:</label> 
+				When you comfort or support someone, if you tell them what you most envy about them, you can roll + Freak instead of + Mundane.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Be the monster"><label for="moveSix"> Be the monster:</label> 
+				When you frighten, intimidate, or cow others with your monstrous form, roll + Freak. On a hit, they are thrown off and make themselves vulnerable to you, or they flee. On a 10+, choose one. On a 7-9, choose two.
+				<ul class="choices"><li>you frighten others you had not intended to scare</li><li>you hurt someone or break something you shouldn’t have</li><li>you feel like more of a monster afterward; mark a condition (GM’s choice)</li></ul>
+				On a miss, they react with violence, hatred, and paranoia, and you suffer the brunt of it.
+			</div>
+		</div>
+		<div>
+		<h2>Moment of Truth</h2>
+		<p>It’s so easy to forget that you’re not your body, and you’re not the voice in your head—you’re both. Be the monster, and save them anyway. Smash down walls, and speak softly. Because when you embrace it, you can do anything. Of course, putting on a display like this is sure to rile up those who see only the monster when they look at you…</p>
+		<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+		<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+	</div>
+	<div>
+		<h2>Team Moves</h2>
+		<p>When you share a triumphant celebration with someone, clear one condition if they treat you like a perfectly normal person and mark potential if they praise your power or abilities.</p>
+		<p>When you share a vulnerability or weakness with someone, ask them if they think you’re losing or gaining humanity. If they say losing, mark a condition and mark potential. If they say gaining, clear a condition and shift Mundane up and any other Label down.</p>
+	</div>
+	<div><h2>Potential</h2>
+		<div><input type="checkbox" name="potentialOne" id="potentialOne"><input type="checkbox" name="potentialTwo" id="potentialTwo"><input type="checkbox" name="potentialThree" id="potentialThree"><input type="checkbox" name="potentialFour" id="potentialFour"><input type="checkbox" name="potentialFive" id="potentialFive"> </div>
+	</div>
+	<div><h2>Advancement</h2>
+		<p>When you fill your potential track, you advance. Choose from the list below.</p>
+		<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br />
+		<input type="checkbox" name="advanceFour" id="advanceFour"> Take a doom, doomtrack, and doomsigns from the Doomed playbook<br />
+		<input type="checkbox" name="advanceFive" id="advanceFive"> Someone permanently loses Influence over you; add +1 to a Label<br />
+		<input type="checkbox" name="advanceSix" id="advanceSix"> Rearrange your Labels as you choose, and add +1 to a Label<br />
+		<input type="checkbox" name="advanceSeven" id="advanceSeven"> Unlock your Moment of Truth<br />
+		<input type="checkbox" name="advanceEight" id="advanceEight"> Mutate further and reveal another two new abilities (chosen from any playbook)<br />
+		<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+		<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br />
+		<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br />
+		<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br />
+		<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br />
+		<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br />
+		<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br />
+	</div>
+	<h2>Other Moves</h2>
+				<textarea rows=8 name="otherMoves" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Masks RPG <a href="https://sheet.adventureforhire.com/">Character Sheet</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://www.magpiegames.com/masks/">Masks RPG here</a>!
+	</div>
+
+</body>
+</html>
