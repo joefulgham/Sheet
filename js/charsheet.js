@@ -38,6 +38,13 @@ function putCharstuff() {
     });
     // Convert array to JSON string which is then compressed to a text string that can be stored in the URI
     var charData = LZString.compressToEncodedURIComponent(JSON.stringify(result));
+
+    // Check total data length to make sure we're not going over the 2038 limit
+    var totalLength = location.href.replace(location.hash,"").length + charData.length;
+    if (totalLength > 2036) {
+        alert("Length of " + totalLength + " exceeds maximum 2038. Remove some text and re-save to ensure your bookmark works!");
+    }
+
     // Put that string up into the hashtag 
     window.location.hash = charData;
     setTitle();
