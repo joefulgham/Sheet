@@ -139,7 +139,6 @@
 		z-index: -5;
 		max-width: 45%;
 		max-height: 100vh;
-
 	}
 
 	.choices {
@@ -163,3 +162,7 @@
 .striketoggle input[type=checkbox] {
 	display: none;
 }
+
+input#charPortraitURI { width: 1em; opacity: 0; }
+
+input#charPortraitURI:focus { width: auto; opacity: 100; }
