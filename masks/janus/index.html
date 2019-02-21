@@ -85,8 +85,19 @@
 		<h2>Abilities</h2>
 		<p>Your appearance is unchanged by your abilities, and you can keep your powers hidden. You have heightened physical abilities (strength, agility, toughness), and choose two unique abilities:</p>
 		<div class="abilities">
-			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="rodent/insect control"><label for="abilityOne"> rodent/insect control</label></span>
-			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="bone generation, venom, or webs"><label for="abilityTwo"> bone generation, venom, or webs</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="rodent/insect control"><label for="abilityOne">
+				<select name="ablilityOneOption">
+					<option value="Rodent control">Rodent control</option>
+					<option value="Insect control">Insect control</option>
+				</select>
+			</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="bone generation, venom, or webs"><label for="abilityTwo">
+				<select name="ablilityTwoOption">
+					<option value="Bone generation">Bone generation</option>
+					<option value="Venom">Venom</option>
+					<option value="Webs">Webs</option>
+				</select>
+			</label></span>
 			<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="energy absorption"><label for="abilityThree"> energy absorption</label></span>
 			<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value=" supernatural senses"><label for="abilityFour"> supernatural senses</label></span>
 			<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="impossible mobility"><label for="abilityFive"> impossible mobility</label></span>
