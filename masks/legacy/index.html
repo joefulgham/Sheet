@@ -1,0 +1,292 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Masks RPG Playbook - v 0.3 | Adventure For Hire</title>
+	<meta name="description" content="Masks RPG Responsive Playbook">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Masks RPG Responsive Playbook" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based playbook that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css"
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Masks RPG Playbook - Legacy</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/masks/images/portrait-beacon.jpg" id="charImage" /><br />
+		You're the latest in a storied heroic lineage, a family that shares a name and a cause. Now, everybody is watching and waiting to see if you've got what it takes to uphold that tradition. No pressure, right?
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Legacy Name" />
+			<span>Legacy Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name" />
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-legacy.jpg" data-original-value="https://sheet.adventureforhire.com/masks/images/portrait-legacy.jpg" />
+			<span>Portrait URI</span>
+			</label>
+		</div>
+		<h2>Look</h2>
+		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/> <input type="text" name="insignia" list="insignias" placeholder=""/>
+		<datalist id="genders">
+			<option value="ambiguous">
+			<option value="man">
+			<option value="shifting">
+			<option value="transgressing">
+			<option value="woman">
+		</datalist>
+		<datalist id="races">
+			<option value="Asian or South Asian">
+			<option value="Black">
+			<option value="Hispanic/Latino">
+			<option value="Indigenous">
+			<option value="Middle Eastern">
+			<option value="White">
+		</datalist>
+		<datalist id="clothing">
+			<option value="boring clothing">
+			<option value="elegant clothing">
+			<option value="formal clothing">
+			<option value="upscale clothing">
+		</datalist>
+		<datalist id="costumes">
+			<option value="iconic costume">
+			<option value="concealing costume">
+			<option value="distracting costume">
+			<option value="flashy costume">
+		</datalist>
+		<datalist id="insignias">
+			<option value="animal insignia">
+			<option value="letter insignia">
+			<option value="simple symbol insignia">
+			<option value="symbol insignia">
+			<option value="no insignia">
+		</datalist>
+		<h2>Abilities</h2>
+		<p>You have powers that match your general line. Choose one suite of powers, but pick two powers
+that you don’t have from your suite:</p>
+		<div class="abilities">
+			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="classic powers">
+				<span class="striketoggle">
+					<input type="checkbox" name="abilityOneA" id="abilityOneA" value="super strength"><label for="abilityOneA">super strength</label>, 
+					<input type="checkbox" name="abilityOneB" id="abilityOneB" value="invincibility"><label for="abilityOneB">invincibility</label>, 
+					<input type="checkbox" name="abilityOneC" id="abilityOneC" value="eye beams"><label for="abilityOneC">eye beams</label>, 
+					<input type="checkbox" name="abilityOneD" id="abilityOneD" value="flight"><label for="abilityOneD">flight</label>, 
+					<input type="checkbox" name="abilityOneE" id="abilityOneE" value="super senses"><label for="abilityOneE">super senses</label>
+				</span>
+			</span>
+			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="speedster powers">
+				<span class="striketoggle">
+					<input type="checkbox" name="abilityTwoA" id="abilityTwoA" value="super speeed"><label for="abilityTwoA">super speed</label>,
+					<input type="checkbox" name="abilityTwoB" id="abilityTwoB" value="regeneration"><label for="abilityTwoB">regeneration</label>, 
+					<input type="checkbox" name="abilityTwoC" id="abilityTwoC" value="phasing"><label for="abilityTwoC">phasing</label>, 
+					<input type="checkbox" name="abilityTwoD" id="abilityTwoD" value="speed-reading/learning"><label for="abilityTwoD">speed-reading/learning</label>, 
+					<input type="checkbox" name="abilityTwoE" id="abilityTwoE" value="air manipulation"><label for="abilityTwoE">air manipulation</label>
+				</span>
+			</span>
+			<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="detective powers">
+				<span class="striketoggle">
+					<input type="checkbox" name="abilityThreeA" id="abilityThreeA" value="athletic perfection"><label for="abilityThreeA">athletic perfection</label>,
+					<input type="checkbox" name="abilityThreeB" id="abilityThreeB" value="Holmesian deduction"><label for="abilityThreeB">Holmesian deduction</label>, 
+					<input type="checkbox" name="abilityThreeC" id="abilityThreeC" value="gadgetry"><label for="abilityThreeC">gadgetry</label>, 
+					<input type="checkbox" name="abilityThreeD" id="abilityThreeD" value="intimidation"><label for="abilityThreeD">intimidation</label>, 
+					<input type="checkbox" name="abilityThreeE" id="abilityThreeE" value="fearsome reputation"><label for="abilityThreeE">fearsome reputation</label>
+				</span>
+			</span>
+			<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value="divine powers">
+				<span class="striketoggle">
+					<input type="checkbox" name="abilityFourA" id="abilityFourA" value="divine armor"><label for="abilityFourA">divine armor</label>,
+					<input type="checkbox" name="abilityFourB" id="abilityFourB" value="magic weaponry"><label for="abilityFourB">magic weaponry</label>, 
+					<input type="checkbox" name="abilityFourC" id="abilityFourC" value="mythic might"><label for="abilityFourC">mythic might</label>, 
+					<input type="checkbox" name="abilityFourD" id="abilityFourD" value="legendary speed"><label for="abilityFourD">legendary speed</label>, 
+					<input type="checkbox" name="abilityFourE" id="abilityFourE" value="god-like beauty"><label for="abilityFourE">god-like beauty</label>
+				</span>
+			</span>
+			<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="shadow powers">
+				<span class="striketoggle">
+					<input type="checkbox" name="abilityFiveA" id="abilityFiveA" value="shadow control"><label for="abilityFiveA">shadow control</label>,
+					<input type="checkbox" name="abilityFiveB" id="abilityFiveB" value="shadow portals"><label for="abilityFiveB">shadow portals</label>, 
+					<input type="checkbox" name="abilityFiveC" id="abilityFiveC" value="mind-clouding"><label for="abilityFiveC">mind-clouding</label>, 
+					<input type="checkbox" name="abilityFiveD" id="abilityFiveD" value="shadow cloak stealth"><label for="abilityFiveD">shadow cloak stealth</label>, 
+					<input type="checkbox" name="abilityFiveE" id="abilityFiveE" value="shadow senses"><label for="abilityFiveE">shadow senses</label>
+				</span>
+			</span>
+		</div>
+		<h2>Labels</h2>
+		<p>(at character creation, add +1 wherever you choose)</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Danger <input type="number" name="charDanger" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Freak <input type="number" name="charFreak" min="-2" max="3" value="0" class="alignRight" /></p>
+			<p>Savior <input type="number" name="charSavior" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Superior <input type="number" name="charSuperior" min="-2" max="3" value="0" class="alignRight" /></p>
+			<p>Mundane <input type="number" name="charMundane" min="-2" max="3" value="1" class="alignRight" /></p>
+		</div>
+		<div class="conditions">
+			<h2>Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br />
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br />
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br /> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br /> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br /> 
+		</div>
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="When did you officially become a part of your legacy?"></textarea>
+			<span>When did you officially become a part of your legacy?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="What's the greatest accomplishment of your legacy?"></textarea>
+			<span>What's the greatest accomplishment of your legacy?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="How does the public perceive your legacy?"></textarea>
+			<span>How does the public perceive your legacy?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="How does your legacy tie into your reasons for being a hero?"></textarea>
+			<span>How does your legacy tie into your reasons for being a hero?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		<h2>When our team first came together...</h2>
+		<p>All things considered, we did well and impressed an established hero.</p>
+		<label class="has-float-label">
+			<textarea rows="2" name="firstTogether" placeholder="Who was it?"></textarea>
+			<span>Who was it?</span>
+		</label>
+		<h2>Relationships</h2>
+			You once got caught doing something that shames your legacy with <textarea rows="1" name="relationshipOne" class="inline"></textarea>.<br />
+			You trust <textarea rows="1" name="relationshipTwo" class="inline"></textarea> and told them an important secret of your legacy<br />
+		<h2>Influence</h2>
+		<p>You're a part of this team, for better or worse, and you care what they think. Give Influence to all your teammates.</p>
+		<label class="has-float-label">
+			<textarea rows="1" name="influenceNotes" placeholder="Influence notes" style="height: 50px;"></textarea>
+			<span>Influence notes</span>
+		</label>
+		<div class="moves">
+			<h2>Legacy Moves</h2>
+			<p>(Choose two)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Fight the good fight"><label for="moveOne"> Fight the good fight:</label> When you pull your punches while <b>directly engaging a threat</b>, you can roll +Savior instead of +Danger. If you do, you cannot choose to impress, surprise, or frighten your foe.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="I know what I am"><label for="moveTwo"> I know what I am:</label> 
+				Once per scene, when you <b>defend</b> a teammate you can shift Savior up and another Label down in addition to any other benefits from the move, even on a miss. If you do, add 1 Team to the pool.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Words of the past"><label for="moveThree"> Words of the past:</label> 
+				When you seek the guidance of one of your elders or a member of your legacy, tell them a problem you face, and ask them a question about the problem. They will answer it honestly, and tell you what to do. Take +1 ongoing if you listen. If you go your own way, mark potential.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="The legacy matters"><label for="moveFour"> The legacy matters:</label> 
+				When you take Influence over someone from your legacy (or give them Influence over you), mark potential and take +1 forward. When someone from your legacy causes your Labels to shift, mark potential and take +1 forward.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Never give up, never surrender"><label for="moveFive"> Never give up, never surrender:</label> 
+				When you <b>take a powerful blow</b> from someone with far greater power than you, use this move instead of the basic move. Roll + Savior. On a hit, you stand strong and choose one. On a 7-9, mark a condition.
+				<ul class="choices">
+					<li>you get an opportunity or opening against your attacker</li>
+					<li>you rally from the hit, and it inspires the team; add 1 Team to the pool</li>
+					<li>you keep your attacker’s attention</li>
+				</ul>
+				On a miss, you go down hard but leave your opponent off balance and vulnerable.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Symbol of authority"><label for="moveSix"> Symbol of authority:</label> 
+				When you give an NPC an order based on authority they recognize, roll +Savior. On a hit, they choose one:
+				<ul class="choices">
+					<li>do what you say</li>
+					<li>get out of your way</li>
+					<li>attack you at a disadvantage</li>
+					<li>freeze</li>
+				</ul>
+				On a 10+, you also take +1 forward against them. On a miss, they do as they please and you take -1 forward against them.
+			</div>
+		</div>
+		<h2>Legacy</h2>
+		<p>Your legacy is an important part of Halcyon City.</p>
+		<p>Name the different members of your legacy (at least two):</p>
+		<p><textarea rows="1" name="legacyOne" class="inline"></textarea> is still active and prominent in the city.<br />
+			<textarea rows="1" name="relationshipTwo" class="inline"></textarea> is retired and quite judgemental.<br />
+			<textarea rows="1" name="relationshipThree" class="inline"></textarea> is the next possible member of your legacy.<br />
+			<textarea rows="1" name="relationshipFour" class="inline"></textarea> is the next possible member of your legacy.<br />
+			<textarea rows="1" name="relationshipFive" class="inline"></textarea> is the greatest opponent your legacy ever faced... and is still at large</p>
+			<p>Whenever time passes, roll + Savior to see how the members of your legacy feel or react to your
+most recent exploits. Before rolling, ask the other players to answer these questions about your performance. Take -1 to the roll for each “no” answer:
+<ul class="choices">
+	<li>have you been upholding the traditions of your legacy?</li>
+	<li>have you maintained the image of your legacy?</li>
+	<li>have you made the other members of your legacy proud?</li>
+</ul>
+		On a hit, one of them offers you meaningful encouragement, an opportunity, or an advantage. On a 7-9, another is upset with your most recent actions, and will make their displeasure known. On a miss, something you did stirred up the hornet’s nest—expect several members of your legacy to meddle with your life.</p>
+
+		<label class="has-float-label">
+			<textarea rows="2" name="legacyNotes" id="legacyNotes" placeholder="Legacy notes"></textarea>
+			<span>Legacy notes</span>
+		</label>
+		<div>
+		<h2>Moment of Truth</h2>
+		<p>This is the moment when you prove how much the mantle belongs to you. You seize control of all your powers, and you defeat even impossible odds to prove you are worthy of the name you carry. You accomplish feats even your predecessors couldn’t do. Of course, after you prove something like that, you can expect still more responsibilities to be placed on your shoulders...</p>
+		<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+		<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+	</div>
+	<div>
+		<h2>Team Moves</h2>
+		<p>When you share a triumphant celebration with someone, tell them whether you see them as an equal. If you do, give them Influence over you and mark potential. If you don’t, shift Superior up and any other Label down.</p>
+		<p>When you share a vulnerability or weakness with someone, tell them a secret about your legacy (including your own true feelings about it) to clear a condition and give them Influence over you.</p>
+	</div>
+	<div><h2>Potential</h2>
+		<div><input type="checkbox" name="potentialOne" id="potentialOne"><input type="checkbox" name="potentialTwo" id="potentialTwo"><input type="checkbox" name="potentialThree" id="potentialThree"><input type="checkbox" name="potentialFour" id="potentialFour"><input type="checkbox" name="potentialFive" id="potentialFive"> </div>
+	</div>
+	<div><h2>Advancement</h2>
+		<p>When you fill your potential track, you advance. Choose from the list below.</p>
+		<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br />
+		<input type="checkbox" name="advanceFour" id="advanceFour"> Take a Sanctuary from the Doomed playbook<br />
+		<input type="checkbox" name="advanceFive" id="advanceFive"> Rearrange your Labels as you choose, and add +1 to a Label<br />
+		<input type="checkbox" name="advanceSix" id="advanceSix"> Someone permanently loses Influence over you; add +1 to a Label<br />
+		<input type="checkbox" name="advanceSeven" id="advanceSeven"> Unlock the remaining two powers of your suite<br />
+		<input type="checkbox" name="advanceEight" id="advanceEight"> Unlock your Moment of Truth<br />
+		<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+		<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br />
+		<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br />
+		<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br />
+		<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br />
+		<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br />
+		<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br />
+	</div>
+	<h2>Notes / Other Moves</h2>
+				<textarea rows=8 name="otherMoves" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Masks RPG <a href="https://sheet.adventureforhire.com/">Character Sheet</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://www.magpiegames.com/masks/">Masks RPG here</a>!
+	</div>
+
+</body>
+</html>

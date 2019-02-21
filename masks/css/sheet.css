@@ -145,3 +145,21 @@
 	.choices {
 		font-style: italic;
 	}
+
+.striketoggle {
+	z-index: 10;
+}
+.striketoggle input[type=checkbox] + label{
+  text-decoration: line-through;
+  margin-right: 0;
+}
+
+
+.striketoggle input[type=checkbox]:checked + label{
+  text-decoration: none;
+  margin-right: 0;
+}
+
+.striketoggle input[type=checkbox] {
+	display: none;
+}
