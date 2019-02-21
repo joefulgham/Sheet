@@ -13,13 +13,14 @@ Character sheets for new games can be made by creating an HTML form with the id 
 
 ## Current Working Sheets
 * [Tales from the Loop](https://sheet.adventureforhire.com/loop/) 
-* [Star-Crossed](https://sheet.adventureforhire.com/starcrossed) 
+* [Star-Crossed](https://sheet.adventureforhire.com/starcrossed)
+* [Masks RPG](https://sheet.adventureforhire.com/masks/) - Currently in "beta" but appears mostly functional and should be completelyfuture-proof.
 
 These should be future-proof, but if I ever have to break the save/load formatting I'll make sure the old code is still available to load your characters.
 
 ### Sheets under construction
 Note that I cannot guarantee saved characters on these will continue to work, so use at your own risk! These are here simply because I've planned to do them and have started in some fashion.
-* [Masks RPG](https://sheet.adventureforhire.com/masks/) - I started with "Beacon" and am now making my way through the individual playbooks as I have time. Already very happy with how they're working.
+* Masks Villains
 
 ## To-Do and Requests
 * Remainder of Masks playbooks
