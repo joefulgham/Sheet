@@ -125,7 +125,7 @@
 		margin: 0 auto;
 		padding: 8px;
 	}
-	.moves label {
+	.charMove > input + label {
 		font-weight: 600;
 	}
 	.abilities label {

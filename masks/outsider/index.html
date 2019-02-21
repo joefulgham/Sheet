@@ -1,0 +1,254 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Masks RPG Playbook - v 0.3 | Adventure For Hire</title>
+	<meta name="description" content="Masks RPG Responsive Playbook">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Masks RPG Responsive Playbook" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based playbook that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css"
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Masks RPG Playbook - Outsider</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/masks/images/portrait-outsider.jpg" id="charImage" /><br />
+		You're not from here. Your home is an amazing place, full of beauty and wonder. But there's something to this place, something special that you're missing back home. Something... human. So yeah, you'll be hanging around. At least for now.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name" />
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name" />
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-outsider.jpg" data-original-value="https://sheet.adventureforhire.com/masks/images/portrait-outsider.jpg" />
+			<span>Portrait URI</span>
+			</label>
+		</div>
+		<h2>Look</h2>
+		<input type="text" name="genders" list="genders" placeholder=""/> 
+		<input type="text" name="body" list="bodies" placeholder=""/> 
+		<input type="text" name="eye" list="eyes" placeholder=""/> 
+		<input type="text" name="clothing" list="clothing" placeholder=""/> 
+		<input type="text" name="costume" list="costumes" placeholder=""/>
+		<datalist id="genders">
+			<option value="ambiguous">
+			<option value="man">
+			<option value="shifting">
+			<option value="transgressing">
+			<option value="woman">
+		</datalist>
+		<datalist id="bodies">
+			<option value="strange body">
+			<option value="animalistic body">
+			<option value="neon body">
+			<option value="huan body">
+		</datalist>
+		<datalist id="eyes">
+			<option value="glowing eyes">
+			<option value="animalistic eyes">
+			<option value="metallic eyes">
+			<option value="bizarre eyes">
+		</datalist>
+		<datalist id="clothing">
+			<option value="flashy clothing">
+			<option value="mismatched clothing">
+			<option value="average clothing">
+			<option value="no human clothing">
+		</datalist>
+		<datalist id="costumes">
+			<option value="your peoples' uniform">
+			<option value="your station's costume">
+			<option value="practical costume">
+			<option value="humanizing costume">
+			<option value="no costume">
+		</datalist>
+		<h2>Abilities</h2>
+		<p>You can fly, and you’re pretty tough. Choose any two of the following:</p>
+		<div class="abilities">
+			<span class="nowrap"><input type="checkbox" name="abilityOne" id="abilityOne" value="density control"><label for="abilityOne"> density control</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityTwo" id="abilityTwo" value="heliokinesis"><label for="abilityTwo"> heliokinesis</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityThree" id="abilityThree" value="stunning beauty or pheremones"><label for="abilityThree"> stunning beauty or pheremones</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityfour" id="abilityFour" value="radical shapeshifting"><label for="abilityFour"> radical shapeshifting</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilityFive" id="abilityFive" value="alien weaponry"><label for="abilityFive"> alien weaponry</label></span>
+			<span class="nowrap"><input type="checkbox" name="abilitySix" id="abilitySix" value="telepathy and mind blasts"><label for="abilitySix"> telepathy and mind blasts</label></span>
+		</div>
+		<h2>Labels</h2>
+		<p>(at character creation, add +1 wherever you choose)</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Danger <input type="number" name="charDanger" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Freak <input type="number" name="charFreak" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Savior <input type="number" name="charSavior" min="-2" max="3" value="0" class="alignRight" /></p>
+			<p>Superior <input type="number" name="charSuperior" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Mundane <input type="number" name="charMundane" min="-2" max="3" value="0" class="alignRight" /></p>
+		</div>
+		<div class="conditions">
+			<h2>Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br />
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br />
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br /> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br /> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br /> 
+		</div>
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="Where do you come from?"></textarea>
+			<span>Where do you come from?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="Why did you come to Earth?"></textarea>
+			<span>Why did you come to Earth?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Why do you want to stay here (for now at least)?"></textarea>
+			<span>Why do you want to stay here (for now at least)?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Why do your people want you to come home?"></textarea>
+			<span>Why do your people want you to come home?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		<h2>When our team first came together...</h2>
+		<p>We didn’t trust each other at first, but that changed. </p>
+		<label class="has-float-label">
+			<textarea rows="1" name="firstTogether" placeholder="How? Why?"></textarea>
+			<span>How? Why?</span>
+		</label>
+		<h2>Relationships</h2>
+			You’ve been learning about Earth by spending time with <textarea rows="1" name="relationshipOne" class="inline"></textarea>.<br />
+			You have a crush on <textarea rows="1" name="relationshipTwo" class="inline"></textarea> but you keep it under wraps.<br />
+		<h2>Influence</h2>
+		<p>Choose your demeanor: <select name="demeanor" id="demeanor"><option value="haughty"/><option value="cheerful"/></select></p>
+		<p>If you’re haughty, you think you’re better than them. Give no one Influence.</p>
+		<p>If you’re cheerful, you’re thrilled to be here. Give everyone Influence over you.</p>
+		<label class="has-float-label">
+			<textarea rows="1" name="influenceNotes" placeholder="Influence notes" style="height: 50px;"></textarea>
+			<span>Influence notes</span>
+		</label>
+		<div class="moves">
+			<h2>Outsider Moves</h2>
+			<p>(Choose three)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Belong in two worlds"><label for="moveOne"> Belong in two worlds:</label> You have the resources that come with your station. Whenever you contact your people, roll + Superior. On a 10+, hold 3. On a 7-9, hold 2. On a miss, hold 1, but your people make an uncomfortable demand of you. Spend your hold 1 for 1 to:
+				<ul class="choices">
+					<li>receive a useful piece of alien technology that will allow you to use any ability from another playbook once (choose the ability when you spend the hold)</li>
+					<li>consult your people’s knowledge to ask the GM a question about the current situation</li>
+					<li>clear a condition through the comfort of contact with your home</li>
+				</ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Alien tech"><label for="moveTwo"> Alien tech:</label> 
+				When you alter a human device with your alien technology, roll + Freak. On a hit, you create a device that can do something impossible once and then fizzle. When you roll a 10+, choose one:
+				<ul class="choices"><li>it works exceptionally well</li><li>you get an additional use out of it</li></ul>
+				On a miss, the device works, but it has a completely unintended side effect that the GM will reveal when you use it.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Alien ways"><label for="moveThree"> Alien ways:</label> 
+				Whenever you openly disregard or undermine an important Earth custom in favor of one of your own people’s customs, shift Superior up and any other Label down.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Kirby-craft"><label for="moveFour"> Kirby-craft:</label> 
+				You have a vehicle, something from your home. Detail its look, and choose two strengths and two weaknesses. When you are flying your ship, you can use it to unleash your powers, directly engage a threat, or defend someone using Superior.
+				<p><b>Strengths:</b> 
+				<span class="striketoggle">
+					<input type="checkbox" name="moveFourA" id="moveFourA" value="Fast & maneuverable"><label for="moveFourA">Fast & maneuverable</label>, 
+					<input type="checkbox" name="moveFourB" id="moveFourB" value="chameleon plating"><label for="moveFourB">chameleon plating</label>, 
+					<input type="checkbox" name="moveFourC" id="moveFourC" value="powerful weaponry"><label for="moveFourC">powerful weaponry</label>, 
+					<input type="checkbox" name="moveFourD" id="moveFourD" value="regenerating"><label for="moveFourD">regenerating</label>, 
+					<input type="checkbox" name="moveFourE" id="moveFourE" value="dimension-shifting"><label for="moveFourE">dimension-shifting</label>
+					<input type="checkbox" name="moveFourF" id="moveFourF" value="size-shifting"><label for="moveFourF">size-shifting</label>
+					<input type="checkbox" name="moveFourG" id="moveFourG" value="telepathic"><label for="moveFourG">telepathic</label>
+				</span>
+				</p>
+				<p><b>Weaknesses:</b> 
+				<span class="striketoggle">
+					<input type="checkbox" name="moveFourH" id="moveFourH" value="Bizarre fuel source"><label for="moveFourH">Bizarre fuel source</label>, 
+					<input type="checkbox" name="moveFourI" id="moveFourI" value="susceptible to "><label for="moveFourI">susceptible to <textarea rows="1" name="susceptibleTo" class="inline"></textarea> </label>, 
+					<input type="checkbox" name="moveFourJ" id="moveFourJ" value="easily detectable"><label for="moveFourJ">easily detectable</label>, 
+					<input type="checkbox" name="moveFourK" id="moveFourK" value="slow and clumsy"><label for="moveFourK">slow and clumsy</label>, 
+					<input type="checkbox" name="moveFourL" id="moveFourL" value="unarmed"><label for="moveFourL">unarmed</label>
+					<input type="checkbox" name="moveFourM" id="moveFourM" value="difficult to repair"><label for="moveFourM">difficult to repair</label>
+				</span>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="The best of them"><label for="moveFive"> The best of them:</label> 
+				When you <b>comfort or support someone</b> by telling them how they exemplify the best parts of Earth, roll +Freak instead of +Mundane.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Not so different after all"><label for="moveSix"> Not so different after all:</label> 
+				When you talk about your home, roll + Freak. On a 10+, choose two. On a 7-9, choose one. During the conversation, you:
+				<ul class="choices"><li>confess a flaw of your home; add 1 Team to the pool</li>
+					<li>mislead them about your home; take Influence over them</li>
+					<li>describe the glories of your home; clear a condition</li>
+				</ul>
+				On a miss, you inadvertently reveal more about yourself than you planned; tell them a secret or vulnerability you haven’t shared with Earthlings before now.
+			</div>
+		</div>
+		<div>
+		<h2>Moment of Truth</h2>
+		<p>You embrace your home and call them for aid. They will answer your call -- in force! -- arriving exactly when you need them to turn the tide. They fight and serve you for the rest of the battle. Of course, when all is said and done... they’d probably like to take you home with them. You did, after all, just prove yourself worthy.</p>
+		<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+		<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+	</div>
+	<div>
+		<h2>Team Moves</h2>
+		<p>When you share a triumphant celebration with someone, take Influence over them if you show them meaningful affection, physical or emotional. They decide if it’s meaningful.</p>
+		<p>When you share a vulnerability or weakness with someone, they tell you what you should do to fit in more. Take +1 forward to do it, and mark potential if you do.</p>
+	</div>
+	<div><h2>Potential</h2>
+		<div><input type="checkbox" name="potentialOne" id="potentialOne"><input type="checkbox" name="potentialTwo" id="potentialTwo"><input type="checkbox" name="potentialThree" id="potentialThree"><input type="checkbox" name="potentialFour" id="potentialFour"><input type="checkbox" name="potentialFive" id="potentialFive"> </div>
+	</div>
+	<div><h2>Advancement</h2>
+		<p>When you fill your potential track, you advance. Choose from the list below.</p>
+		<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br />
+		<input type="checkbox" name="advanceFour" id="advanceFour"> Someone permanently loses Influence over you; add +1 to a Label<br />
+		<input type="checkbox" name="advanceFive" id="advanceFive"> Rearrange your Labels as you choose, and add +1 to a Label<br />
+		<input type="checkbox" name="advanceSix" id="advanceSix"> Unlock your Moment of Truth<br />
+		<input type="checkbox" name="advanceSeven" id="advanceSeven"> Choose two new abilities from any playbook as you come into your own<br />
+		<input type="checkbox" name="advanceEight" id="advanceEight"> You adopt a human life; take Secret Identity and The Mask from the Janus playbook<br />
+		<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+		<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br />
+		<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br />
+		<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br />
+		<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br />
+		<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br />
+		<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br />
+	</div>
+	<h2>Notes / Other Moves</h2>
+				<textarea rows=8 name="otherMoves" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Masks RPG <a href="https://sheet.adventureforhire.com/">Character Sheet</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://www.magpiegames.com/masks/">Masks RPG here</a>!
+	</div>
+
+</body>
+</html>
