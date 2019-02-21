@@ -141,3 +141,7 @@
 		max-height: 100vh;
 
 	}
+
+	.choices {
+		font-style: italic;
+	}
