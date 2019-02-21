@@ -1,0 +1,251 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Masks RPG Character Sheet - v 0.5 | Adventure For Hire</title>
+	<meta name="description" content="Masks RPG Responsive Character Sheet">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Masks RPG Responsive Character Sheet" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/masks/images/sheet-masks-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css"/>
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Masks RPG Playbook - Protege</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/masks/images/portrait-protege.jpg" id="charImage" /><br />
+		You don't have to do this. 	You could probably have a safe, decent, simple life. It'd be nice but... come on. Superpowers! Aliens! Wizards! Time travel! You're out of your depth but who cares? This is awesome. Everybody should try it.
+		<div style="white-space: nowrap;">
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Hero Name" />
+			<span>Hero Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="text" name="realName" id="realName" placeholder="Real Name" />
+			<span>Real Name</span>
+			</label>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/masks/images/portrait-protege.jpg" data-original-value="https://sheet.adventureforhire.com/masks/images/portrait-protege.jpg" />
+			<span>Portrait URI</span>
+			</label>
+		</div>
+		<h2>Look</h2>
+		<input type="text" name="genders" list="genders" placeholder=""/> <input type="text" name="race" list="races" placeholder=""/> <input type="text" name="body" list="bodies" placeholder=""/> <input type="text" name="clothing" list="clothing" placeholder=""/> <input type="text" name="costume" list="costumes" placeholder=""/>
+		<datalist id="genders">
+			<option value="ambiguous">
+			<option value="man">
+			<option value="shifting">
+			<option value="transgressing">
+			<option value="woman">
+		</datalist>
+		<datalist id="races">
+			<option value="Asian or South Asian">
+			<option value="Black">
+			<option value="Hispanic/Latino">
+			<option value="Indigenous">
+			<option value="Middle Eastern">
+			<option value="White">
+		</datalist>
+		<datalist id="bodies">
+			<option value="athletic boddy">
+			<option value="compact body">
+			<option value="lean body">
+			<option value="muscular body">
+		</datalist>
+		<datalist id="clothing">
+			<option value="school uniform">
+			<option value="casual clothes">
+			<option value="fashionable clothes">
+			<option value="loose clothes">
+		</datalist>
+		<datalist id="costumes">
+			<option value="colorful costume">
+			<option value="mentor's garb">
+			<option value="protective wear">
+			<option value="simple costume">
+		</datalist>
+		<h2>Abilities</h2>
+		<p>You are someone’s protégé. Your powers largely mimic theirs, but each of you is in some way unique. Pick one ability you both share and one ability for each of you that is uniquely yours.</p>
+		<div class="abilities">
+		<b>Shared Ability: </b><input type="text" name="abilityOne" id="abilityOne" list="beaconAbilities" placeholder=""/><br />
+		<b>Your Own Ability: </b><input type="text" name="abilityTwo" id="abilityTwo" list="beaconAbilities" placeholder=""/><br />
+		<b>Your Mentor's Ability: </b><input type="text" name="abilityThree" id="abilityThree" list="beaconAbilities" placeholder=""/>
+		<datalist id="beaconAbilities">
+			<option value="superhuman physique">
+			<option value="weapons and gadgets">
+			<option value="stealth">
+			<option value="detective skills">
+			<option value="hacking">
+			<option value="power mimicry">
+			<option value="body elasticity">
+			<option value="powerful armor">
+			<option value="telepathy/telekinesis">
+			<option value="intimidation and fear">
+			<option value="impossible fighting skills">
+		</datalist>
+		</div>
+		<h2>Mentor</h2>
+		You have a mentor, someone who’s taught you, trained you, given you aid, or raised you up. Someone who might have confined you a bit too rigidly to a single path. Which Label do they embody, and which do they deny?
+		<p><b>Embodies: </b><select name="mentorEmbodies" id="mentorEmbodies"><option value="Savior">Savior</option><option value="Danger">Danger</option><option value="Freak">Freak</option><option value="Superior">Superior</option><option value="Mundane">Mundane</option></select></p>
+		<p><b>Denies: </b><select name="mentorDenies" id="mentorEmbodies"><option value="Savior">Savior</option><option value="Danger">Danger</option><option value="Freak">Freak</option><option value="Superior">Superior</option><option value="Mundane">Mundane</option></select></p>
+		<h2>Labels</h2>
+		<p>(at character creation, add +1 wherever you choose)</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Danger <input type="number" name="charDanger" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Freak <input type="number" name="charFreak" min="-2" max="3" value="0" class="alignRight" /></p>
+			<p>Savior <input type="number" name="charSavior" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Superior <input type="number" name="charSuperior" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Mundane <input type="number" name="charMundane" min="-2" max="3" value="0" class="alignRight" /></p>
+		</div>
+		<div class="conditions">
+			<h2>Conditions</h2>
+			<input type="checkbox" name="conAfraid" id="conAfraid" value="Afraid"><label for="conAfraid"> Afraid</label> (-2 to directly engage a threat)<br />
+			<input type="checkbox" name="conAngry" id="conAngry" value="Angry"><label for="conAngry"> Angry</label> (-2 to comfort or support or pierce the mask) <br />
+			<input type="checkbox" name="conGuilty" id="conGuilty" value="Guilty"><label for="conGuilty"> Guilty</label> (-2 to provoke someone or assess the situation)<br /> 
+			<input type="checkbox" name="conHopeless" id="conHopeless" value="Hopeless"><label for="conHopeless"> Hopeless</label> (-2 to unleash your powers)<br /> 
+			<input type="checkbox" name="conInsecure" id="conInsecure" value="Insecure"><label for="conInsecure"> Insecure</label> (-2 to defend someone or reject others’ influence)<br /> 
+		</div>
+		<div class="backstory">
+			<h2>Backstory</h2>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryOne" placeholder="How did you first meet your mentor?"></textarea>
+			<span>How did you first meet your mentor?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryTwo" placeholder="When and why did you choose to train with them?"></textarea>
+			<span>When and why did you choose to train with them?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryThree" placeholder="Why did they agree to train you?"></textarea>
+			<span>Why did they agree to train you?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFour" placeholder="Who else, outside of the team, knows about your training?"></textarea>
+			<span>Who else, outside of the team, knows about your training?</span>
+			</label>
+			<label class="has-float-label">
+			<textarea rows="1" name="backstoryFive" placeholder="Why do you care about the team?"></textarea>
+			<span>Why do you care about the team?</span>
+			</label>
+			<p>Once you’ve finished your backstory, introduce your character to the other players, and then determine what happened when your team first came together, the relationships between you and your teammates, and who has Influence over you.</p>
+		</div>
+		<h2>When our team first came together...</h2>
+		<p>We stuck together after all was said and done. </p>
+		<label class="has-float-label">
+			<textarea rows="1" name="firstTogether" placeholder="Why? How’d we keep in contact?"></textarea>
+			<span>Why? How’d we keep in contact?</span>
+		</label>
+		<h2>Relationships</h2>
+			You and <textarea rows="1" name="relationshipOne" class="inline"></textarea> teamed up a few times before the rest of you got together.<br />
+			Your mentor is cautious; they asked you to keep an eye on <textarea rows="1" name="relationshipTwo" class="inline"></textarea>.<br />
+		<h2>Influence</h2>
+		<p>Choose your demeanor: <select name="demeanor" id="demeanor"><option value="playful">playful</option><option value="business">business</option></select></p>
+		<p>If you choose playful, give Influence to two teammates.</p>
+		<p>If you choose business, give Influence to no teammates.</p>
+		<label class="has-float-label">
+			<textarea rows="1" name="influenceNotes" placeholder="Influence notes" style="height: 50px;"></textarea>
+			<span>Influence notes</span>
+		</label>
+		<div class="moves">
+			<h2>Protege Moves</h2>
+			<p>(Choose three)</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" value="Been reading the files"><label for="moveOne"> Been reading the files:</label> 
+				You’ve learned about the superhuman world through your mentor’s resources. When you first encounter an important superpowered phenomenon (your call), roll + Superior. On a hit, tell the team one important detail you’ve learned from your studies. The GM will tell you what, if anything, seems different from what you remember. On a 10+, ask the GM a follow-up question; they will answer it honestly. On a miss, the situation is well outside your base of knowledge; the GM will tell you why.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Captain"><label for="moveTwo"> Captain:</label> 
+				When you <b>enter battle as a team</b>, add an extra Team to the pool and carry +1 forward if you are the leader.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Venting frustration"><label for="moveThree"> Venting frustration:</label> 
+				When you <b>directly engage</b> while you are Angry, you can roll + the Label your mentor denies and clear Angry.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Fireside chat"><label for="moveFour"> Fireside chat:</label> 
+				When you seek advice from your mentor, roll + the Label they embody. On a hit they will tell you what to do. On a 10+, mark potential if you follow their advice, and take +1 ongoing to follow through. On a 7-9, you get +1 forward to see it through if you do it their way. On a miss, they don’t have time for you because something big has gone down; mark a condition, GM’s choice.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Be mindful of your surroundings"><label for="moveFive"> Be mindful of your surroundings:</label> 
+				When you <b>assess the situation</b> before entering into a fight, you may ask one additional question, even on a miss.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Heroic tradition"><label for="moveSix"> Heroic tradition:</label> 
+				When you give someone the advice that you think your mentor would give, you can roll + the Label your mentor embodies to <b>comfort or support someone</b>, instead of rolling + Mundane.
+			</div>
+		</div>
+		<h2>Mentor's Resources</h2>
+		<p>Choose up to three resources that your mentor gave you and the team:</p>
+		<span class="striketoggle">
+			<input type="checkbox" name="resourceOne" id="resourceOne" value="A hidden base"><label for="resourceOne">A hidden base</label>, 
+			<input type="checkbox" name="resourceTwo" id="resourceTwo" value="a vehicle"><label for="resourceTwo">a vehicle</label>, 
+			<input type="checkbox" name="resourceThree" id="resourceThree" value="a supercomputer"><label for="resourceThree">a supercomputer</label>, 
+			<input type="checkbox" name="resourceFour" id="resourceFour" value="communicators"><label for="resourceFour">communicators</label>, 
+			<input type="checkbox" name="resourceFive" id="resourceFive" value="surveillance equipment"><label for="resourceFive">surveillance equipment</label>, 
+			<input type="checkbox" name="resourceSix" id="resourceSix" value="false identities"><label for="resourceSix">false identities</label>, 
+			<input type="checkbox" name="resourceSeven" id="resourceSeven" value="badges of authority"><label for="resourceSeven">badges of authority</label>, 
+			<input type="checkbox" name="resourceEight" id="resourceEight" value="a chem lab"><label for="resourceEight">a chem lab</label>, 
+			<input type="checkbox" name="resourceNine" id="resourceNine" value="a med lab"><label for="resourceNine">a med lab</label>, 
+			<input type="checkbox" name="resourceTen" id="resourceTen" value="a teleportal"><label for="resourceTen">a teleportal</label>, 
+			<input type="checkbox" name="resourceEleven" id="resourceEleven" value="a weapon of last resort"><label for="resourceEleven">a weapon of last resort</label>, 
+			<input type="checkbox" name="resourceTwelve" id="resourceTwelve" value="security systems"><label for="resourceTwelve">security systems</label>, 
+			<input type="checkbox" name="resourceThirteen" id="resourceThirteen" value="simple robots"><label for="resourceThirteen">simple robots</label>, 
+		</span>
+		<div>
+		<h2>Moment of Truth</h2>
+		<p>The moment that you show who you really are: your mentor, or something different. You can do whatever your mentor could do and more. You can do the incredible, even the things they always failed to accomplish. Of course, they’re not going to see you the same way, no matter which path you choose…</p>
+		<label for="truthUnlockOne"> Unlock 1:</label> <input type="checkbox" name="truthUnlockOne" id="truthUnlockOne"><label for="truthUsedOne"> Use 1:</label> <input type="checkbox" name="truthUsedOne" id="truthUsedOne">
+		<label for="truthUnlockTwo"> Unlock 2:</label> <input type="checkbox" name="truthUnlockTwo" id="truthUnlockTwo"><label for="truthUsedTwo"> Use 2:</label> <input type="checkbox" name="truthUsedTwo" id="truthUsedTwo">
+	</div>
+	<div>
+		<h2>Team Moves</h2>
+		<p>When you share a triumphant celebration with someone, ask them if you’ve been a good leader or effective teammate. If they say yes, your mentor loses Influence over you and you mark potential. If they say no, your mentor gains Influence over you, and you take +1 forward on using the Label your mentor embodies.</p>
+		<p>When you share a vulnerability or weakness with someone, tell them a secret about your mentor (including your feelings towards them). Give them Influence over you and add a Team to the pool.</p>
+	</div>
+	<div><h2>Potential</h2>
+		<div><input type="checkbox" name="potentialOne" id="potentialOne"><input type="checkbox" name="potentialTwo" id="potentialTwo"><input type="checkbox" name="potentialThree" id="potentialThree"><input type="checkbox" name="potentialFour" id="potentialFour"><input type="checkbox" name="potentialFive" id="potentialFive"> </div>
+	</div>
+	<div><h2>Advancement</h2>
+		<p>When you fill your potential track, you advance. Choose from the list below.</p>
+		<input type="checkbox" name="advanceOne" id="advanceOne"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another move from your playbook<br />
+		<input type="checkbox" name="advanceThree" id="advanceThree"> Take a move from another playbook<br />
+		<input type="checkbox" name="advanceFour" id="advanceFour"> Someone permanently loses Influence over you; add +1 to a Label<br />
+		<input type="checkbox" name="advanceFive" id="advanceFive"> Rearrange your Labels as you choose, and add +1 to a Label<br />
+		<input type="checkbox" name="advanceSix" id="advanceSix"> Unlock your Moment of Truth<br />
+		<input type="checkbox" name="advanceSeven" id="advanceSeven"> Add +2 to the Label your mentor embodies or denies<br />
+		<input type="checkbox" name="advanceEight" id="advanceEight"> Choose up to four more resources from your mentor<br />
+		<p>When you’ve taken five advances from the top list, you can take advances from the list below.</p>
+		<input type="checkbox" name="advanceNine" id="advanceNine"> Unlock your Moment of Truth after it’s been used once<br />
+		<input type="checkbox" name="advanceTen" id="advanceTen"> Change playbooks<br />
+		<input type="checkbox" name="advanceEleven" id="advanceEleven"> Take an adult move<br />
+		<input type="checkbox" name="advanceTwelve" id="advanceTwelve"> Take an adult move<br />
+		<input type="checkbox" name="advanceThirteen" id="advanceThirteen"> Lock a Label, and add +1 to a Label of your choice<br />
+		<input type="checkbox" name="advanceFourteen" id="advanceFourteen"> Retire from the life or become a paragon of the city<br />
+	</div>
+	<h2>Other Moves</h2>
+				<textarea rows=8 name="otherMoves" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Masks RPG <a href="https://sheet.adventureforhire.com/">Character Sheet</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://www.magpiegames.com/masks/">Masks RPG here</a>!
+	</div>
+
+</body>
+</html>
