@@ -15,6 +15,7 @@ Character sheets for new games can be made by creating an HTML form with the id 
 * [Tales from the Loop](https://sheet.adventureforhire.com/loop/) 
 * [Star-Crossed](https://sheet.adventureforhire.com/starcrossed)
 * [Masks RPG](https://sheet.adventureforhire.com/masks/) - Currently in "beta" but appears mostly functional and should be completelyfuture-proof.
+* [Lasers & Feelings](https://sheet.adventureforhire.com/lf/) - initial sheet created, seems to be working
 
 These should be future-proof, but if I ever have to break the save/load formatting I'll make sure the old code is still available to load your characters.
 
