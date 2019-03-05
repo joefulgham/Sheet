@@ -1,4 +1,5 @@
-/*! charsheet.js v1.3 by @joefulgham | MIT license 
+/*! charsheet.js v1.3 by @joefulgham
+    Copyright 2019 Joe Fulgham - Javascript: MIT license | HTML/CSS: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 	https://sheet.adventureforhire.com
 	https://joefulgham.com
 */
