@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87348180-2"></script>
+  	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-87348180-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Monsterhearts 2 Skin - The Fae v0.5 | Adventure For Hire</title>
+	<meta name="description" content="Monsterhearts RPG Character Skin - The Fae">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Monsterhearts RPG Character Skin - The Fae" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Monsterhearts 2 Skin - The Fae</h1></header>
+	<form id="charSheet">
+		<h2>Identity</h2>
+		<img src="https://sheet.adventureforhire.com/monsterhearts/images/portrait-fae.jpg" id="charImage" /><br />
+		At the edges of this world, just beyond the veil, there are colours that few mortals even dream of. Beauty enough to shatter any heart. The Fae live and breathe at the edges of this world. They keep a dusting of that magic tucked behind their ears, just in case.<br /><br />And the Fae are willing to share. They’re nothing if not generous, asking for only one thing in return. A promise. Keep it, and the true beauty of the world will be revealed. Break it, and feel the wrath of faery vengeance.
+			<label class="has-float-label">
+			<input type="text" name="charName" id="charName" placeholder="Name" list="charNames" />
+			<span>Name</span>
+			</label>
+			<datalist id="charNames">
+				<option value="Anders">
+				<option value="Aurora">
+				<option value="Crow">
+				<option value="Gail">
+				<option value="Harmony">
+				<option value="Iris">
+				<option value="Lilith">
+				<option value="Ping">
+				<option value="Selene">
+				<option value="Sienna">
+				<option value="Walthus">
+			</datalist>
+			<label class="has-float-label">
+			<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-fae.jpg" data-original-value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-fae.jpg" />
+			<span>Portrait URI</span>
+			</label>
+		Look:&nbsp;<input type="text" name="charLook" id="charLook" list="charLooks" placeholder=""/> Eyes:&nbsp;<input type="text" name="charEye" id="charEye" list="charEyes" placeholder=""/> Origin:&nbsp;<input type="text" name="charOrigin" list="charOrigins" placeholder=""/> 
+		<datalist id="charLooks">
+			<option value="dainty">
+			<option value="girlish">
+			<option value="gaunt">
+			<option value="mysterious">
+			<option value="dishevelled">
+		</datalist>
+		<datalist id="charEyes">
+			<option value="quick eyes">
+			<option value="lyrical eyes">
+			<option value="mesmerizing eyes">
+			<option value="laughing eyes">
+			<option value="piercing eyes">
+		</datalist>
+		<datalist id="charOrigins">
+			<option value="fae born">
+			<option value="fae blooded">
+			<option value="swapped at birth">
+			<option value="stole the gift">
+			<option value="touchedd with the gift">
+		</datalist>
+		<h2>Your Backstory</h2>
+		<p>You wear your heart on your sleeve. Give everyone one String.</p>
+		<p>You've captured someone's fancy. Gain 2 Strings on them.</p>
+		<label class="has-float-label">
+			<textarea rows="4" name="stringNotes" id="stringNotes" placeholder="Strings" style="height: 50px;"></textarea>
+			<span>Strings</span>
+		</label>
+		<h2>Darkest Self</h2>
+		<p>Everything you say seems a promise. Everything you heart seems a promise. If a promise is broken, justice must be wrought in trickery or blood. You aren’t subject to the human rules of mercy. To escape your Darkest Self, you must in some way re-balance the scales of justice.</p>
+		<h2>Harm</h2>
+		<div><input type="checkbox" name="harmOne" id="harmOne"><input type="checkbox" name="harmTwo" id="harmTwo"><input type="checkbox" name="harmThree" id="harmThree"><input type="checkbox" name="harmFour" id="harmFour"></div>
+		<div><h2>Experience</h2>
+			<div><input type="checkbox" name="experienceOne" id="experienceOne"><input type="checkbox" name="experienceTwo" id="experienceTwo"><input type="checkbox" name="experienceThree" id="experienceThree"><input type="checkbox" name="experienceFour" id="experienceFour"><input type="checkbox" name="experienceFive" id="experienceFive"> </div>
+			<input type="checkbox" name="advanceOne" id="advanceOne">Add +1 to one of your stats<br />
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another Fae move<br />
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another Fae move<br />
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSix" id="advanceSix"> You belong to a <b>Jury of Fae</b><br />
+		</div>
+		<h2>Conditions</h2>
+		<label class="has-float-label">
+			<textarea rows="4" name="conditionNotes" id="conditionNotes" placeholder="Conditions"></textarea>
+			<span>Conditions</span>
+		</label>
+		<h2>Stats</h2>
+		<p>Choose one stat set<br/>
+			Hot 2 Cold -1 Volatile -1 Dark 1, OR<br />
+			Hot 1 Cold -1 Volatile 2 Dark -1
+		</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Hot <input type="number" name="charHot" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Cold <input type="number" name="charCold" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Volatile <input type="number" name="charVolatile" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Dark <input type="number" name="charDark" min="-2" max="3" value="1" class="alignRight" /></p>
+		</div>
+		<div class="moves">
+			<h2>Fae Moves</h2>
+			<p>You get Faery Contract, and choose one more</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked value="Faery Contract"><label for="moveOne"> Faery Contract:</label> 
+				If someone breaks a promise or contract made to you, take a String on them. When spending a String to even out the score and get justice on a broken promise, add these options to <i>Pulling Strings</i>:
+				<ul><li>they fuck up something simple at a crucial moment, suffering 1 Harm if appropriate,</li>
+				<li>add 2 to your roll on an act of vengeance.</li></ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Unashamed"><label for="moveTwo"> Unashamed:</label> You can give someone a String on you to add 3 to your attempt to <i>Turn Them On</i>.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="The Wild Hunt"><label for="moveThree"> The Wild Hunt:</label> 
+				When you draw upon your most feral manner, echoing the lithe movements of a cat or the voracity of a wolf, add 1 to your roll to <i>Turn Someone On</i>.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Lure"><label for="moveFour">Lure:</label> 
+				Whenever someone makes a promise to you, they mark experience. Whenever someone breaks a promise to you, you mark experience.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Guide"><label for="moveFive"> Guide:</label> 
+				If you spend a String on someone willing, you can bring them across the veil, into the faery realm. The spell lasts for a scene or two, before you’re both returned to the mundane world.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Beyond The Veil"><label for="moveSix"> Beyond The Veil:</label> 
+				To seek audience with the Faery King, <i>Gaze Into the Abyss</i>. On a 10 up, in addition to other results, the Faery King reveals to you a hidden String on someone. Gain it. On a 7 to 9, in addition to other results, the Faery King demands a favour of you.
+			</div>
+		</div>
+		<h2>Sex Move</h2>
+		<p>When you lie naked with another, you can ask them for a promise. If they refuse, take 2 Strings on them.</p>
+		<h2>Playing The Fae</h2>
+		<p>Alluring, otherworldly, fickle, and vengeful. The Fae entices people into making promises, and wields faerie vengeance when those promises are broken. They also have the ability to commune with ethereal forces, just beyond the veil.</p>
+		<p>The two stat choices for the Fae allow you to slant toward being either beautiful and mysterious (Hot 2 & Dark 1) or audacious and alien (Volatile 2 & Hot 1). With a consistently-low Cold stat, they aren’t prone to being very chill, cynical, or wry. From their forward sensuality to their unwavering sense of justice, sincerity is a big theme for the Fae.</p>
+		<p>When you play the Fae, promises matter. Use the Fae’s allure and wit to tease those promises out of other characters. You can add mechanical incentive for others to make promises to you by spending Strings to tempt them to do what you want, or through the move Lure. Keep track of the promises that others make to you, in the margins of your character sheet or on scrap paper. Beyond the Veil, Guide, the option to join a Jury of Fae, and talk of faery justice all invite you to collaboratively imagine the world of faery. To do so, ask questions of the MC, anticipate questions being asked of you in return, and brace yourself for surprise.</p>
+	<h2>Notes</h2>
+				<textarea rows=8 name="charNotes" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Monsterhearts <a href="https://sheet.adventureforhire.com/">Skin</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://buriedwithoutceremony.com/monsterhearts">Monsterhearts 2 here</a>!
+	</div>
+
+</body>
+</html>
