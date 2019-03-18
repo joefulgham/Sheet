@@ -1,5 +1,5 @@
 	body {
-  		font-family: 'Open Sans', sans-serif;
+  		font-family: 'Overlock', sans-serif;
   		font-size: 16px;
 	}
 	/* Tell iOS to leave my small fonts alone! */
@@ -17,19 +17,10 @@
 		text-align: center;
 	}
 	h1, h2, h3 {
-		color: #4a7284;
+		color: #000;
 		font-weight: 800;
 		text-transform: uppercase;
 		font-family: 'Jolly Lodger', serif;
-	}
-	h2 {
-		margin-bottom: 4px;
-		margin-left: -12px;
-		padding-left: 12px;
-		padding-top: 6px;
-		font-style: italic;
-		border-left: 6px solid  #4a7284;
-		border-top: 2px solid  #4a7284;
 	}
 
 	.logo {
@@ -50,7 +41,7 @@
     	display: block;
     	padding: 0;
     	margin: 0;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Overlock', sans-serif;
 		font-size: 16px;
     }
 
