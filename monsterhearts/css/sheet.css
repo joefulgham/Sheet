@@ -163,3 +163,13 @@
 input#charPortraitURI { width: 1em; opacity: 0; }
 
 input#charPortraitURI:focus { width: auto; opacity: 100; }
+
+.rTextarea { width: 100%; }
+
+.rTextarea textarea { 
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;	
+    width: 100%;
+ }
+ 
