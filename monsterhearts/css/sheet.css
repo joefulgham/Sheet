@@ -23,6 +23,10 @@
 		font-family: 'Jolly Lodger', serif;
 	}
 
+	h2 {
+		font-size: 36px;
+	}
+
 	.logo {
 		width: 80%; 
 		height:auto; 
