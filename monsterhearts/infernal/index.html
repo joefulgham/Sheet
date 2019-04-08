@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87348180-2"></script>
+  	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-87348180-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Monsterhearts 2 Skin - The Fae v0.5 | Adventure For Hire</title>
+	<meta name="description" content="Monsterhearts RPG Character Skin - The Infernal">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Overlock" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Monsterhearts RPG Character Skin - The Infernal" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Monsterhearts 2 Skin - The Infernal</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/monsterhearts/images/portrait-infernal.png" id="charImage" />
+		<p>
+			<i>At first, it seemed innocent. It gave you things, made you feel good about yourself. You came to it with your problems, and it fixed them. When you asked how you could return the favour, it told you to be patient - that all debts would be settled in due time. That was the first time you heard it mention debts.<br /><br />You’ve got Satan as your cornerman, or a demon in your brain. Or maybe the stars glow just for you. Regardless, you owe a debt to something much bigger and scarier than you’ll ever be.</i>
+		</p>
+		<h2>Identity</h2>
+		<label class="has-float-label">
+		<input type="text" name="charName" id="charName" placeholder="Name" list="charNames" />
+		<span>Name</span>
+		</label>
+		<datalist id="charNames">
+			<option value="Baron">
+			<option value="Cain">
+			<option value="Chloe">
+			<option value="Damien">
+			<option value="Logan">
+			<option value="Mark">
+			<option value="Mika">
+			<option value="Omar">
+			<option value="Ophelia">
+			<option value="Poe">
+			<option value="Yoanna">
+		</datalist>
+		<label class="has-float-label">
+		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-infernal.png" data-original-value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-infernal.png" />
+		<span>Portrait URI</span>
+		</label>
+		Look: <input type="text" name="charLook" id="charLook" list="charLooks" placeholder=""/><br />
+		Eyes: <input type="text" name="charEye" id="charEye" list="charEyes" placeholder=""/><br />
+		Origin: <input type="text" name="charOrigin" list="charOrigins" placeholder=""/> 
+		<datalist id="charLooks">
+			<option value="quiet">
+			<option value="frantic">
+			<option value="venomous">
+			<option value="spoiled">
+			<option value="spooked">
+		</datalist>
+		<datalist id="charEyes">
+			<option value="empty eyes">
+			<option value="calculating eyes">
+			<option value="burning eyes">
+			<option value="flickering eyes">
+			<option value="piercing eyes">
+		</datalist>
+		<datalist id="charOrigins">
+			<option value="bartered soul">
+			<option value="emissary">
+			<option value="last-chancer">
+			<option value="legion">
+			<option value="lackey">
+			<option value="chosen">
+		</datalist>
+		<h2>Your Backstory</h2>
+		<p>You owe debts. Give away 3 Strings, divided any way you like between the Dark Power and the other characters.</p>
+		<p>Someone thinks they can save you. Gain a String on them.</p>
+		<div class="rTextarea">
+		<label class="has-float-label">
+			<textarea rows="2" name="stringNotes" id="stringNotes" placeholder="Strings"></textarea>
+			<span>Strings</span>
+		</label>
+		</div>
+		<h2>Darkest Self</h2>
+		<p>You find yourself shivering, needy, and alone. The Dark Power will make some daunting, open-ended demands. Every demand fulfilled brings you closer to feeling whole again, and removes one of the Dark Power’s Strings on you. You escape your Darkest Self when the Dark Power is out of Strings, or you make a bargain with an even more dangerous entity.</p>
+		<h2>Harm</h2>
+		<div><input type="checkbox" name="harmOne" id="harmOne"><input type="checkbox" name="harmTwo" id="harmTwo"><input type="checkbox" name="harmThree" id="harmThree"><input type="checkbox" name="harmFour" id="harmFour"></div>
+		<div><h2>Experience</h2>
+			<div><input type="checkbox" name="experienceOne" id="experienceOne"><input type="checkbox" name="experienceTwo" id="experienceTwo"><input type="checkbox" name="experienceThree" id="experienceThree"><input type="checkbox" name="experienceFour" id="experienceFour"><input type="checkbox" name="experienceFive" id="experienceFive"> </div>
+			<input type="checkbox" name="advanceOne" id="advanceOne">Add +1 to one of your stats<br />
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another infernal move<br />
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another infernal move<br />
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSix" id="advanceSix"> You supply for <b>Needy Fiends</b><br />
+		</div>
+		<h2>Conditions</h2>
+		<label class="has-float-label">
+			<textarea rows="4" name="conditionNotes" id="conditionNotes" placeholder="Conditions"></textarea>
+			<span>Conditions</span>
+		</label>
+		<h2>Stats</h2>
+		<p>Choose one stat set<br/>
+			Hot -1 Cold -1 Volatile 2 Dark 1, OR<br />
+			Hot 1 Cold -1 Volatile -1 Dark 2
+		</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Hot <input type="number" name="charHot" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Cold <input type="number" name="charCold" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Volatile <input type="number" name="charVolatile" min="-2" max="2" value="2" class="alignRight" /></p>
+			<p>Dark <input type="number" name="charDark" min="-2" max="3" value="1" class="alignRight" /></p>
+		</div>
+		<div class="moves">
+			<h2>Infernal Moves</h2>
+			<p><i>You get Soul Debt, and choose one more:</i></p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checkedd value="Soul Debt"><label for="moveOne"> Soul Debt:</label> 
+				You owe a debt to a Dark Power. Name it, and choose two Bargains it has made with you.<br /><br /> The Dark Power can gain Strings. If ever it has 5 Strings on you, trigger your Darkest Self.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Dark Recruiter"><label for="moveTwo"> Dark Recruiter:</label> When you bring an innocent soul to the Dark Power, mark experience.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Under Pressure"><label for="moveThree"> Under Pressure:</label> 
+				If someone has 3 or more Strings on you, add 1 to your rolls to carry out their bidding.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Can't Save Myself"><label for="moveFour"> Can't Save Myself:</label> 
+				When somebody saves you from forces too powerful for you to reckon with, they mark experience, and you gain a String on them.
+			</div>
+			<h2>Bargains</h2>
+			<p><i>Choose two Bargains that the Dark Power has made with you:</i></p>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="The Power Flows Through You"><label for="moveFive"> The Power Flows Through You:</label> 
+				You can give the Dark Power a String in order to add 2 to your next roll.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Numbing It Out"><label for="moveSix"> Numbing It Out:</label> 
+				You can give the Dark Power a String in order to remove a Condition or up to two harm.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Elsewise Power"><label for="moveSix"> Elsewise Power:</label> 
+				You can give the Dark Power a String to use a move you don’t have, just this once. This move can come from any Skin.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Uncanny Voices"><label for="moveSix"> Uncanny Voices:</label> 
+				You can give the Dark Power a String in order to realize a secret about someone you’re talking to. The owner of that character will reveal one of their secret fears, secret desires, or secret strengths (they choose which.)
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Strings Attached"><label for="moveSix"> Strings Attached:</label> 
+				You can ask the Dark Power for something that you really, really want. The MC will attach a price to the thing you want, and hint at an undesired twist in its nature. If you pay the price, you’ll get what you’re after.
+			</div>
+		</div>
+		<h2>Sex Move</h2>
+		<p>When you have sex, the Dark Power loses a String on you and gains a String on whoever you had sex with.</p>
+		<h2>Playing The Infernal</h2>
+		<p>Tempted, impulsive, and in over their head. The Infernal has a demonic patron – someone who gets them things they want, at an unspecified price. The Infernal plays with themes of temptation, addiction, and dependency.</p>
+		<p>The Infernal is extremely powerful while sinking into debt with their Dark Power, though that pushes them toward an inevitable crash. The crash isn’t a punishment to be avoided, but rather a dramatic height in the character arc. When you play the Infernal, don’t stop just shy of that fifth String of debt or try to play it safe. The Infernal is most interesting when they are swinging chaotically between power and powerlessness.</p>
+		<p>With <i>Dark Recruiter</i>, the specifics of what it means to bring someone to the Dark Power is left up to interpretation and context. It might involve ritual sacrifice, or a simple introduction at the cafe.</p>
+		<p>The <i>Strings Attached</i> Bargain plays with the "be careful what you wish for" trope from stories of witches and genies. Taking this Bargain communicates to the MC that you want to be punched in the gut by tragic irony every now and again.</p>
+	<h2>Notes</h2>
+				<textarea rows=8 name="charNotes" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Monsterhearts 2 RPG <a href="https://sheet.adventureforhire.com/">Skin</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://buriedwithoutceremony.com/monsterhearts">Monsterhearts 2 here</a>!
+	</div>
+
+</body>
+</html>
