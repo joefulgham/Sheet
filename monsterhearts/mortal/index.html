@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87348180-2"></script>
+  	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-87348180-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Monsterhearts 2 Skin - The Fae v0.5 | Adventure For Hire</title>
+	<meta name="description" content="Monsterhearts RPG Character Skin - The Mortal">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Overlock" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Monsterhearts RPG Character Skin - The Mortal" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Monsterhearts 2 Skin - The Mortal</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/monsterhearts/images/portrait-mortal.png" id="charImage" />
+		<p>
+			<i>None of them would understand. What you have here, in this dark and secret place, it’s beautiful. They’d warn you that this sort of beauty is dangerous, like a raging fire. Well some things are worth getting burned for.<br /><br />Love has eclipsed all hope, and the dark has left you feeling beautiful.</i>
+		</p>
+		<h2>Identity</h2>
+		<label class="has-float-label">
+		<input type="text" name="charName" id="charName" placeholder="Name" list="charNames" />
+		<span>Name</span>
+		</label>
+		<datalist id="charNames">
+			<option value="Anne">
+			<option value="Carla">
+			<option value="Deirdre">
+			<option value="James">
+			<option value="Jonathan">
+			<option value="Laeli">
+			<option value="Patrick">
+			<option value="Robin">
+			<option value="Shen">
+			<option value="Timothy">
+			<option value="Wendy">
+		</datalist>
+		<label class="has-float-label">
+		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-mortal.png" data-original-value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-mortal.png" />
+		<span>Portrait URI</span>
+		</label>
+		Look: <input type="text" name="charLook" id="charLook" list="charLooks" placeholder=""/><br />
+		Eyes: <input type="text" name="charEye" id="charEye" list="charEyes" placeholder=""/><br />
+		Origin: <input type="text" name="charOrigin" list="charOrigins" placeholder=""/> 
+		<datalist id="charLooks">
+			<option value="quiet">
+			<option value="desperate">
+			<option value="awkward">
+			<option value="beautiful">
+			<option value="displaced">
+		</datalist>
+		<datalist id="charEyes">
+			<option value="doe eyes">
+			<option value="sad eyes">
+			<option value="darting eyes">
+			<option value="nervous eyes">
+			<option value="human eyes">
+		</datalist>
+		<datalist id="charOrigins">
+			<option value="new kid in town">
+			<option value="kid next door">
+			<option value="your barista">
+			<option value="someone’s girlfriend">
+			<option value="someone’s boyfriend">
+			<option value="nobody">
+		</datalist>
+		<h2>Your Backstory</h2>
+		<p>Declare your backstory last.</p>
+		<p>Choose one person to be your Lover. Give them three Strings on you. Take one String on them.</p>
+		<div class="rTextarea">
+		<label class="has-float-label">
+			<textarea rows="2" name="stringNotes" id="stringNotes" placeholder="Strings"></textarea>
+			<span>Strings</span>
+		</label>
+		</div>
+		<h2>Darkest Self</h2>
+		<p>Nobody understands you. Nobody even tries. You do so much for the people you love, and they walk all over you. Enough is enough! Betray them. Show them what its like to be uncared for. Reveal their monstrosity and yours. Only seeing the pain that you’re causing your Lover will let you escape your Darkest Self.</p>
+		<h2>Harm</h2>
+		<div><input type="checkbox" name="harmOne" id="harmOne"><input type="checkbox" name="harmTwo" id="harmTwo"><input type="checkbox" name="harmThree" id="harmThree"><input type="checkbox" name="harmFour" id="harmFour"></div>
+		<div><h2>Experience</h2>
+			<div><input type="checkbox" name="experienceOne" id="experienceOne"><input type="checkbox" name="experienceTwo" id="experienceTwo"><input type="checkbox" name="experienceThree" id="experienceThree"><input type="checkbox" name="experienceFour" id="experienceFour"><input type="checkbox" name="experienceFive" id="experienceFive"> </div>
+			<input type="checkbox" name="advanceOne" id="advanceOne">Add +1 to one of your stats<br />
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another mortal move<br />
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another mortal move<br />
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Take a move from any Skin</b><br />
+		</div>
+		<h2>Conditions</h2>
+		<label class="has-float-label">
+			<textarea rows="4" name="conditionNotes" id="conditionNotes" placeholder="Conditions"></textarea>
+			<span>Conditions</span>
+		</label>
+		<h2>Stats</h2>
+		<p>Choose one stat set<br/>
+			Hot 2 Cold -1 Volatile -1 Dark 1, OR<br />
+			Hot 2 Cold -1 Volatile 1 Dark -1
+		</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Hot <input type="number" name="charHot" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Cold <input type="number" name="charCold" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Volatile <input type="number" name="charVolatile" min="-2" max="-1" value="2" class="alignRight" /></p>
+			<p>Dark <input type="number" name="charDark" min="-2" max="3" value="1" class="alignRight" /></p>
+		</div>
+		<div class="moves">
+			<h2>Mortal Moves</h2>
+			<p><i>You gain True Love, and choose two more:</i></p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked value="True Love"><label for="moveOne"> True Love:</label> 
+				You always have exactly one Lover. The first is chosen during Your Backstory. If you ever fall in love with someone else instead, give them a String and they become your new Lover. You always carry 1 forward to earning your Lover’s heart or fancy.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Mess With Me, Mess With Him"><label for="moveTwo"> Mess With Me, Mess With Him:</label> When using your Lover’s name as a threat, add 2 to your roll to <i>Shut Someone Down</i> or <i>Keep Your Cool</i>. Your Lover gains a String on you.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Entrenched"><label for="moveThree"> Entrenched:</label> 
+				If you and another character have a combined total of 5 or more Strings on one another, gain 1 to all rolls against them.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Sympathy is My Weapon"><label for="moveFour"> Sympathy is My Weapon:</label> 
+				Every time you forgive someone for hurting you, and excuse their base nature, gain a String on them.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Excuses Are My Armour"><label for="moveFive"> Excuses Are My Armour:</label> 
+				When you ignore some blatant problem with your Lover or how they treat you, mark experience.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Downward Spiral"><label for="moveSix"> Downward Spiral:</label> 
+				When you <i>Gaze Into the Abyss</i>, you may cause yourself 1 Harm. If you do, add 2 to your roll.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Down the Rabbit Hole"><label for="moveSix"> Down the Rabbit Hole:</label> 
+				When you go poking your nose in affairs not meant for your kind, someone involved in the situation gains a String on you, and you mark experience.
+			</div>
+		</div>
+		<h2>Sex Move</h2>
+		<p>When you have sex with someone, it awakens something sinister within. The next time you take your eyes off them, they become their Darkest Self.</p>
+		<h2>Playing The Mortal</h2>
+		<p>Vulnerable, magnetic, and beautiful. For anybody else, giving away a String would represent a loss of control. For you, it’s more symbiotic - you get power by giving it away. The Mortal explores co-dependency, power imbalances, and wide-eyed eagerness.</p>
+		<p>The two stat choices for the Mortal both have Hot 2, because the Mortal is desirable and special. They differ depending on whether the Mortal is more impulsive and panicky (Volatile 1) or brooding and lonely (Dark 1).</p>
+		<p><i>True Love</i> is about who you’ve currently placed at the center of your universe. You don’t necessarily need to be in a relationship with someone to declare them your Lover.</p>
+		<p>Your Sex Move might seem like a major drawback, but remember that the Mortal can gain a lot of leverage from victimhood. Having lovers suddenly get weird, scary, or hostile after a moment of intimacy gives you a perfect opportunity to take advantage of moves like <i>Sympathy Is My Weapon</i>, <i>Excuses Are My Armour</i>, and <i>Down the Rabbit Hole.</i></p>
+	<h2>Notes</h2>
+				<textarea rows=8 name="charNotes" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Monsterhearts 2 RPG <a href="https://sheet.adventureforhire.com/">Skin</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://buriedwithoutceremony.com/monsterhearts">Monsterhearts 2 here</a>!
+	</div>
+
+</body>
+</html>
