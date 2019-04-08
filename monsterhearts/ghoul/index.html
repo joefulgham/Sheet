@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87348180-2"></script>
+  	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-87348180-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Monsterhearts 2 Skin - The Fae v0.5 | Adventure For Hire</title>
+	<meta name="description" content="Monsterhearts RPG Character Skin - The Ghoul">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Overlock" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Monsterhearts RPG Character Skin - The Ghoul" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Monsterhearts 2 Skin - The Ghost</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/monsterhearts/images/portrait-ghoul.png" id="charImage" />
+		<p>
+			<i>Death changed you. It took away your contemplative joy, it dulled your senses, and it left you impossibly hungry. That hunger is always with you, like a hum in your ears that swells and crescendos until you can’t hear anything else. Unattended, it will come to dominate you - but feeding it may be just as bad.<br /><br /> There is a certain beauty to what you’ve become. Your gaunt body, its unnatural form - it draws people in. Your stark disinterest is beguiling. But underneath that disaffected presentation - the hunger, the hunger.</i>
+		</p>
+		<h2>Identity</h2>
+		<label class="has-float-label">
+		<input type="text" name="charName" id="charName" placeholder="Name" list="charNames" />
+		<span>Name</span>
+		</label>
+		<datalist id="charNames">
+			<option value="Akuji">
+			<option value="Cage">
+			<option value="Cole">
+			<option value="Georgia">
+			<option value="Horace">
+			<option value="Iggy">
+			<option value="Mara">
+			<option value="Morrigan">
+			<option value="Silas">
+			<option value="Sharona">
+			<option value="Victor">
+			<option value="Zed">
+		</datalist>
+		<label class="has-float-label">
+		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-ghoul.png" data-original-value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-ghoul.png" />
+		<span>Portrait URI</span>
+		</label>
+		Look: <input type="text" name="charLook" id="charLook" list="charLooks" placeholder=""/><br />
+		Eyes: <input type="text" name="charEye" id="charEye" list="charEyes" placeholder=""/><br />
+		Origin: <input type="text" name="charOrigin" list="charOrigins" placeholder=""/> 
+		<datalist id="charLooks">
+			<option value="gaunt">
+			<option value="stiff">
+			<option value="disfigured">
+			<option value="detached">
+			<option value="wrecked">
+		</datalist>
+		<datalist id="charEyes">
+			<option value="hollow eye">
+			<option value="quiet eyes">
+			<option value="calculating eyes">
+			<option value="harsh eyes">
+			<option value="hungry eyes">
+		</datalist>
+		<datalist id="charOrigins">
+			<option value="resurrected">
+			<option value="constructed">
+			<option value="disturbed">
+			<option value="rejected">
+			<option value="sent">
+		</datalist>
+		<h2>Your Backstory</h2>
+		<p>Someone reminded you what love was, when you thought that death had stolen it away from you forever. Give them a String.</p>
+		<p>Did anyone watch you die? If so, you gain 2 Strings on each other.</p>
+		<div class="rTextarea">
+		<label class="has-float-label">
+			<textarea rows="2" name="stringNotes" id="stringNotes" placeholder="Strings"></textarea>
+			<span>Strings</span>
+		</label>
+		</div>
+		<h2>Darkest Self</h2>
+		<p>Your dull hunger sharpens. You can’t focus on anything else but feeding. And in addition to your peculiar cravings, you recognize something else. That primordial hunger which connects all hungers. Flesh, blood, meat. You escape your Darkest Self once you’ve overindulged, or you’ve been locked out for long enough to regain composure.</p>
+		<h2>Harm</h2>
+		<div><input type="checkbox" name="harmOne" id="harmOne"><input type="checkbox" name="harmTwo" id="harmTwo"><input type="checkbox" name="harmThree" id="harmThree"><input type="checkbox" name="harmFour" id="harmFour"></div>
+		<div><h2>Experience</h2>
+			<div><input type="checkbox" name="experienceOne" id="experienceOne"><input type="checkbox" name="experienceTwo" id="experienceTwo"><input type="checkbox" name="experienceThree" id="experienceThree"><input type="checkbox" name="experienceFour" id="experienceFour"><input type="checkbox" name="experienceFive" id="experienceFive"> </div>
+			<input type="checkbox" name="advanceOne" id="advanceOne">Add +1 to one of your stats<br />
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another ghoul move<br />
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another ghoul move<br />
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSix" id="advanceSix"> You're part of a <b>Reckless Crew</b><br />
+		</div>
+		<h2>Conditions</h2>
+		<label class="has-float-label">
+			<textarea rows="4" name="conditionNotes" id="conditionNotes" placeholder="Conditions"></textarea>
+			<span>Conditions</span>
+		</label>
+		<h2>Stats</h2>
+		<p>Choose one stat set<br/>
+			Hot -1 Cold 1 Volatile 2 Dark -1, OR<br />
+			Hot -1 Cold 2 Volatile -1 Dark 1
+		</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Hot <input type="number" name="charHot" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Cold <input type="number" name="charCold" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Volatile <input type="number" name="charVolatile" min="-2" max="-1" value="2" class="alignRight" /></p>
+			<p>Dark <input type="number" name="charDark" min="-2" max="3" value="-1" class="alignRight" /></p>
+		</div>
+		<div class="moves">
+			<h2>Ghoul Moves</h2>
+			<p>You get The Hunger, and choose two more</p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked value="The Hunger"><label for="moveOne"> The Hunger:</label> 
+				You have a Hunger for (circle 1): <select><option value="Fear">Fear</option><option value="Power">Power</option><option value="Plunder">Plunder</option><option value="Thrills">Thrills</option></select><br /><br />
+				When you heedlessly pursue a Hunger, add 1 to rolls. When you ignore a promising feeding opportunity, roll to Keep Your Cool.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="What the Right Hand Wants"><label for="moveTwo"> What the Right Hand Wants:</label> Your body contains many histories, and it desires many things. Create another Hunger.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Satiety"><label for="moveThree"> Satiety:</label> 
+				When you satiate a Hunger, choose one:
+				<ul><li>heal 1 Harm;</li><li>mark Experience;</li><li>take 1 Forward.</li></ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Short Rest for the Wicked"><label for="moveFour"> Short Rest for the Wicked:</label> 
+				When you die, wait it out. A few hours later, you wake up fully healed.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Watchful Golem"><label for="moveFive"> Watchful Golem:</label> 
+				When you defend someone without them ever knowing about it, mark experience.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Ending"><label for="moveSix"> Ending:</label> 
+				You remember every detail of your death. When you tell someone about it, give them the Condition <b>morbid</b> and roll to <i>Turn Them On</i> with Cold.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Esprit de Corpse"><label for="moveSix"> Esprit de Corpse:</label> 
+				When you <i>Gaze Into the Abyss</i>, the abyss will share with you its Hunger. Treat that Hunger as one of your own until you satiate it, and mark experience when you do so.
+			</div>
+		</div>
+		<h2>Sex Move</h2>
+		<p>When you have sex with someone, create a new Hunger.</p>
+		<h2>Playing The Ghoul</h2>
+		<p>Obsessive, dangerous, morbid, and quiet. The Ghoul is constantly contending with voracious Hunger, and the emotional distance brought on by death makes it easier to do bad things in pursuit of feeding. They might be a flesh-eating zombie, or something a little more subtle and strange.</p>
+		<p>The two stat choices for the Ghoul paint a portrait of the character as either cruel and erratic (Volatile 2 & Cold 1) or disaffected and portentous (Cold 2 & Dark 1). Since <i>The Hunger</i> forces you to <i>Keep Your Cool</i> to avoid a feeding opportunity, your Cold stat plays a pivotal role in maintaining self-control.</p>
+		<p><i>Watchful Golem</i> and <i>Esprit de Corpse</i> both present the ability to steer the Ghoul in a couple different directions. Are you watching over others out of a deep-rooted but unexpressed sense of care? Or are you skulking around serving them because death took away your sense of independence?</p>
+		<p><i>Short Rest For the Wicked</i> is a recipe for pandemonium. It’s also an invitation to the MC to frame you into a new, dramatic situation. A lot can happen in a few hours.</p>
+		<p>Your Sex Move prompts you to create a new Hunger. It can be anything you like, and it’s added to your character alongside their existing Hungers. If you have sex often, you’ll find your appetite growing wider and weirder all the time.</p>
+	<h2>Notes</h2>
+				<textarea rows=8 name="charNotes" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Monsterhearts <a href="https://sheet.adventureforhire.com/">Skin</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://buriedwithoutceremony.com/monsterhearts">Monsterhearts 2 here</a>!
+	</div>
+
+</body>
+</html>
