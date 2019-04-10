@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87348180-2"></script>
+  	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-87348180-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Monsterhearts 2 Skin - The Fae v0.5 | Adventure For Hire</title>
+	<meta name="description" content="Monsterhearts RPG Character Skin - The Vampire">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Overlock" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Monsterhearts RPG Character Skin - The Vampire" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Monsterhearts 2 Skin - The Vampire</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/monsterhearts/images/portrait-vampire.png" id="charImage" />
+		<p>
+			<i>You are beauty eternal. You are the darkness that everyone wants to taste, but no one dares understand. It’s there in your eyes, your carefully chosen words, and your every gesture: you no longer have a soul.<br /><br />Some vampires revel in that fact, their afterlife a tapestry of hedonism and exsanguination. Others hate the evil in their skin, solemnly vowing to a chaste and lonely existence. Either way, someone suffers. The choice is yours.</i>
+		</p>
+		<h2>Identity</h2>
+		<label class="has-float-label">
+		<input type="text" name="charName" id="charName" placeholder="Name" list="charNames" />
+		<span>Name</span>
+		</label>
+		<datalist id="charNames">
+			<option value="Amanda">
+			<option value="Cassius">
+			<option value="Clayton">
+			<option value="Helene">
+			<option value="Isaiah">
+			<option value="Jessamine">
+			<option value="Jong">
+			<option value="Lucian">
+			<option value="Marcell">
+			<option value="Morana">
+			<option value="Serina">
+		</datalist>
+		<label class="has-float-label">
+		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-vampire.png" data-original-value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-vampire.png" />
+		<span>Portrait URI</span>
+		</label>
+		Look: <input type="text" name="charLook" id="charLook" list="charLooks" placeholder=""/><br />
+		Eyes: <input type="text" name="charEye" id="charEye" list="charEyes" placeholder=""/><br />
+		Origin: <input type="text" name="charOrigin" list="charOrigins" placeholder=""/> 
+		<datalist id="charLooks">
+			<option value="intense">
+			<option value="aloof">
+			<option value="predatory">
+			<option value="smoldering">
+			<option value="old-fashioned">
+		</datalist>
+		<datalist id="charEyes">
+			<option value="dead eyes">
+			<option value="lusty eyes">
+			<option value="pained eyes">
+			<option value="hungry eyes">
+			<option value="thirsty eyes">
+		</datalist>
+		<datalist id="charOrigins">
+			<option value="newly reborn">
+			<option value="taken this century">
+			<option value="many ages old">
+			<option value="lord">
+			<option value="cursed blood">
+		</datalist>
+		<h2>Your Backstory</h2>
+		<p>You’re beautiful. Gain a String on everyone.</p>
+		<p>Someone once saved your unlife. They gain 2 Strings on you.</p>
+		<div class="rTextarea">
+		<label class="has-float-label">
+			<textarea rows="2" name="stringNotes" id="stringNotes" placeholder="Strings"></textarea>
+			<span>Strings</span>
+		</label>
+		</div>
+		<h2>Darkest Self</h2>
+		<p>Everyone is your pawn, your plaything. You hurt them and make them vulnerable, for sport &mdash; like a cat does with a mouse. Maybe you’ll even drain them dry, though you’ll certainly take your time first. You escape your Darkest Self when you’re put in your rightful place, by someone more powerful than you.</p>
+		<h2>Harm</h2>
+		<div><input type="checkbox" name="harmOne" id="harmOne"><input type="checkbox" name="harmTwo" id="harmTwo"><input type="checkbox" name="harmThree" id="harmThree"><input type="checkbox" name="harmFour" id="harmFour"></div>
+		<div><h2>Experience</h2>
+			<div><input type="checkbox" name="experienceOne" id="experienceOne"><input type="checkbox" name="experienceTwo" id="experienceTwo"><input type="checkbox" name="experienceThree" id="experienceThree"><input type="checkbox" name="experienceFour" id="experienceFour"><input type="checkbox" name="experienceFive" id="experienceFive"> </div>
+			<input type="checkbox" name="advanceOne" id="advanceOne">Add +1 to one of your stats<br />
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another Vampire move<br />
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another Vampire move<br />
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSix" id="advanceSix"> You’re in a <b>Vampiric Coterie</b>.<br />
+		</div>
+		<h2>Conditions</h2>
+		<label class="has-float-label">
+			<textarea rows="4" name="conditionNotes" id="conditionNotes" placeholder="Conditions"></textarea>
+			<span>Conditions</span>
+		</label>
+		<h2>Stats</h2>
+		<p>Choose one stat set<br/>
+			Hot 2 Cold 1 Volatile -1 Dark -1, OR<br />
+			Hot 1 Cold 2 Volatile -1 Dark -1
+		</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Hot <input type="number" name="charHot" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Cold <input type="number" name="charCold" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Volatile <input type="number" name="charVolatile" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Dark <input type="number" name="charDark" min="-2" max="3" value="-1" class="alignRight" /></p>
+		</div>
+		<div class="moves">
+			<h2>Vampire Moves</h2>
+			<p><i>Choose two:</i></p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked value="Invited"><label for="moveOne"> Invited:</label> 
+				You cannot enter a home without being invited. Whenever someone invites you in, gain a String on them.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Hypnotic"><label for="moveTwo"> Hypnotic:</label> You can hypnotize people who have no Strings on you. Roll with Hot. On a 10 up, they do exactly what you wish and have no idea that anything is wrong. • On a 7-9, the hypnosis works, but choose one:
+				<ul><li>they realize exactly what you’ve done to them</li><li>they fuck up your commands</li><li>their sanity is unhinged</li></ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Cold as Ice"><label for="moveThree"> Cold as Ice:</label> 
+			 	When you <i>Shut Someone Down</i> and roll a 7 or higher, you may choose an extra option from the list.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="The Feeding"><label for="moveFour"> The Feeding:</label> 
+				You feed on hot blood, direct from the source. If this is the first time they’ve ever been fed upon, you both mark experience. When you feed, choose two:
+				<ul><li>you heal 1 Harm</li><li>you take 1 Forward</li><li>they definitely don’t die</li></ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Marked for the Hunt"><label for="moveFive"> Marked for the Hunt:</label> 
+				Feeding on someone establishes a preternatural bond. From that point forward, whenever you Gaze Into the Abyss concerning their whereabouts or well-being, roll as if you had Dark 3.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Inescapable"><label for="moveSix"> Inescapable:</label> 
+				You may spend a String on someone to demand that they remain in your presence. If they still walk out on you, gain 2 Strings on them.
+			</div>
+		</div>
+		<h2>Sex Move</h2>
+		<p>When you deny someone sexually, gain a String on them. When you have sex with someone, lose all Strings on them.</p>
+		<h2>Playing The Vampire</h2>
+		<p>Icy, manipulative, hypnotic, and cruel. The Vampire thrives on emotional entrenchment and control. The Vampire knows how to undermine the will of others, and often possesses an unsettling attitude toward consent.</p>
+		<p>Both stat options showcase the Vampire’s Hot and Cold nature, passionately romantic one minute and downright mean the next. Your choice is about which way the scale tends to lean: sexy or disdainful.</p>
+		<p>The Vampire has some moves that are downright scary, not because of anything supernatural, but because they are calculatingly and intimately violent. Playing a Vampire means contending with being a person who wilfully causes harm. Do you work toward redemption? Do you give in to dark temptation? Remember that you’re a main character in this story, and that means having a character arc beyond simply hurting others. Or, if not, be prepared to have your role change from protagonist to villain, as the other characters start sharpening up their stakes</p>
+	<h2>Notes</h2>
+				<textarea rows=8 name="charNotes" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Monsterhearts 2 RPG <a href="https://sheet.adventureforhire.com/">Skin</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://buriedwithoutceremony.com/monsterhearts">Monsterhearts 2 here</a>!
+	</div>
+
+</body>
+</html>
