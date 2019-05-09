@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87348180-2"></script>
+  	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-87348180-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Monsterhearts 2 Skin - The Werewolf v0.5 | Adventure For Hire</title>
+	<meta name="description" content="Monsterhearts RPG Character Skin - The Werewolf">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Overlock" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Monsterhearts RPG Character Skin - The Werewolf" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Monsterhearts 2 Skin - The Werewolf</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/monsterhearts/images/portrait-werewolf.png" id="charImage" />
+		<p>
+			<i>Everyone around you seems so willing to play the roles they are handed, to quietly colour within the lines. They’ve been tamed, domesticated. You’re of a different stock: you’ve broken down the fence built to contain you. You’ve howled at the moon, and heard it howl back.<br /><br />Now, the transformation is complete. This is what you were always meant to be. Wild. Unwavering. Alive.</i>
+		</p>
+		<h2>Identity</h2>
+		<label class="has-float-label">
+		<input type="text" name="charName" id="charName" placeholder="Name" list="charNames" />
+		<span>Name</span>
+		</label>
+		<datalist id="charNames">
+			<option value="Cassidy">
+			<option value="Candika">
+			<option value="Flinch">
+			<option value="Levi">
+			<option value="Margot">
+			<option value="Lorrie">
+			<option value="Luna">
+			<option value="Peter">
+			<option value="Tucker">
+			<option value="Zachary">
+		</datalist>
+		<label class="has-float-label">
+		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-werewolf.png" data-original-value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-werewolf.png" />
+		<span>Portrait URI</span>
+		</label>
+		Look: <input type="text" name="charLook" id="charLook" list="charLooks" placeholder=""/><br />
+		Eyes: <input type="text" name="charEye" id="charEye" list="charEyes" placeholder=""/><br />
+		Origin: <input type="text" name="charOrigin" list="charOrigins" placeholder=""/> 
+		<datalist id="charLooks">
+			<option value="primal">
+			<option value="unkempt">
+			<option value="wiry">
+			<option value="rugged">
+			<option value="feisty">
+		</datalist>
+		<datalist id="charEyes">
+			<option value="cunning eyes">
+			<option value="predatory eyes">
+			<option value="fierce eyes">
+			<option value="savage eyes">
+			<option value="wolf eyes">
+		</datalist>
+		<datalist id="charOrigins">
+			<option value="born a wolf">
+			<option value="bitten">
+			<option value="raised by wolves">
+			<option value="ancestral power">
+			<option value="awoken">
+			<option value="favoured by the moon">
+		</datalist>
+		<h2>Your Backstory</h2>
+		<p>You lack subtlety. Give a String to everyone.</p>
+		<p>You’ve spent weeks watching someone from a distance. Their scent and mannerisms are unmistakable to you now. Gain two Strings on them.</p>
+		<div class="rTextarea">
+		<label class="has-float-label">
+			<textarea rows="2" name="stringNotes" id="stringNotes" placeholder="Strings"></textarea>
+			<span>Strings</span>
+		</label>
+		</div>
+		<h2>Darkest Self</h2>
+		<p>You transform into a terrifyingwolf-creature. You crave power and dominance, and those are earned through bloodshed. If anyone attempts to stand in your way, they must be brought down and made to bleed. You escape your Darkest Self when you wound someone you really care about or the sun rises, whichever happens first.</p>
+		<h2>Harm</h2>
+		<div><input type="checkbox" name="harmOne" id="harmOne"><input type="checkbox" name="harmTwo" id="harmTwo"><input type="checkbox" name="harmThree" id="harmThree"><input type="checkbox" name="harmFour" id="harmFour"></div>
+		<div><h2>Experience</h2>
+			<div><input type="checkbox" name="experienceOne" id="experienceOne"><input type="checkbox" name="experienceTwo" id="experienceTwo"><input type="checkbox" name="experienceThree" id="experienceThree"><input type="checkbox" name="experienceFour" id="experienceFour"><input type="checkbox" name="experienceFive" id="experienceFive"> </div>
+			<input type="checkbox" name="advanceOne" id="advanceOne">Add +1 to one of your stats<br />
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another Werewolf move<br />
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take another Werewolf move<br />
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSix" id="advanceSix"> You belong to a <b>Wolf Pack</b>.<br />
+		</div>
+		<h2>Conditions</h2>
+		<label class="has-float-label">
+			<textarea rows="4" name="conditionNotes" id="conditionNotes" placeholder="Conditions"></textarea>
+			<span>Conditions</span>
+		</label>
+		<h2>Stats</h2>
+		<p>Choose one stat set<br/>
+			Hot 1 Cold -1 Volatile 2 Dark -1, OR<br />
+			Hot 2 Cold -1 Volatile 1 Dark -1
+		</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Hot <input type="number" name="charHot" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Cold <input type="number" name="charCold" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Volatile <input type="number" name="charVolatile" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Dark <input type="number" name="charDark" min="-2" max="3" value="-1" class="alignRight" /></p>
+		</div>
+		<div class="moves">
+			<h2>Werewolf Moves</h2>
+			<p><i>Choose two:</i></p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked value="Primal Dominance"><label for="moveOne"> Primal Dominance:</label> 
+				When you harm someone, take a String on them.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" value="Scent of Blood"><label for="moveTwo"> Scent of Blood:</label> Add 1 to all rolls against those who have been harmed in this scene already.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Howl at the Moon"><label for="moveThree"> Howl at the Moon:</label> 
+			 	When basked in moonlight, you may act as if you had Dark 3.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Spirit Armour"><label for="moveFour"> Spirit Armour:</label> 
+				When basked in moonlight, any harm that you suffer is reduced by 1, and you add 2 to all rolls to Keep Your Cool.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Heightened Senses"><label for="moveFive"> Heightened Senses:</label> 
+				When you rely on your animal instincts to make sense of a charged situation, roll with Dark. On a 10 up, ask the MC three questions from below and take 1 Forward. • On a 7-9, ask one question from below and take 1 Forward:
+				<ul><li>Where’s my best escape route or way in?</li><li>Which enemy is the most vulnerable to me?</li><li>What’s their secret weakness?</li><li>What poses the biggest threat to me?</li><li>Who’s in control here?</li></ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Unstable"><label for="moveSix"> Unstable:</label> 
+				When you become your Darkest Self, mark experience.
+			</div>
+		</div>
+		<h2>Sex Move</h2>
+		<p>When you have sex with someone, you establish a deep spiritual connection with them. Until either of you breaks that spirit connection (by having sex with someone else) add 1 to all rolls made to defend them. You can tell when that connection has been broken.</p>
+		<h2>Playing The Werewolf</h2>
+		<p>Aggressive, domineering, primal, and amorous. The Werewolf is primed for violence, and knows that physical dominance is the root of social power. They are territorial and dangerous, but they draw people in with their rough, lusty gorgeousness. Rounding out the Werewolf is a mystical, animal side: they are strongest when basked in moonlight and guided by primal instincts.</p>
+		<p>Both stat options highlight the Werewolf’s sexy, dangerous nature. Your choice is about whether they lean more toward a heart-breaker with a mean streak (Hot 2 & Volatile 1), or an unpredictable loose-cannon who it’s dangerous to get too close to (Hot 1 & Volatile 2).</p>
+		<p>The question of whether you can transform into the form of a wolf when not your Darkest Self is left up to individual groups to decide. You have the same stats and moves regardless of your current form.</p>
+	<h2>Notes</h2>
+				<textarea rows=8 name="charNotes" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Monsterhearts 2 RPG <a href="https://sheet.adventureforhire.com/">Skin</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://buriedwithoutceremony.com/monsterhearts">Monsterhearts 2 here</a>!
+	</div>
+
+</body>
+</html>

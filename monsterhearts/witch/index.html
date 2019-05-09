@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87348180-2"></script>
+  	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-87348180-2');
+	</script>
+	<meta charset="utf-8">
+	<title>Monsterhearts 2 Skin - The Witch v0.5 | Adventure For Hire</title>
+	<meta name="description" content="Monsterhearts RPG Character Skin - The Witch">
+	<meta name="author" content="Joe Fulgham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Overlock" rel="stylesheet">
+	<link rel="shortcut icon" href="https://adventureforhire.com/wp-content/uploads/2016/11/cropped-header-hello.jpg"  />
+	<link rel="stylesheet" href="../css/has-float-label.css"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Monsterhearts RPG Character Skin - The Witch" />
+	<meta name="twitter:site" content="@joefulgham" />
+	<meta name="twitter:description" content="A web based character sheet that stores and loads its data using the hashtag. Bookmark to save for later loading!" />
+	<meta name="twitter:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg" />
+	<meta name="twitter:image-alt" content="[Logo displayed over game artwork]" >
+	<meta property="og:image" content="https://sheet.adventureforhire.com/monsterhearts/images/sheet-monsterhearts-social.jpg">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/charsheet.js"></script>
+	<link rel="stylesheet" href="../css/sheet.css">
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header><h1>Monsterhearts 2 Skin - The Witch</h1></header>
+	<form id="charSheet">
+		<img src="https://sheet.adventureforhire.com/monsterhearts/images/portrait-witch.png" id="charImage" />
+		<p>
+			<i>In every lock of hair, every furtive glance, every secret note that transfers hands during history class – there is an invitation. An invitation to be fucked with. Not that witchcraft is about fucking with others, exactly, but it’s hard not to notice how utterly malleable the world is, once you know a thing or two about magic.<br /><br />Of course, a good witch like you knows restraint. A good witch turns a blind eye to all those invitations, and doesn’t think about how sweet vengeance and control might be. A good witch is above that sort of thing. At least, most of the time.</i>
+		</p>
+		<h2>Identity</h2>
+		<label class="has-float-label">
+		<input type="text" name="charName" id="charName" placeholder="Name" list="charNames" />
+		<span>Name</span>
+		</label>
+		<datalist id="charNames">
+			<option value="Abrielle">
+			<option value="Annalee">
+			<option value="Cordelia">
+			<option value="Darius">
+			<option value="Evelyn">
+			<option value="Gerard">
+			<option value="Lucca">
+			<option value="Merrill">
+			<option value="Sabrina">
+			<option value="Vanessa">
+		</datalist>
+		<label class="has-float-label">
+		<input type="url" name="charPortraitURI" id="charPortraitURI" placeholder="Portrait URI" value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-witch.png" data-original-value="https://sheet.adventureforhire.com/monsterhearts/images/portrait-witch.png" />
+		<span>Portrait URI</span>
+		</label>
+		Look: <input type="text" name="charLook" id="charLook" list="charLooks" placeholder=""/><br />
+		Eyes: <input type="text" name="charEye" id="charEye" list="charEyes" placeholder=""/><br />
+		Origin: <input type="text" name="charOrigin" list="charOrigins" placeholder=""/> 
+		<datalist id="charLooks">
+			<option value="lithe">
+			<option value="guarded">
+			<option value="coy">
+			<option value="edgy">
+			<option value="meticulous">
+		</datalist>
+		<datalist id="charEyes">
+			<option value="calculating eyes">
+			<option value="smirking eyes">
+			<option value="playful eyes">
+			<option value="wicked eyes">
+			<option value="deep eyes">
+		</datalist>
+		<datalist id="charOrigins">
+			<option value="taught by grandma">
+			<option value="awoken">
+			<option value="pagan initiate">
+			<option value="tumblr">
+			<option value="avid reader">
+		</datalist>
+		<h2>Your Backstory</h2>
+		<p>You start the game with two Sympathetic Tokens. Decide whose and what they are.</p>
+		<p>One of the others caught you rummaging through their friend’s stuff, but hasn’t said anything. They get a String on you.</p>
+		<div class="rTextarea">
+		<label class="has-float-label">
+			<textarea rows="2" name="stringNotes" id="stringNotes" placeholder="Strings"></textarea>
+			<span>Strings</span>
+		</label>
+		</div>
+		<h2>Darkest Self</h2>
+		<p>The time for subtlety and patience is over. You’re too powerful to put up with their garbage any longer. You hex anyone who slights you. All of your hexes have unexpected side effects, and are more effective than you are comfortable with. To escape your Darkest Self, you must offer peace to the one you have hurt the most.</p>
+		<h2>Harm</h2>
+		<div><input type="checkbox" name="harmOne" id="harmOne"><input type="checkbox" name="harmTwo" id="harmTwo"><input type="checkbox" name="harmThree" id="harmThree"><input type="checkbox" name="harmFour" id="harmFour"></div>
+		<div><h2>Experience</h2>
+			<div><input type="checkbox" name="experienceOne" id="experienceOne"><input type="checkbox" name="experienceTwo" id="experienceTwo"><input type="checkbox" name="experienceThree" id="experienceThree"><input type="checkbox" name="experienceFour" id="experienceFour"><input type="checkbox" name="experienceFive" id="experienceFive"> </div>
+			<input type="checkbox" name="advanceOne" id="advanceOne">Add +1 to one of your stats<br />
+			<input type="checkbox" name="advanceTwo" id="advanceTwo"> Take another Witch move<br />
+			<input type="checkbox" name="advanceThree" id="advanceThree"> Take all the remaining Hexes<br />
+			<input type="checkbox" name="advanceFour" id="advanceFour"> Create a new Hex<br />
+			<input type="checkbox" name="advanceFive" id="advanceFive"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSix" id="advanceSix"> Take a move from any Skin<br />
+			<input type="checkbox" name="advanceSeven" id="advanceSeven"> You belong to a <b>Coven</b>.<br />
+		</div>
+		<h2>Conditions</h2>
+		<label class="has-float-label">
+			<textarea rows="4" name="conditionNotes" id="conditionNotes" placeholder="Conditions"></textarea>
+			<span>Conditions</span>
+		</label>
+		<h2>Stats</h2>
+		<p>Choose one stat set<br/>
+			Hot -1 Cold 2 Volatile -1 Dark 1, OR<br />
+			Hot 1 Cold -1 Volatile -1 Dark 2
+		</p>
+		<div class="labels" style="max-width: 10em;">
+			<p>Hot <input type="number" name="charHot" min="-2" max="3" value="1" class="alignRight" /></p>
+			<p>Cold <input type="number" name="charCold" min="-2" max="3" value="-1" class="alignRight" /></p>
+			<p>Volatile <input type="number" name="charVolatile" min="-2" max="3" value="2" class="alignRight" /></p>
+			<p>Dark <input type="number" name="charDark" min="-2" max="3" value="-1" class="alignRight" /></p>
+		</div>
+		<div class="moves">
+			<h2>Witch Moves</h2>
+			<p><i>You start with Sympathetic Tokens and Hex-Casting:</i></p>
+			<div class="charMove">
+				<input type="checkbox" name="moveOne" id="moveOne" checked value="Sympathetic Tokens"><label for="moveOne"> Sympathetic Tokens:</label> 
+				You gain power from Sympathetic Tokens - items of personal significance taken from others. Sympathetic Tokens count as Strings.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveTwo" id="moveTwo" checked value="Hex-Casting"><label for="moveTwo"> Hex-Casting:</label> You can cast Hexes. Choose two that you know. To cast them, either expend a Sympathetic Token during a secret ritual, or meet the target’s gaze and chant at them in tongues. Then roll with Dark. On a 10 up, the Hex works, and can easily be reversed. On a 7-9, it works but choose one:
+				<ul><li>the casting does you 1 Harm</li><li>the Hex has weird side effects</li><li>trigger your Darkest Self</li></ul>
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveThree" id="moveThree" value="Transgressive Magic"><label for="moveThree"> Transgressive Magic:</label> 
+			 	If your ritual transgresses the community’s moral or sexual standards, add 1 to your Hex- Casting roll.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveFour" id="moveFour" value="Sanctuary"><label for="moveFour"> Sanctuary:</label> 
+				You have a secret place for practicing witchcraft. Add 1 to all rolls you make within this space.
+			</div>
+			<h2>Hexes</h2>
+			<div class="charMove">
+				<input type="checkbox" name="moveFive" id="moveFive" value="Wither"><label for="moveFive"> Wither:</label> 
+				The hexed loses all of their hair, or their teeth start falling out, or their period arrives unexpected and heavy, or their skin gets all sickly yellow and spotty. Whatever the specifics, it’s bad.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSix" id="moveSix" value="Binding"><label for="moveSix"> Binding:</label> 
+				The person cannot physically harm others.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveSeven" id="moveSeven" value="Ring of Lies"><label for="moveSeven"> Ring of Lies:</label> 
+				Whenever the person attempts to lie, they hear a piercing ringing noise. Big lies will often make their knees buckle and disorient them. Severe lies can cause harm or even brain damage.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveEight" id="moveEight" value="Watching"><label for="moveEight"> Watching:</label> 
+				You enter a deep sleep, and begin to see the world through the eyes of the hexed. You can feel their reactions to and impressions of what they are seeing.
+			</div>
+			<div class="charMove">
+				<input type="checkbox" name="moveNine" id="moveNine" value="Illusions"><label for="moveNine"> Illusions:</label> 
+				Pick one: snakes and bugs, demonic visages, false prophecies, non-existent subtext. The hexed sees that thing everywhere. You have no control over the exact images or manifestations.
+			</div>
+		</div>
+		<h2>Sex Move</h2>
+		<p>After sex, you can take a Sympathetic Token from them. They know about it, and it’s cool.</p>
+		<h2>Playing The Witch</h2>
+		<p>Brooding, vengeful, secretive, and occult. The Witch bides their time, silently judging others until an opportunity for magical retribution and mischief presents itself.</p>
+		<p>The two stat options for the Witch slant toward being either calculating and venomous (Cold 2 & Dark 1) or seductive and spooky (Hot 1 & Dark 2). Either way, the Witch relies on patience to be at the height of their power. Unless they’re willing to chant in tongues, eyes swirling a cloudy crimson, their low Volatile stat means they’re not very good at reacting to unexpected threats.</p>
+		<p>The best way to keep track of both Strings and Sympathetic Tokens is to use a different symbol for each. Since circles are already suggested for Strings, little stars or triangles would work well for the tokens. You can keep track of what the physical objects are on a scrap piece of paper or in the margins of the sheet.</p>
+		<p>If a character of another Skin takes the Hex-Casting move without also taking Sympathetic Tokens, the only way they can cast a Hex is by meeting their target’s gaze and chanting in tongues – not exactly a subtle approach.</p>
+	<h2>Notes</h2>
+				<textarea rows=8 name="charNotes" style="width: 100%;"></textarea>
+	</form>
+	<div class="credits">
+		Monsterhearts 2 RPG <a href="https://sheet.adventureforhire.com/">Skin</a> - Save and Bookmark to store your character.<br />by <a href="https://joefulgham.com/">Joe Fulgham</a> / <a href="https://adventureforhire.com/">Adventure For Hire</a><br />Twitter: <a href="https://twitter.com/joefulgham/">@joefulgham</a> | Facebook: <a href="https://www.facebook.com/joefulgham/">/joefulgham</a> | Twitch: <a href="https://www.twitch.tv/joefulgham/">joefulgham</a> | PayPal: <a href="https://paypal.me/joefulgham">joefulgham</a> | <a href="https://ko-fi.com/joefulgham/">Buy me a coffee</a><br />
+		Get <a href="https://buriedwithoutceremony.com/monsterhearts">Monsterhearts 2 here</a>!
+	</div>
+
+</body>
+</html>
