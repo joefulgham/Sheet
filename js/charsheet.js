@@ -37,6 +37,8 @@ function putCharstuff() {
     $.each($('form').serializeArray(), function() {
         result[this.name] = this.value;
     });
+    // Alert to show what's being saved for debugging purposes. Should be commented out in live
+    // alert(JSON.stringify(result));
     // Convert array to JSON string which is then compressed to a text string that can be stored in the URI
     var charData = LZString.compressToEncodedURIComponent(JSON.stringify(result));
 
